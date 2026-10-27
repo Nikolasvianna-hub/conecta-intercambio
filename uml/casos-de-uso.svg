@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 1020" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <style>
+      .boundary-box { fill: #f8fafc; stroke: #334155; stroke-width: 2.5; rx: 12; }
+      .boundary-title { font-size: 18px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+      .sub-title { font-size: 13px; fill: #64748b; text-anchor: middle; }
+      .actor-label { font-size: 12px; font-weight: 600; fill: #1e293b; text-anchor: middle; }
+      .actor-sub { font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .uc-ellipse { fill: #ffffff; stroke: #0284c7; stroke-width: 2; rx: 90; ry: 28; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05)); }
+      .uc-core { stroke: #2563eb; stroke-width: 2.5; fill: #eff6ff; }
+      .uc-gov { stroke: #dc2626; stroke-width: 2; fill: #fef2f2; }
+      .uc-inst { stroke: #b45309; stroke-width: 2; fill: #fffbeb; }
+      .uc-extend { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 4 3; fill: #f8fafc; }
+      .uc-text { font-size: 11px; font-weight: 600; fill: #0f172a; text-anchor: middle; }
+      .uc-subtext { font-size: 9.5px; fill: #475569; text-anchor: middle; }
+      .assoc-line { stroke: #475569; stroke-width: 1.5; fill: none; }
+      .include-line { stroke: #2563eb; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; marker-end: url(#arrow-blue); }
+      .extend-line { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; marker-end: url(#arrow-gray); }
+      .rel-text { font-size: 10px; font-weight: 600; fill: #2563eb; text-anchor: middle; background-color: #ffffff; }
+      .extend-text { font-size: 9.5px; fill: #475569; text-anchor: middle; }
+      .gen-arrow { stroke: #475569; stroke-width: 1.5; fill: none; marker-end: url(#gen-triangle); }
+    </style>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="gen-triangle" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#ffffff" stroke="#475569" stroke-width="1.5" />
+    </marker>
+  </defs>
+
+  <!-- Limite do Sistema -->
+  <rect x="250" y="30" width="820" height="950" class="boundary-box" />
+  <text x="660" y="65" class="boundary-title">Sistema Conecta Intercâmbio — Rede Social Acadêmica</text>
+  <text x="660" y="85" class="sub-title">Universidade de Fortaleza (Unifor) | Limite do Sistema UML 2.5</text>
+
+  <!-- ATORES (ESQUERDA) -->
+  <!-- Ator Base: Estudante da Unifor -->
+  <g id="actor-base">
+    <circle cx="90" cy="300" r="15" fill="#f1f5f9" stroke="#1e293b" stroke-width="2" />
+    <line x1="90" y1="315" x2="90" y2="350" stroke="#1e293b" stroke-width="2" />
+    <line x1="65" y1="328" x2="115" y2="328" stroke="#1e293b" stroke-width="2" />
+    <line x1="90" y1="350" x2="70" y2="385" stroke="#1e293b" stroke-width="2" />
+    <line x1="90" y1="350" x2="110" y2="385" stroke="#1e293b" stroke-width="2" />
+    <text x="90" y="405" class="actor-label">Estudante Geral</text>
+    <text x="90" y="418" class="actor-sub">(Comunidade Unifor)</text>
+  </g>
+
+  <!-- Ator: Internacional (Incoming) -->
+  <g id="actor-incoming">
+    <circle cx="90" cy="110" r="15" fill="#fef3c7" stroke="#b45309" stroke-width="2" />
+    <line x1="90" y1="125" x2="90" y2="160" stroke="#b45309" stroke-width="2" />
+    <line x1="65" y1="138" x2="115" y2="138" stroke="#b45309" stroke-width="2" />
+    <line x1="90" y1="160" x2="70" y2="195" stroke="#b45309" stroke-width="2" />
+    <line x1="90" y1="160" x2="110" y2="195" stroke="#b45309" stroke-width="2" />
+    <text x="90" y="215" class="actor-label">Estudante Internacional</text>
+    <text x="90" y="228" class="actor-sub">(Incoming)</text>
+  </g>
+  <line x1="90" y1="235" x2="90" y2="280" class="gen-arrow" />
+
+  <!-- Ator: Brasileiro (Outgoing) -->
+  <g id="actor-outgoing">
+    <circle cx="90" cy="500" r="15" fill="#dbeafe" stroke="#1e40af" stroke-width="2" />
+    <line x1="90" y1="515" x2="90" y2="550" stroke="#1e40af" stroke-width="2" />
+    <line x1="65" y1="528" x2="115" y2="528" stroke="#1e40af" stroke-width="2" />
+    <line x1="90" y1="550" x2="70" y2="585" stroke="#1e40af" stroke-width="2" />
+    <line x1="90" y1="550" x2="110" y2="585" stroke="#1e40af" stroke-width="2" />
+    <text x="90" y="605" class="actor-label">Estudante Brasileiro</text>
+    <text x="90" y="618" class="actor-sub">(Outgoing)</text>
+  </g>
+  <line x1="90" y1="495" x2="90" y2="430" class="gen-arrow" />
+
+  <!-- Ator: Ex-Intercambista (Alumni) -->
+  <g id="actor-alumni">
+    <circle cx="90" cy="690" r="15" fill="#ede9fe" stroke="#6d28d9" stroke-width="2" />
+    <line x1="90" y1="705" x2="90" y2="740" stroke="#6d28d9" stroke-width="2" />
+    <line x1="65" y1="718" x2="115" y2="718" stroke="#6d28d9" stroke-width="2" />
+    <line x1="90" y1="740" x2="70" y2="775" stroke="#6d28d9" stroke-width="2" />
+    <line x1="90" y1="740" x2="110" y2="775" stroke="#6d28d9" stroke-width="2" />
+    <text x="90" y="795" class="actor-label">Ex-Intercambista</text>
+    <text x="90" y="808" class="actor-sub">(Alumni)</text>
+  </g>
+  <path d="M 125 730 L 150 730 L 150 360 L 125 360" class="gen-arrow" />
+
+  <!-- Ator: Buddy Voluntário -->
+  <g id="actor-buddy">
+    <circle cx="90" cy="870" r="15" fill="#dcfce7" stroke="#15803d" stroke-width="2" />
+    <line x1="90" y1="885" x2="90" y2="920" stroke="#15803d" stroke-width="2" />
+    <line x1="65" y1="898" x2="115" y2="898" stroke="#15803d" stroke-width="2" />
+    <line x1="90" y1="920" x2="70" y2="955" stroke="#15803d" stroke-width="2" />
+    <line x1="90" y1="920" x2="110" y2="955" stroke="#15803d" stroke-width="2" />
+    <text x="90" y="975" class="actor-label">Estudante Buddy</text>
+    <text x="90" y="988" class="actor-sub">(Voluntário Local)</text>
+  </g>
+  <line x1="90" y1="865" x2="90" y2="630" class="gen-arrow" />
+
+  <!-- ATORES (DIREITA) -->
+  <!-- Ator: Moderador -->
+  <g id="actor-moderador">
+    <circle cx="1200" cy="400" r="15" fill="#fee2e2" stroke="#dc2626" stroke-width="2" />
+    <line x1="1200" y1="415" x2="1200" y2="450" stroke="#dc2626" stroke-width="2" />
+    <line x1="1175" y1="428" x2="1225" y2="428" stroke="#dc2626" stroke-width="2" />
+    <line x1="1200" y1="450" x2="1180" y2="485" stroke="#dc2626" stroke-width="2" />
+    <line x1="1200" y1="450" x2="1220" y2="485" stroke="#dc2626" stroke-width="2" />
+    <text x="1200" y="505" class="actor-label">Moderador</text>
+    <text x="1200" y="518" class="actor-sub">(Equipe de Moderação)</text>
+  </g>
+
+  <!-- Ator: Administrador Institucional (NEI) -->
+  <g id="actor-gestor">
+    <circle cx="1200" cy="720" r="15" fill="#fef08a" stroke="#854d0e" stroke-width="2" />
+    <line x1="1200" y1="735" x2="1200" y2="770" stroke="#854d0e" stroke-width="2" />
+    <line x1="1175" y1="748" x2="1225" y2="748" stroke="#854d0e" stroke-width="2" />
+    <line x1="1200" y1="770" x2="1180" y2="805" stroke="#854d0e" stroke-width="2" />
+    <line x1="1200" y1="770" x2="1220" y2="805" stroke="#854d0e" stroke-width="2" />
+    <text x="1200" y="825" class="actor-label">Gestor Institucional</text>
+    <text x="1200" y="838" class="actor-sub">(Assessoria NEI / Unifor)</text>
+  </g>
+  <line x1="1200" y1="710" x2="1200" y2="530" class="gen-arrow" />
+
+  <!-- CASOS DE USO CENTRAIS -->
+  <!-- Coluna 1: Acesso, Perfil, Feed, Notícias (x=380) -->
+  <!-- UC01 -->
+  <g id="g-uc01">
+    <rect x="290" y="110" width="180" height="52" rx="26" class="uc-ellipse uc-core" />
+    <text x="380" y="132" class="uc-text">UC01: Autenticar Usuário</text>
+    <text x="380" y="146" class="uc-subtext">(com validação de vínculo)</text>
+  </g>
+
+  <!-- UC02 -->
+  <g id="g-uc02">
+    <rect x="290" y="195" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="217" class="uc-text">UC02: Gerenciar Perfil</text>
+    <text x="380" y="231" class="uc-subtext">(acadêmico e idiomas)</text>
+  </g>
+
+  <!-- UC03 -->
+  <g id="g-uc03">
+    <rect x="290" y="280" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="302" class="uc-text">UC03: Buscar Estudantes</text>
+    <text x="380" y="316" class="uc-subtext">(filtros por país e curso)</text>
+  </g>
+
+  <!-- UC04 -->
+  <g id="g-uc04">
+    <rect x="290" y="365" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="387" class="uc-text">UC04: Publicar no Feed</text>
+    <text x="380" y="401" class="uc-subtext">(texto, fotos e tags)</text>
+  </g>
+
+  <!-- UC05 -->
+  <g id="g-uc05">
+    <rect x="290" y="450" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="472" class="uc-text">UC05: Interagir em Posts</text>
+    <text x="380" y="486" class="uc-subtext">(curtir e comentar)</text>
+  </g>
+
+  <!-- UC06 -->
+  <g id="g-uc06">
+    <rect x="290" y="535" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="557" class="uc-text">UC06: Consultar Notícias</text>
+    <text x="380" y="571" class="uc-subtext">(comunicados oficiais)</text>
+  </g>
+
+  <!-- UC09 -->
+  <g id="g-uc09">
+    <rect x="290" y="620" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="642" class="uc-text">UC09: Acessar Comunidade</text>
+    <text x="380" y="656" class="uc-subtext">(grupos por destino/idioma)</text>
+  </g>
+
+  <!-- UC10 -->
+  <g id="g-uc10">
+    <rect x="290" y="710" width="180" height="56" rx="28" class="uc-ellipse" style="stroke: #7c3aed; fill: #faf5ff;" />
+    <text x="380" y="734" class="uc-text">UC10: Submeter Relato</text>
+    <text x="380" y="748" class="uc-subtext">(experiência de intercâmbio)</text>
+  </g>
+
+  <!-- UC11 -->
+  <g id="g-uc11">
+    <rect x="290" y="805" width="180" height="52" rx="26" class="uc-ellipse" />
+    <text x="380" y="827" class="uc-text">UC11: Consultar Agenda</text>
+    <text x="380" y="841" class="uc-subtext">(eventos acadêmicos/culturais)</text>
+  </g>
+
+  <!-- Coluna 2: Extensões, Buddy, Denúncias (x=660) -->
+  <!-- UC15: Extend de UC04 -->
+  <g id="g-uc15">
+    <rect x="560" y="340" width="190" height="50" rx="25" class="uc-ellipse uc-extend" />
+    <text x="655" y="361" class="uc-text">UC15: Exibir Isenção Legal</text>
+    <text x="655" y="375" class="uc-subtext">[dicas de moradia privada]</text>
+  </g>
+
+  <!-- UC07: Buddy (Solicitação) -->
+  <g id="g-uc07">
+    <rect x="560" y="140" width="190" height="52" rx="26" class="uc-ellipse" style="stroke: #d97706; fill: #fffbeb;" />
+    <text x="655" y="162" class="uc-text">UC07: Solicitar Buddy</text>
+    <text x="655" y="176" class="uc-subtext">(tutoria de acolhimento)</text>
+  </g>
+
+  <!-- UC13: Denúncia -->
+  <g id="g-uc13">
+    <rect x="560" y="470" width="190" height="52" rx="26" class="uc-ellipse uc-gov" />
+    <text x="655" y="492" class="uc-text">UC13: Denunciar Conteúdo</text>
+    <text x="655" y="506" class="uc-subtext">(violação ética / assédio)</text>
+  </g>
+
+  <!-- UC08: Buddy (Gestão) -->
+  <g id="g-uc08">
+    <rect x="560" y="870" width="190" height="52" rx="26" class="uc-ellipse" style="stroke: #15803d; fill: #f0fdf4;" />
+    <text x="655" y="892" class="uc-text">UC08: Gerenciar Buddy</text>
+    <text x="655" y="906" class="uc-subtext">(atribuição e tutoria)</text>
+  </g>
+
+  <!-- Coluna 3: Moderação e Publicação Oficial (x=930) -->
+  <!-- UC14: Moderar Denúncias -->
+  <g id="g-uc14">
+    <rect x="830" y="440" width="200" height="56" rx="28" class="uc-ellipse uc-gov" style="stroke-width: 2.5;" />
+    <text x="930" y="464" class="uc-text">UC14: Moderar Conteúdos</text>
+    <text x="930" y="478" class="uc-subtext">(auditoria e resoluções)</text>
+  </g>
+
+  <!-- UC12: Publicar Comunicados Oficiais -->
+  <g id="g-uc12">
+    <rect x="830" y="740" width="200" height="56" rx="28" class="uc-ellipse uc-inst" style="stroke-width: 2.5;" />
+    <text x="930" y="764" class="uc-text">UC12: Publicar Editais</text>
+    <text x="930" y="778" class="uc-subtext">(Assessoria NEI oficial)</text>
+  </g>
+
+  <!-- LINHAS DE ASSOCIAÇÃO: ATOR ESTUDANTE GERAL -> CASOS DE USO -->
+  <line x1="125" y1="330" x2="290" y2="136" class="assoc-line" />
+  <line x1="125" y1="335" x2="290" y2="221" class="assoc-line" />
+  <line x1="125" y1="345" x2="290" y2="306" class="assoc-line" />
+  <line x1="125" y1="355" x2="290" y2="391" class="assoc-line" />
+  <line x1="125" y1="365" x2="290" y2="476" class="assoc-line" />
+  <line x1="125" y1="375" x2="290" y2="561" class="assoc-line" />
+  <line x1="125" y1="385" x2="290" y2="646" class="assoc-line" />
+  <line x1="125" y1="395" x2="290" y2="831" class="assoc-line" />
+  <line x1="125" y1="370" x2="560" y2="496" class="assoc-line" />
+
+  <!-- ASSOCIAÇÃO ESPECÍFICA: INTERNACIONAL -> UC07 -->
+  <line x1="125" y1="150" x2="560" y2="166" class="assoc-line" style="stroke: #b45309; stroke-width: 2;" />
+
+  <!-- ASSOCIAÇÃO ESPECÍFICA: EX-INTERCAMBISTA -> UC10 -->
+  <line x1="125" y1="740" x2="290" y2="738" class="assoc-line" style="stroke: #6d28d9; stroke-width: 2;" />
+
+  <!-- ASSOCIAÇÃO ESPECÍFICA: BUDDY -> UC08 -->
+  <line x1="125" y1="920" x2="560" y2="896" class="assoc-line" style="stroke: #15803d; stroke-width: 2;" />
+
+  <!-- ASSOCIAÇÕES MODERADOR E GESTOR -->
+  <line x1="1170" y1="440" x2="1030" y2="468" class="assoc-line" style="stroke: #dc2626; stroke-width: 2;" />
+  <line x1="1170" y1="755" x2="1030" y2="768" class="assoc-line" style="stroke: #854d0e; stroke-width: 2;" />
+  <line x1="1170" y1="775" x2="750" y2="896" class="assoc-line" style="stroke: #854d0e; stroke-width: 1.5;" />
+
+  <!-- RELACIONAMENTOS INCLUDE E EXTEND -->
+  <!-- UC04 include UC01 -->
+  <path d="M 470 380 L 510 380 L 510 145 L 470 145" class="include-line" />
+  <rect x="475" y="245" width="70" height="18" fill="#ffffff" rx="4" />
+  <text x="510" y="258" class="rel-text">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- UC15 extend UC04 -->
+  <line x1="560" y1="365" x2="470" y2="385" class="extend-line" />
+  <rect x="475" y="340" width="75" height="18" fill="#ffffff" rx="4" />
+  <text x="512" y="353" class="extend-text" font-weight="bold">&lt;&lt;extend&gt;&gt;</text>
+
+  <!-- UC14 include UC13 -->
+  <line x1="830" y1="475" x2="750" y2="488" class="include-line" style="stroke: #dc2626;" />
+  <rect x="755" y="465" width="70" height="18" fill="#ffffff" rx="4" />
+  <text x="790" y="478" class="rel-text" style="fill: #dc2626;">&lt;&lt;include&gt;&gt;</text>
+</svg>

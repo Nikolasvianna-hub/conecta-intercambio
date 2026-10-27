@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net" modified="2026-10-27T15:29:00.000Z" agent="Antigravity Requirements Modeler" version="21.6.8" type="device">
+  <diagram id="diagram-deployment" name="Diagrama de Implantação - Conecta Intercâmbio">
+    <mxGraphModel dx="1420" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- NÓ 1: DISPOSITIVO DO CLIENTE -->
+        <mxCell id="node_client" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&#xa;&lt;b&gt;Dispositivo do Usuário&lt;/b&gt;&#xa;(Smartphone / Notebook / Desktop)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=15;fillColor=#f8fafc;strokeColor=#0284c7;strokeWidth=2;verticalAlign=top;spacingTop=10;fontStyle=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="300" height="340" as="geometry" />
+        </mxCell>
+
+        <!-- Ambiente de Execução: Navegador Web -->
+        <mxCell id="node_browser" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&#xa;&lt;b&gt;Navegador Web Moderno&lt;/b&gt;&#xa;(Google Chrome, Safari, Firefox, Edge)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;verticalAlign=top;spacingTop=10;fontSize=11;" vertex="1" parent="node_client">
+          <mxGeometry x="25" y="70" width="250" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Artefatos Implantados no Navegador -->
+        <mxCell id="art_spa" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;conecta-web-app.bundle.js&lt;/b&gt;&#xa;(HTML5, CSS3, JS Frontend, i18n JSONs)" style="shape=rect;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;" vertex="1" parent="node_browser">
+          <mxGeometry x="20" y="70" width="210" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_storage_client" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;LocalStorage / IndexedDB&lt;/b&gt;&#xa;(Token JWT de Sessão, Idioma Ativo)" style="shape=rect;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.2;fontSize=10;" vertex="1" parent="node_browser">
+          <mxGeometry x="20" y="150" width="210" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- NÓ 2: NUVEM / SERVIDOR DE HOSPEDAGEM DE APLICAÇÃO -->
+        <mxCell id="node_cloud_server" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&#xa;&lt;b&gt;Servidor de Aplicação Web / Nuvem (Cloud Host)&lt;/b&gt;&#xa;(Ambiente de Hospedagem / Container Linux)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=15;fillColor=#f8fafc;strokeColor=#2563eb;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="80" width="380" height="480" as="geometry" />
+        </mxCell>
+
+        <!-- Servidor Web Reverso Nginx -->
+        <mxCell id="node_nginx" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&#xa;&lt;b&gt;Servidor Web Reverso (Nginx / Caddy)&lt;/b&gt;&#xa;(Terminação TLS 1.3, Roteamento, Cache)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=1.5;verticalAlign=top;spacingTop=8;fontSize=10;" vertex="1" parent="node_cloud_server">
+          <mxGeometry x="25" y="70" width="330" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_dist" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;/dist (Arquivos Estáticos da SPA)&lt;/b&gt;" style="shape=rect;html=1;fillColor=#ffffff;strokeColor=#2563eb;fontSize=10;" vertex="1" parent="node_nginx">
+          <mxGeometry x="20" y="55" width="290" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Runtime do Backend -->
+        <mxCell id="node_backend_runtime" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&#xa;&lt;b&gt;Runtime de Backend (Node.js / Python / Docker)&lt;/b&gt;&#xa;(Processamento de Regras de Negócio e APIs)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=1.5;verticalAlign=top;spacingTop=8;fontSize=10;" vertex="1" parent="node_cloud_server">
+          <mxGeometry x="25" y="210" width="330" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_api" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;conecta-api-server.bin&lt;/b&gt;&#xa;(API Gateway, Módulos Auth, Feed, News, Buddy)" style="shape=rect;html=1;fillColor=#ffffff;strokeColor=#2563eb;fontSize=10;" vertex="1" parent="node_backend_runtime">
+          <mxGeometry x="20" y="60" width="290" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_mod_service" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;moderation-engine.bin&lt;/b&gt;&#xa;(Triagem de Denúncias, Auditoria LGPD)" style="shape=rect;html=1;fillColor=#ffffff;strokeColor=#dc2626;fontSize=10;" vertex="1" parent="node_backend_runtime">
+          <mxGeometry x="20" y="130" width="290" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- NÓ 3: SERVIDOR DE BANCO DE DADOS -->
+        <mxCell id="node_db_server" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&#xa;&lt;b&gt;Servidor de Banco de Dados&lt;/b&gt;&#xa;(Database Server Instance / VPC Privada)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=15;fillColor=#f8fafc;strokeColor=#15803d;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="80" width="320" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="node_sgbd" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&#xa;&lt;b&gt;SGBD Relacional (PostgreSQL 15+)&lt;/b&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#dcfce7;strokeColor=#15803d;strokeWidth=1.5;verticalAlign=top;spacingTop=8;fontSize=10;" vertex="1" parent="node_db_server">
+          <mxGeometry x="20" y="65" width="280" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_db_schema" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;conecta_schema.sql (Tabelas e Índices)&lt;/b&gt;&#xa;(users, profiles, posts, buddies, audit_logs)" style="shape=rect;html=1;fillColor=#ffffff;strokeColor=#15803d;fontSize=10;" vertex="1" parent="node_sgbd">
+          <mxGeometry x="15" y="60" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- NÓ 4: SERVIDOR DE ARMAZENAMENTO DE OBJETOS (MÍDIAS) -->
+        <mxCell id="node_object_storage" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&#xa;&lt;b&gt;Servidor de Armazenamento de Arquivos&lt;/b&gt;&#xa;(Cloud Object Storage / S3 Bucket / CDN)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=15;fillColor=#f8fafc;strokeColor=#15803d;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="370" width="320" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_s3_bucket" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&#xa;&lt;b&gt;Bucket de Fotos e Mídias (/media-conecta)&lt;/b&gt;&#xa;(Imagens de Perfis, Anexos e Vídeos Curtos)" style="shape=rect;html=1;fillColor=#ffffff;strokeColor=#15803d;fontSize=10;" vertex="1" parent="node_object_storage">
+          <mxGeometry x="25" y="90" width="270" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- NÓ 5: SERVIÇO EXTERNO DE E-MAIL / NOTIFICAÇÃO -->
+        <mxCell id="node_smtp_server" value="&amp;lt;&amp;lt;execution environment&amp;gt;&amp;gt;&#xa;&lt;b&gt;Servidor de Mensageria / E-mail Unifor&lt;/b&gt;&#xa;(Serviço Externo SMTP)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=15;fillColor=#fefce8;strokeColor=#ca8a04;strokeWidth=1.5;verticalAlign=top;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="640" width="380" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- PROTOCOLOS E CAMINHOS DE COMUNICAÇÃO -->
+        <!-- Cliente -> Nuvem (HTTPS 443 / TLS 1.3) -->
+        <mxCell id="link_client_server" value="&amp;lt;&amp;lt;protocol&amp;gt;&amp;gt;&#xa;&lt;b&gt;HTTPS / TLS 1.3&lt;/b&gt;&#xa;(Porta 443 / TCP-IP)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#0284c7;strokeWidth=2;fontSize=10;align=center;verticalAlign=bottom;" edge="1" parent="1" source="node_client" target="node_cloud_server">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Nuvem -> Banco de Dados (TCP/IP Porta 5432) -->
+        <mxCell id="link_server_db" value="&amp;lt;&amp;lt;protocol&amp;gt;&amp;gt;&#xa;&lt;b&gt;TCP/IP Privado&lt;/b&gt;&#xa;(Porta 5432 / TLS)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;align=center;verticalAlign=bottom;" edge="1" parent="1" source="node_cloud_server" target="node_db_server">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Nuvem -> Armazenamento de Arquivos (HTTPS / S3 API) -->
+        <mxCell id="link_server_storage" value="&amp;lt;&amp;lt;protocol&amp;gt;&amp;gt;&#xa;&lt;b&gt;HTTPS / S3 API&lt;/b&gt;&#xa;(Porta 443)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#15803d;strokeWidth=2;fontSize=10;align=center;verticalAlign=bottom;" edge="1" parent="1" source="node_cloud_server" target="node_object_storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Nuvem -> SMTP (SMTP TLS Porta 587) -->
+        <mxCell id="link_server_smtp" value="&amp;lt;&amp;lt;protocol&amp;gt;&amp;gt;&#xa;&lt;b&gt;SMTP / STARTTLS&lt;/b&gt;&#xa;(Porta 587)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#ca8a04;strokeWidth=2;fontSize=10;align=center;verticalAlign=bottom;" edge="1" parent="1" source="node_cloud_server" target="node_smtp_server">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

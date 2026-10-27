@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net" modified="2026-10-27T15:25:00.000Z" agent="Antigravity Requirements Modeler" version="21.6.8" type="device">
+  <diagram id="diagram-use-cases" name="Diagrama de Casos de Uso - Conecta Intercâmbio">
+    <mxGraphModel dx="1420" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1390" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Limite do Sistema (System Boundary) -->
+        <mxCell id="boundary" value="Sistema Conecta Intercâmbio — Rede Social Acadêmica (Unifor)" style="shape=rect;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fontStyle=1;fontSize=15;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=2;dashed=0;spacingTop=15;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="840" height="980" as="geometry" />
+        </mxCell>
+
+        <!-- Atores à Esquerda (Estudantes) -->
+        <mxCell id="actor_estudante_base" value="Estudante da Unifor&#xa;(Geral)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=12;fillColor=#e2e8f0;strokeColor=#1e293b;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_brasileiro" value="Estudante Brasileiro&#xa;(Outgoing)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=11;fillColor=#dbeafe;strokeColor=#1e40af;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="490" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_internacional" value="Estudante Internacional&#xa;(Incoming)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=11;fillColor=#fef3c7;strokeColor=#b45309;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_ex_intercambista" value="Ex-Intercambista&#xa;(Alumni)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=11;fillColor=#ede9fe;strokeColor=#6d28d9;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="680" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_buddy" value="Estudante Buddy&#xa;(Voluntário Local)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=11;fillColor=#dcfce7;strokeColor=#15803d;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="870" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Generalizações dos Atores de Estudantes para Estudante Geral -->
+        <mxCell id="gen_inter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="actor_internacional" target="actor_estudante_base">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gen_br" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="actor_brasileiro" target="actor_estudante_base">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gen_alumni" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="actor_ex_intercambista" target="actor_estudante_base">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="725" />
+              <mxPoint x="140" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gen_buddy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="actor_buddy" target="actor_brasileiro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Atores à Direita (Governança e Administração) -->
+        <mxCell id="actor_moderador" value="Moderador&#xa;Comunitário" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=12;fillColor=#fee2e2;strokeColor=#b91c1c;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="380" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor_gestor_nei" value="Administrador Institucional&#xa;(Assessoria NEI / Unifor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=12;fillColor=#fef08a;strokeColor=#854d0e;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="680" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Generalização: Gestor NEI herda capacidades do Moderador -->
+        <mxCell id="gen_gestor_mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="actor_gestor_nei" target="actor_moderador">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Casos de Uso Centrais (Elipses) -->
+        <mxCell id="uc01" value="UC01: Autenticar Usuário&#xa;(com Validação de Vínculo)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#2563eb;strokeWidth=2;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="90" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc02" value="UC02: Gerenciar Perfil&#xa;Acadêmico e Idiomas" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="180" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc03" value="UC03: Buscar Estudantes,&#xa;Destinos e Relatos" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="270" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc04" value="UC04: Publicar no Feed&#xa;Acadêmico (Texto/Fotos)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="370" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc05" value="UC05: Interagir com Publicações&#xa;(Curtir e Comentar)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="460" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc06" value="UC06: Consultar Notícias e&#xa;Editais Oficiais" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="550" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc07" value="UC07: Solicitar Conexão com&#xa;Buddy Voluntário" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#d97706;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="580" y="210" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc08" value="UC08: Gerenciar Atribuições&#xa;do Programa de Buddy" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#d97706;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="580" y="860" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc09" value="UC09: Participar de&#xa;Comunidades por Destino" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="640" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc10" value="UC10: Submeter Relato de&#xa;Experiência de Intercâmbio" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="730" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc11" value="UC11: Consultar Agenda de&#xa;Eventos de Integração" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="820" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc12" value="UC12: Publicar Comunicados e&#xa;Editais Oficiais do NEI" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#b45309;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="840" y="730" width="210" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc13" value="UC13: Denunciar Conteúdo,&#xa;Comentário ou Perfil" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#dc2626;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="580" y="440" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc14" value="UC14: Moderar Conteúdos e&#xa;Processar Denúncias" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffffff;strokeColor=#dc2626;strokeWidth=2;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="420" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc15" value="UC15: Exibir Isenção Legal&#xa;em Dicas de Moradia" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f1f5f9;strokeColor=#64748b;strokeWidth=1.5;strokeDasharray=3 3;" vertex="1" parent="1">
+          <mxGeometry x="580" y="340" width="190" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Associações Ator -> Casos de Uso -->
+        <mxCell id="assoc_base_uc01" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc01" />
+        <mxCell id="assoc_base_uc02" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc02" />
+        <mxCell id="assoc_base_uc03" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc03" />
+        <mxCell id="assoc_base_uc04" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc04" />
+        <mxCell id="assoc_base_uc05" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc05" />
+        <mxCell id="assoc_base_uc06" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc06" />
+        <mxCell id="assoc_base_uc09" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc09" />
+        <mxCell id="assoc_base_uc11" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc11" />
+        <mxCell id="assoc_base_uc13" style="strokeColor=#475569;strokeWidth=1.2;endArrow=none;" edge="1" parent="1" source="actor_estudante_base" target="uc13" />
+
+        <mxCell id="assoc_inter_uc07" style="strokeColor=#b45309;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_internacional" target="uc07" />
+        <mxCell id="assoc_alumni_uc10" style="strokeColor=#6d28d9;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_ex_intercambista" target="uc10" />
+        <mxCell id="assoc_buddy_uc08" style="strokeColor=#15803d;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_buddy" target="uc08" />
+
+        <mxCell id="assoc_mod_uc14" style="strokeColor=#b91c1c;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_moderador" target="uc14" />
+        <mxCell id="assoc_gestor_uc12" style="strokeColor=#854d0e;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_gestor_nei" target="uc12" />
+        <mxCell id="assoc_gestor_uc08" style="strokeColor=#854d0e;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_gestor_nei" target="uc08" />
+
+        <!-- Relações Include e Extend -->
+        <!-- UC04 (Publicar no Feed) includes UC01 (Autenticar Usuário) -->
+        <mxCell id="inc_uc04_uc01" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;endFill=0;strokeColor=#2563eb;strokeWidth=1.2;fontSize=10;" edge="1" parent="1" source="uc04" target="uc01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="400" />
+              <mxPoint x="530" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- UC10 (Submeter Relato) includes UC01 (Autenticar Usuário) -->
+        <mxCell id="inc_uc10_uc01" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;endFill=0;strokeColor=#2563eb;strokeWidth=1.2;fontSize=10;" edge="1" parent="1" source="uc10" target="uc01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="760" />
+              <mxPoint x="550" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- UC15 (Exibir Isenção Legal de Moradia) extends UC04 (Publicar no Feed) sob condição de post sobre moradia -->
+        <mxCell id="ext_uc15_uc04" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;&#xa;[post envolve moradia]" style="dashed=1;html=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.2;fontSize=10;verticalAlign=bottom;" edge="1" parent="1" source="uc15" target="uc04" />
+
+        <!-- UC14 (Moderar Conteúdos) extends UC13 (Denunciar Conteúdo) sob condição de denúncia submetida -->
+        <mxCell id="ext_uc14_uc13" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="dashed=1;html=1;endArrow=open;endFill=0;strokeColor=#dc2626;strokeWidth=1.2;fontSize=10;" edge="1" parent="1" source="uc14" target="uc13" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

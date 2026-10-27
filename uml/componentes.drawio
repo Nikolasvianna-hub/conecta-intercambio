@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" modified="2026-10-27T15:27:00.000Z" agent="Antigravity Requirements Modeler" version="21.6.8" type="device">
+  <diagram id="diagram-components" name="Diagrama de Componentes - Conecta Intercâmbio">
+    <mxGraphModel dx="1420" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- CAMADA 1: FRONTEND WEB RESPONSIVO (SPA/PWA) -->
+        <mxCell id="pkg_frontend" value="&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&#xa;Frontend Web Responsivo (Navegador do Cliente)" style="shape=folder;fontStyle=1;tabWidth=190;tabHeight=28;tabPosition=left;html=1;boundedLbl=1;fillColor=#f8fafc;strokeColor=#0284c7;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="1250" height="200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_ui" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Interface do Usuário&lt;/b&gt;&#xa;(UI Components &amp;amp; Views)" style="shape=module;align=center;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="90" y="95" width="220" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_i18n" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Motor de Localização&lt;/b&gt;&#xa;(i18n Engine: PT/EN)" style="shape=module;align=center;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="370" y="95" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_state" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Gerenciador de Estado&lt;/b&gt;&#xa;(State &amp;amp; Cache Store)" style="shape=module;align=center;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="640" y="95" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_http_client" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Cliente de Comunicação&lt;/b&gt;&#xa;(HTTP/REST Client - Axios/Fetch)" style="shape=module;align=center;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="920" y="95" width="230" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dep_ui_i18n" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#0284c7;strokeWidth=1.2;" edge="1" parent="1" source="cmp_ui" target="cmp_i18n" />
+        <mxCell id="dep_ui_state" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#0284c7;strokeWidth=1.2;" edge="1" parent="1" source="cmp_ui" target="cmp_state" />
+        <mxCell id="dep_state_http" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#0284c7;strokeWidth=1.2;" edge="1" parent="1" source="cmp_state" target="cmp_http_client" />
+
+        <!-- CAMADA 2: BACKEND / SERVIÇOS DE APLICAÇÃO (MONÓLITO MODULAR) -->
+        <mxCell id="pkg_backend" value="&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&#xa;Serviços de Backend (Camada de Aplicação &amp;amp; Regras de Negócio)" style="shape=folder;fontStyle=1;tabWidth=230;tabHeight=28;tabPosition=left;html=1;boundedLbl=1;fillColor=#f8fafc;strokeColor=#2563eb;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="1250" height="380" as="geometry" />
+        </mxCell>
+
+        <!-- Gateway de Entrada -->
+        <mxCell id="cmp_gateway" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;API Gateway &amp;amp; Controladores REST&lt;/b&gt;&#xa;(Roteamento, Autenticação JWT, CORS, Validação)" style="shape=module;align=center;html=1;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;fontSize=11;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="350" width="1060" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Interface REST fornecida pelo Backend para o HTTP Client -->
+        <mxCell id="int_rest" value="Interface RESTful (JSON sobre HTTPS)" style="shape=ellipse;html=1;fontSize=10;fontStyle=1;fillColor=#ffffff;strokeColor=#2563eb;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="990" y="250" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk_gateway_rest" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#2563eb;strokeWidth=1.5;" edge="1" parent="1" source="cmp_gateway" target="int_rest" />
+        <mxCell id="lnk_http_rest" style="edgeStyle=none;dashed=1;html=1;endArrow=open;strokeColor=#0284c7;strokeWidth=1.5;" edge="1" parent="1" source="cmp_http_client" target="int_rest" />
+
+        <!-- Módulos de Serviço Internos -->
+        <mxCell id="cmp_auth_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Auth &amp;amp; Identity Module&lt;/b&gt;&#xa;(Validação de Vínculo, Token, Login)&#xa;[RF01, RN02]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="90" y="440" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_profile_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Profile &amp;amp; Search Module&lt;/b&gt;&#xa;(Perfis de Mobilidade, Descoberta)&#xa;[RF02, RF03, RN04]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_feed_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Feed &amp;amp; Interaction Module&lt;/b&gt;&#xa;(Posts, Comentários, Curtidas)&#xa;[RF04, RN06]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="440" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_news_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Institutional News Module&lt;/b&gt;&#xa;(Comunicados Oficiais NEI, Editais)&#xa;[RF05, RN01]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="440" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_buddy_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Buddy Program Module&lt;/b&gt;&#xa;(Voluntariado, Apadrinhamento, Vínculos)&#xa;[RF06, RN03]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="90" y="550" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_community_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Community Module&lt;/b&gt;&#xa;(Grupos por Destino, Idiomas, Fóruns)&#xa;[RF07]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="340" y="550" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_reports_mod" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Exchange Reports Module&lt;/b&gt;&#xa;(Banco de Relatos Estruturados)&#xa;[RF08, RN07]" style="shape=module;align=center;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=1.2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="550" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_mod_audit" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Moderation &amp;amp; Audit Module&lt;/b&gt;&#xa;(Denúncias, Logs de Segurança, Punições)&#xa;[RF10, RF11, RN05, RNF09]" style="shape=module;align=center;html=1;fillColor=#fee2e2;strokeColor=#b91c1c;strokeWidth=1.5;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="840" y="550" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Ligações do Gateway com os Módulos -->
+        <mxCell id="lnk_gw_auth" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="cmp_gateway" target="cmp_auth_mod" />
+        <mxCell id="lnk_gw_feed" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="cmp_gateway" target="cmp_feed_mod" />
+        <mxCell id="lnk_gw_news" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="cmp_gateway" target="cmp_news_mod" />
+
+        <!-- CAMADA 3: PERSISTÊNCIA, INFRAESTRUTURA E SERVIÇOS EXTERNOS -->
+        <mxCell id="pkg_data" value="&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt;&#xa;Camada de Persistência, Armazenamento e Serviços Externos" style="shape=folder;fontStyle=1;tabWidth=250;tabHeight=28;tabPosition=left;html=1;boundedLbl=1;fillColor=#f8fafc;strokeColor=#15803d;strokeWidth=2;verticalAlign=top;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="50" y="720" width="1250" height="210" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_db" value="&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&#xa;&lt;b&gt;Banco de Dados Relacional&lt;/b&gt;&#xa;(PostgreSQL - Perfis, Posts, Comunidades, Logs)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dcfce7;strokeColor=#15803d;strokeWidth=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="160" y="780" width="250" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_storage" value="&amp;lt;&amp;lt;storage&amp;gt;&amp;gt;&#xa;&lt;b&gt;Armazenamento de Mídias&lt;/b&gt;&#xa;(Object Storage S3-Compatible / Bucket de Fotos)" style="shape=folder;fontStyle=0;tabWidth=80;tabHeight=20;tabPosition=left;html=1;boundedLbl=1;fillColor=#dcfce7;strokeColor=#15803d;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="785" width="260" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cmp_email" value="&amp;lt;&amp;lt;external service&amp;gt;&amp;gt;&#xa;&lt;b&gt;Serviço de Notificação e E-mail&lt;/b&gt;&#xa;(SMTP Institucional / Envio de Tokens)" style="shape=module;align=center;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="880" y="785" width="260" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Ligações dos Módulos com a Camada de Dados -->
+        <mxCell id="dep_mod_db" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#15803d;strokeWidth=1.5;" edge="1" parent="1" source="cmp_auth_mod" target="cmp_db" />
+        <mxCell id="dep_feed_storage" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#15803d;strokeWidth=1.5;" edge="1" parent="1" source="cmp_feed_mod" target="cmp_storage" />
+        <mxCell id="dep_auth_email" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#ca8a04;strokeWidth=1.5;" edge="1" parent="1" source="cmp_auth_mod" target="cmp_email" />
+        <mxCell id="dep_mod_audit_db" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;endArrow=open;strokeColor=#b91c1c;strokeWidth=1.5;" edge="1" parent="1" source="cmp_mod_audit" target="cmp_db" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 960" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <style>
+      .pkg-box { fill: #f8fafc; stroke-width: 2; rx: 8; }
+      .pkg-tab { stroke-width: 2; font-size: 13px; font-weight: bold; }
+      .cmp-box { fill: #ffffff; stroke-width: 1.5; rx: 6; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.04)); }
+      .cmp-icon { fill: #ffffff; stroke-width: 1.2; }
+      .cmp-title { font-size: 12px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+      .cmp-subtitle { font-size: 10px; fill: #475569; text-anchor: middle; }
+      .cmp-stereo { font-size: 9.5px; fill: #64748b; text-anchor: middle; font-style: italic; }
+      .dep-line { stroke: #0284c7; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; marker-end: url(#arrow-cyan); }
+      .dep-back { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; marker-end: url(#arrow-slate); }
+      .dep-data { stroke: #15803d; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; marker-end: url(#arrow-green); }
+      .interface-circle { fill: #ffffff; stroke: #2563eb; stroke-width: 2; }
+      .interface-text { font-size: 11px; font-weight: bold; fill: #2563eb; text-anchor: middle; }
+    </style>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284c7" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#15803d" />
+    </marker>
+  </defs>
+
+  <!-- TÍTULO PRINCIPAL -->
+  <text x="675" y="32" font-size="18" font-weight="bold" fill="#0f172a" text-anchor="middle">Diagrama de Componentes — Conecta Intercâmbio</text>
+  <text x="675" y="48" font-size="12" fill="#64748b" text-anchor="middle">Arquitetura Lógica em Camadas (Monólito Modular RESTful) | UML 2.5</text>
+
+  <!-- ========================================== -->
+  <!-- SUBSISTEMA 1: FRONTEND WEB RESPONSIVO      -->
+  <!-- ========================================== -->
+  <g id="pkg-frontend">
+    <path d="M 50 85 L 50 65 L 320 65 L 340 85 L 1300 85 L 1300 240 L 50 240 Z" class="pkg-box" style="stroke: #0284c7; fill: #f0f9ff;" />
+    <text x="70" y="80" class="pkg-tab" fill="#0369a1">&lt;&lt;subsystem&gt;&gt; Frontend Web Responsivo (SPA/PWA - Cliente)</text>
+
+    <!-- Componente UI -->
+    <g id="cmp-ui">
+      <rect x="80" y="110" width="240" height="95" class="cmp-box" style="stroke: #0284c7;" />
+      <!-- UML Component Icon -->
+      <rect x="295" y="118" width="16" height="20" class="cmp-icon" stroke="#0284c7" />
+      <rect x="290" y="122" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <rect x="290" y="130" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <text x="190" y="135" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="190" y="152" class="cmp-title">Interface do Usuário (UI)</text>
+      <text x="190" y="168" class="cmp-subtitle">Views, Forms, Feeds e Modais</text>
+      <text x="190" y="182" class="cmp-subtitle">Design System Acessível (WCAG)</text>
+    </g>
+
+    <!-- Componente i18n -->
+    <g id="cmp-i18n">
+      <rect x="380" y="110" width="220" height="95" class="cmp-box" style="stroke: #0284c7;" />
+      <rect x="575" y="118" width="16" height="20" class="cmp-icon" stroke="#0284c7" />
+      <rect x="570" y="122" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <rect x="570" y="130" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <text x="490" y="135" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="490" y="152" class="cmp-title">Motor de Localização</text>
+      <text x="490" y="168" class="cmp-subtitle">i18n Engine (pt-BR / en-US)</text>
+      <text x="490" y="182" class="cmp-subtitle">Alternância Dinâmica [RF13]</text>
+    </g>
+
+    <!-- Componente State Store -->
+    <g id="cmp-state">
+      <rect x="660" y="110" width="230" height="95" class="cmp-box" style="stroke: #0284c7;" />
+      <rect x="865" y="118" width="16" height="20" class="cmp-icon" stroke="#0284c7" />
+      <rect x="860" y="122" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <rect x="860" y="130" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <text x="775" y="135" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="775" y="152" class="cmp-title">Gerenciador de Estado</text>
+      <text x="775" y="168" class="cmp-subtitle">Sessão do Usuário e Cache Local</text>
+      <text x="775" y="182" class="cmp-subtitle">Filtros Ativos e Estado Global</text>
+    </g>
+
+    <!-- Componente HTTP Client -->
+    <g id="cmp-http">
+      <rect x="950" y="110" width="280" height="95" class="cmp-box" style="stroke: #0284c7;" />
+      <rect x="1205" y="118" width="16" height="20" class="cmp-icon" stroke="#0284c7" />
+      <rect x="1200" y="122" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <rect x="1200" y="130" width="10" height="4" class="cmp-icon" stroke="#0284c7" />
+      <text x="1090" y="135" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="1090" y="152" class="cmp-title">Cliente de Comunicação HTTP</text>
+      <text x="1090" y="168" class="cmp-subtitle">Axios / Fetch Client (JWT Auth)</text>
+      <text x="1090" y="182" class="cmp-subtitle">Interceptors de Erro e Retry</text>
+    </g>
+
+    <!-- Dependências Internas Frontend -->
+    <line x1="320" y1="155" x2="380" y2="155" class="dep-line" />
+    <line x1="600" y1="155" x2="660" y2="155" class="dep-line" />
+    <line x1="890" y1="155" x2="950" y2="155" class="dep-line" />
+  </g>
+
+  <!-- INTERFACE REST ENTRE FRONTEND E BACKEND -->
+  <g id="interface-rest">
+    <line x1="1090" y1="205" x2="1090" y2="250" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-cyan)" />
+    <circle cx="1090" cy="270" r="10" class="interface-circle" />
+    <text x="1090" y="295" class="interface-text">Interface RESTful API (HTTPS / JSON)</text>
+    <line x1="1090" y1="280" x2="1090" y2="330" stroke="#2563eb" stroke-width="2" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- SUBSISTEMA 2: BACKEND / SERVIÇOS           -->
+  <!-- ========================================== -->
+  <g id="pkg-backend">
+    <path d="M 50 330 L 50 310 L 360 310 L 380 330 L 1300 330 L 1300 670 L 50 670 Z" class="pkg-box" style="stroke: #2563eb; fill: #eff6ff;" />
+    <text x="70" y="325" class="pkg-tab" fill="#1d4ed8">&lt;&lt;subsystem&gt;&gt; Camada de Aplicação &amp; Regras de Negócio (Backend REST API)</text>
+
+    <!-- Componente API Gateway -->
+    <g id="cmp-gateway">
+      <rect x="80" y="350" width="1180" height="55" class="cmp-box" style="stroke: #2563eb; fill: #dbeafe;" />
+      <text x="670" y="372" class="cmp-title" font-size="13">API Gateway &amp; Roteador Central (Controllers, Auth Middleware JWT, CORS, Rate Limit)</text>
+      <text x="670" y="390" class="cmp-subtitle">Ponto Único de Entrada e Validação de Requisições [RNF01, RNF05]</text>
+    </g>
+
+    <!-- Linha 1 de Módulos (y=430) -->
+    <!-- Módulo Auth -->
+    <g id="cmp-auth">
+      <rect x="80" y="430" width="265" height="95" class="cmp-box" style="stroke: #475569;" />
+      <text x="212" y="452" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="212" y="470" class="cmp-title">Auth &amp; Identity Module</text>
+      <text x="212" y="488" class="cmp-subtitle">Validação de Vínculo (@edu.unifor.br)</text>
+      <text x="212" y="504" class="cmp-subtitle">Criptografia de Senhas [RF01, RN02]</text>
+    </g>
+
+    <!-- Módulo Profile -->
+    <g id="cmp-profile">
+      <rect x="385" y="430" width="265" height="95" class="cmp-box" style="stroke: #475569;" />
+      <text x="517" y="452" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="517" y="470" class="cmp-title">Profile &amp; Discovery Module</text>
+      <text x="517" y="488" class="cmp-subtitle">Perfis de Mobilidade e Idiomas</text>
+      <text x="517" y="504" class="cmp-subtitle">Busca por Destino [RF02, RF03, RN04]</text>
+    </g>
+
+    <!-- Módulo Feed -->
+    <g id="cmp-feed">
+      <rect x="690" y="430" width="265" height="95" class="cmp-box" style="stroke: #475569;" />
+      <text x="822" y="452" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="822" y="470" class="cmp-title">Feed &amp; Post Module</text>
+      <text x="822" y="488" class="cmp-subtitle">Posts, Comentários e Curtidas</text>
+      <text x="822" y="504" class="cmp-subtitle">Isenção de Moradia [RF04, RF15, RN08]</text>
+    </g>
+
+    <!-- Módulo News -->
+    <g id="cmp-news">
+      <rect x="995" y="430" width="265" height="95" class="cmp-box" style="stroke: #475569;" />
+      <text x="1127" y="452" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="1127" y="470" class="cmp-title">Official News Module</text>
+      <text x="1127" y="488" class="cmp-subtitle">Editais e Comunicados NEI</text>
+      <text x="1127" y="504" class="cmp-subtitle">Publicação Exclusiva [RF05, RN01]</text>
+    </g>
+
+    <!-- Linha 2 de Módulos (y=550) -->
+    <!-- Módulo Buddy -->
+    <g id="cmp-buddy">
+      <rect x="80" y="550" width="265" height="95" class="cmp-box" style="stroke: #15803d; fill: #f0fdf4;" />
+      <text x="212" y="572" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="212" y="590" class="cmp-title" fill="#166534">Buddy Mentorship Module</text>
+      <text x="212" y="608" class="cmp-subtitle">Voluntariado e Pareamento</text>
+      <text x="212" y="624" class="cmp-subtitle">Acolhimento Discente [RF06, RN03]</text>
+    </g>
+
+    <!-- Módulo Comunidades -->
+    <g id="cmp-comm">
+      <rect x="385" y="550" width="265" height="95" class="cmp-box" style="stroke: #475569;" />
+      <text x="517" y="572" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="517" y="590" class="cmp-title">Community &amp; Events Module</text>
+      <text x="517" y="608" class="cmp-subtitle">Grupos por Destino e Calendário</text>
+      <text x="517" y="624" class="cmp-subtitle">Troca Cultural [RF07, RF09, RN09]</text>
+    </g>
+
+    <!-- Módulo Relatos -->
+    <g id="cmp-rep">
+      <rect x="690" y="550" width="265" height="95" class="cmp-box" style="stroke: #7c3aed; fill: #faf5ff;" />
+      <text x="822" y="572" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="822" y="590" class="cmp-title" fill="#581c87">Exchange Reports Module</text>
+      <text x="822" y="608" class="cmp-subtitle">Depoimentos Estruturados de Alumni</text>
+      <text x="822" y="624" class="cmp-subtitle">Dicas de Moradia/Custo [RF08, RN07]</text>
+    </g>
+
+    <!-- Módulo Moderação -->
+    <g id="cmp-mod">
+      <rect x="995" y="550" width="265" height="95" class="cmp-box" style="stroke: #dc2626; fill: #fef2f2;" />
+      <text x="1127" y="572" class="cmp-stereo">&lt;&lt;component&gt;&gt;</text>
+      <text x="1127" y="590" class="cmp-title" fill="#991b1b">Moderation &amp; Audit Module</text>
+      <text x="1127" y="608" class="cmp-subtitle">Fila de Denúncias e Auditoria</text>
+      <text x="1127" y="624" class="cmp-subtitle">Punições [RF10, RF11, RN05, RNF09]</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- SUBSISTEMA 3: DADOS & SERVIÇOS EXTERNOS    -->
+  <!-- ========================================== -->
+  <g id="pkg-data">
+    <path d="M 50 715 L 50 695 L 400 695 L 420 715 L 1300 715 L 1300 930 L 50 930 Z" class="pkg-box" style="stroke: #15803d; fill: #f0fdf4;" />
+    <text x="70" y="710" class="pkg-tab" fill="#166534">&lt;&lt;subsystem&gt;&gt; Camada de Persistência, Armazenamento e Serviços Externos</text>
+
+    <!-- Banco de Dados Relacional -->
+    <g id="cmp-db">
+      <path d="M 120 760 C 120 748 380 748 380 760 L 380 860 C 380 872 120 872 120 860 Z" fill="#ffffff" stroke="#15803d" stroke-width="2" />
+      <path d="M 120 760 C 120 772 380 772 380 760" fill="none" stroke="#15803d" stroke-width="2" />
+      <text x="250" y="795" class="cmp-stereo">&lt;&lt;database&gt;&gt;</text>
+      <text x="250" y="815" class="cmp-title" fill="#14532d">Banco Relacional (PostgreSQL)</text>
+      <text x="250" y="833" class="cmp-subtitle">Tabelas de Usuários, Vínculos, Posts,</text>
+      <text x="250" y="848" class="cmp-subtitle">Denúncias e Logs Indeléveis [RNF09]</text>
+    </g>
+
+    <!-- Armazenamento de Arquivos / S3 -->
+    <g id="cmp-storage">
+      <rect x="490" y="750" width="340" height="130" class="cmp-box" style="stroke: #15803d;" />
+      <text x="660" y="785" class="cmp-stereo">&lt;&lt;storage&gt;&gt;</text>
+      <text x="660" y="805" class="cmp-title" fill="#14532d">Armazenamento de Mídias (Object Storage)</text>
+      <text x="660" y="825" class="cmp-subtitle">Bucket S3-Compatible / CDN</text>
+      <text x="660" y="843" class="cmp-subtitle">Fotos de Perfil, Mídias de Posts e Anexos PDF</text>
+      <text x="660" y="858" class="cmp-subtitle">Metadados de Vídeos [RF04, RF12, RNF05]</text>
+    </g>
+
+    <!-- Serviço de E-mail / Notificação -->
+    <g id="cmp-smtp">
+      <rect x="940" y="750" width="320" height="130" class="cmp-box" style="stroke: #ca8a04; fill: #fefce8;" />
+      <text x="1100" y="785" class="cmp-stereo">&lt;&lt;external service&gt;&gt;</text>
+      <text x="1100" y="805" class="cmp-title" fill="#854d0e">Servidor SMTP de Notificação</text>
+      <text x="1100" y="825" class="cmp-subtitle">Envio de Tokens de Ativação Institucional</text>
+      <text x="1100" y="843" class="cmp-subtitle">Alertas Críticos de Moderação e Editais NEI</text>
+      <text x="1100" y="858" class="cmp-subtitle">SMTP TLS Porta 587 [RF01, RF14]</text>
+    </g>
+
+    <!-- Linhas de Dependência Backend -> Dados -->
+    <line x1="212" y1="525" x2="250" y2="745" class="dep-data" />
+    <line x1="822" y1="525" x2="660" y2="750" class="dep-data" />
+    <line x1="1127" y1="645" x2="1100" y2="750" class="dep-data" style="stroke: #ca8a04;" />
+    <line x1="1127" y1="645" x2="380" y2="810" class="dep-data" style="stroke: #dc2626;" />
+  </g>
+</svg>
