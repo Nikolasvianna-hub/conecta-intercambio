@@ -21,7 +21,7 @@ Diferenciando-se de redes sociais comerciais e genéricas (como Instagram ou Wha
 
 ## 2. Status do Repositório e da Sprint 1 (P1)
 
-- **Repositório GitHub:** `[INSERIR_LINK_DO_REPOSITORIO_GITHUB]` *(Ex: https://github.com/usuario/conecta-intercambio)*
+- **Repositório GitHub:** `https://github.com/Nikolasvianna-hub/conecta-intercambio.git`
 - **Adição do Avaliador (`marcelobezerra-dotcom`):** ⚠️ **Pendente de Confirmação Manual** (Consulte instruções em [docs/pendencias-entrega.md](docs/pendencias-entrega.md)).
 - **Ciclo Epistemológico:** Modelagem conceitual e especificação de requisitos concluídas; instrumentos de pesquisa de campo estruturados; entrevistas reais em fase de agendamento/coleta.
 
