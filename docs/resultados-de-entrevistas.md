@@ -11,7 +11,7 @@ Este documento destina-se ao registro, consolidação analítica e rastreabilida
 > Este documento não contém participantes fictícios, percentuais artificiais nem citações apresentadas como reais. A situação de cada registro está descrita com transparência na Seção 0:
 > - **Roteiros A e B (estudantes):** uma rodada de entrevista registrada, conduzida por integrante da equipe, com fichas preenchidas em [`fichas_de_registro_entrevista.pdf`](fichas_de_registro_entrevista.pdf).
 > - **Roteiro C (Assessoria NEI):** **ainda não houve entrevista com a assessoria**. A ficha correspondente foi preenchida apenas com as hipóteses da equipe, explicitamente marcadas como tal.
-> - As frases da seção "Evidências Relevantes" das fichas estão marcadas como **exemplos ilustrativos, não citações literais**.
+> - As frases do campo "Síntese da Equipe" das fichas são **paráfrases da equipe, não citações literais**.
 >
 > Os requisitos da P1 se apoiam, portanto, em três fontes combinadas: documentos institucionais de referência, hipóteses da equipe (Seção 2) e os indícios da primeira rodada de entrevistas (Seção 4).
 
@@ -26,86 +26,21 @@ Este documento destina-se ao registro, consolidação analítica e rastreabilida
 | **PART-C01** | Roteiro C (Assessoria NEI) | Assessoria de Relações Internacionais / NEI | (a agendar) | **Pendente** | Ficha 3 do PDF contém só hipóteses; nenhuma diretriz institucional obtida |
 
 > [!NOTE]
-> Nos registros desta rodada, o nome do participante aparece no PDF original. Neste documento a equipe adota códigos anônimos, conforme as diretrizes éticas do [roteiro de entrevistas](roteiro-de-entrevistas.md).
+> Os participantes são identificados apenas por códigos anônimos, conforme as diretrizes éticas do [roteiro de entrevistas](roteiro-de-entrevistas.md) e a LGPD.
 
 ---
 
-## 1. Estrutura Padronizada para Registro de Entrevistas (Pronta para Preenchimento)
+## 1. Instrumento de Registro
 
-Abaixo constam as fichas padronizadas que serão preenchidas pela equipe de requisitos após a realização de cada entrevista semiestruturada.
+Cada entrevista é registrada em uma ficha padronizada, com os mesmos blocos do [roteiro de entrevistas](roteiro-de-entrevistas.md). Os campos são: código anônimo do participante, entrevistador, respostas por bloco, problemas e dores declarados, necessidades manifestadas, sugestões espontâneas, síntese da equipe, requisitos relacionados, incertezas e status do registro (Pendente de Coleta, Coletado ou Tabulado e Validado por Pares).
 
----
+As fichas preenchidas da Sprint 1 estão em [`fichas_de_registro_entrevista.pdf`](fichas_de_registro_entrevista.pdf):
 
-### Ficha de Registro - Estudante Internacional (*Incoming*)
-
-```markdown
-#### Registro: [Código Anônimo - Ex: PART-A01]
-- **Perfil do Participante:** [País de origem, curso na universidade de origem, curso equivalente na Unifor, tempo de permanência no Brasil] *(Não coletar nome nem dados sensíveis)*.
-- **Data da Entrevista:** [DD/MM/AAAA] | **Horário:** [HH:MM] às [HH:MM].
-- **Método / Formato:** [Presencial no Campus / Videoconferência via Google Meet / Questionário guiado].
-- **Entrevistadores Responsáveis:** [Nome dos discentes da equipe de requisitos].
-- **Idioma Utilizado:** [Português / Inglês / Espanhol].
-- **Resumo das Declarações por Bloco:**
-  - *Bloco 1 (Preparação e Chegada):* [Anotações e transcrição sintetizada das respostas do participante].
-  - *Bloco 2 (Canais e Integração):* [Anotações e transcrição sintetizada].
-  - *Bloco 3 (Suporte por Pares e Privacidade):* [Anotações e transcrição sintetizada].
-  - *Bloco 4 (Conteúdos e Fechamento):* [Anotações e transcrição sintetizada].
-- **Problemas e Dores Declaradas:** [Lista de obstáculos e dificuldades concretas vivenciadas pelo participante].
-- **Necessidades Específicas Manifestadas:** [Demandas funcionais ou informativas apontadas espontaneamente].
-- **Sugestões Espontâneas:** [Ideias e recomendações fornecidas pelo participante].
-- **Evidências Relevantes (Citações Diretas Anônimas):** *"[Citação representativa da declaração do entrevistado]"*.
-- **Requisitos Potencialmente Derivados ou Refinados:** [Ex.: Refinamento de RF06, criação de novo critério em RF08].
-- **Incertezas / Pontos a Investigar em Próximas Sessões:** [Questões que permaneceram dúbias ou necessitam de validação técnica].
-- **Status do Registro:** [ ] Pendente de Coleta | [ ] Coletado | [ ] Tabulado e Validado por Pares.
-```
-
----
-
-### Ficha de Registro - Estudante Brasileiro (*Outgoing*) / Ex-Intercambista (*Alumni*)
-
-```markdown
-#### Registro: [Código Anônimo - Ex: PART-B01]
-- **Perfil do Participante:** [Curso na Unifor, semestre, status de mobilidade: Interessado / Inscrito em Edital / Ex-intercambista (país e universidade de destino)] *(Sem dados sensíveis)*.
-- **Data da Entrevista:** [DD/MM/AAAA] | **Horário:** [HH:MM] às [HH:MM].
-- **Método / Formato:** [Presencial / Videoconferência / Questionário guiado].
-- **Entrevistadores Responsáveis:** [Nome dos discentes da equipe].
-- **Resumo das Declarações por Bloco:**
-  - *Bloco 1 (Jornada de Mobilidade e Informações):* [Anotações detalhadas].
-  - *Bloco 2 (Troca de Experiências e Relatos):* [Anotações detalhadas].
-  - *Bloco 3 (Idiomas e Programa de Buddy):* [Anotações detalhadas].
-  - *Bloco 4 (Formatos e Barreiras):* [Anotações detalhadas].
-- **Problemas e Dores Declaradas:** [Obstáculos informativos e burocráticos relatados].
-- **Necessidades Específicas Manifestadas:** [Demandas práticas para escolha de destino, moradia e contato].
-- **Sugestões Espontâneas:** [Recomendações para a plataforma e incentivos para compartilhamento de relatos].
-- **Evidências Relevantes (Citações Diretas Anônimas):** *"[Citação representativa]"*.
-- **Requisitos Potencialmente Derivados ou Refinados:** [Ex.: Refinamento de RF09, confirmação de RN03].
-- **Incertezas / Dúvidas Restantes:** [Pontos a aprofundar].
-- **Status do Registro:** [ ] Pendente de Coleta | [ ] Coletado | [ ] Tabulado e Validado por Pares.
-```
-
----
-
-### Ficha de Registro - Representante da Internacionalização (Assessoria NEI)
-
-```markdown
-#### Registro: [Código Anônimo - Ex: PART-C01]
-- **Perfil do Participante:** [Função institucional genérica na Assessoria de Relações Internacionais / NEI] *(Sem nomes de servidores ou cargos nominais)*.
-- **Data da Entrevista:** [DD/MM/AAAA] | **Horário:** [HH:MM] às [HH:MM].
-- **Método / Formato:** [Reunião formal presencial / Videoconferência institucional].
-- **Entrevistadores Responsáveis:** [Equipe de requisitos].
-- **Resumo das Declarações por Bloco:**
-  - *Bloco 1 (Processos Institucionais e Comunicação):* [Anotações oficiais].
-  - *Bloco 2 (Governança, Moderação e Moradia):* [Diretrizes institucionais apontadas].
-  - *Bloco 3 (Perfis, Vínculos e Integração Tecnológica):* [Critérios de validação de vínculo discente].
-  - *Bloco 4 (Expectativas e Riscos Institucionais):* [Metas e restrições mandatórias].
-- **Problemas Institucionais Apontados:** [Gargalos de atendimento no balcão, retrabalho com editais].
-- **Necessidades de Gestão Manifestadas:** [Controle de publicações oficiais, rastreabilidade de denúncias].
-- **Diretrizes Mandatórias de Negócio:** [Definição de permissões e termos de isenção de responsabilidade].
-- **Evidências Relevantes:** *"[Posicionamento institucional anônimo sintetizado]"*.
-- **Requisitos e Regras de Negócio Validadas:** [Ex.: Validação de RN01, RN02, RN05 e RN08].
-- **Pendências de Homologação Institucional:** [Minutas de termos que dependem de apreciação jurídica da universidade].
-- **Status do Registro:** [ ] Pendente de Coleta | [ ] Coletado | [ ] Tabulado e Validado por Pares.
-```
+| Ficha | Roteiro | Participante | Status |
+| :---: | :--- | :---: | :---: |
+| 1 | Roteiro A (Incoming) | PART-A01 | Coletado |
+| 2 | Roteiro B (Outgoing / Alumni) | PART-B01 | Coletado |
+| 3 | Roteiro C (Assessoria NEI) | PART-C01 | Pendente de Coleta (contém apenas as hipóteses a levar à assessoria) |
 
 ---
 
@@ -165,7 +100,7 @@ Síntese das fichas registradas em [`fichas_de_registro_entrevista.pdf`](fichas_
 1. **Amostra mínima:** um único participante respondeu aos roteiros A e B; os achados são indícios qualitativos, não validação.
 2. **Perfil incoming a confirmar:** as fichas indicam a necessidade de repetir o Roteiro A com intercambistas estrangeiros efetivamente matriculados na Unifor.
 3. **NEI não entrevistado:** RN01, RN02, RN03, RN05 e RN08 continuam como propostas da equipe até a reunião com a assessoria.
-4. **Evidências ilustrativas:** as frases de evidência das fichas foram redigidas pela equipe como exemplo e não devem ser citadas como falas literais.
+4. **Sínteses parafraseadas:** as frases de síntese das fichas foram redigidas pela equipe a partir das respostas e não devem ser citadas como falas literais.
 
 ### 4.4. Próximas ações de elicitação (Sprint 2)
 - Aplicar o Roteiro A com pelo menos 2 intercambistas *incoming* e o Roteiro B com pelo menos 2 ex-intercambistas.

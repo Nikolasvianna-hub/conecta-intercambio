@@ -22,7 +22,7 @@ Diferenciando-se de redes sociais comerciais e genéricas (como Instagram ou Wha
 ## 2. Status do Repositório e da Sprint 1 (P1)
 
 - **Repositório GitHub:** `https://github.com/Nikolasvianna-hub/conecta-intercambio.git`
-- **Adição do Avaliador (`marcelobezerra-dotcom`):** ⚠️ **Pendente de Confirmação Manual** (Consulte instruções em [docs/pendencias-entrega.md](docs/pendencias-entrega.md)).
+- **Adição do Avaliador (`marcelobezerra-dotcom`):** ✅ **Convite enviado em 02/11/2026** (evidência em [docs/evidencias/convite-marcelobezerra-dotcom.png](docs/evidencias/convite-marcelobezerra-dotcom.png)).
 - **Ciclo Epistemológico:** Modelagem conceitual e especificação de requisitos concluídas; roteiros de entrevista estruturados; 1ª rodada de entrevistas com estudantes registrada e consolidada; entrevista com a Assessoria NEI pendente.
 
 ---
@@ -43,7 +43,8 @@ conecta-intercambio/
 │   ├── backlog.md                 # Product Backlog em Épicos, User Stories e MoSCoW
 │   ├── rastreabilidade.md         # Matriz de Rastreabilidade Bidirecional (Forward/Backward)
 │   ├── glossario.md               # Vocabulário padrão de domínio e engenharia de software
-│   └── pendencias-entrega.md      # Procedimentos para adição do avaliador e checklist AVA
+│   ├── pendencias-entrega.md      # Convite ao avaliador e checklist AVA
+│   └── evidencias/                # Print do convite a marcelobezerra-dotcom
 └── uml/                           # Modelos visuais em notação UML 2.5 padronizada
     ├── casos-de-uso.drawio        # Arquivo-fonte editável do Diagrama de Casos de Uso
     ├── casos-de-uso.svg           # Exportação vetorial do Diagrama de Casos de Uso
@@ -72,7 +73,7 @@ A tabela a seguir consolida os entregáveis da disciplina, seus arquivos corresp
 | **9. Diagrama de Casos de Uso** | [uml/casos-de-uso.drawio](uml/casos-de-uso.drawio) <br> [uml/casos-de-uso.svg](uml/casos-de-uso.svg) | Draw.io / SVG | Atores, limite do sistema, casos de uso, `<<include>>` e `<<extend>>`. |
 | **10. Diagrama de Componentes** | [uml/componentes.drawio](uml/componentes.drawio) <br> [uml/componentes.svg](uml/componentes.svg) | Draw.io / SVG | Arquitetura em camadas (Frontend SPA, Backend REST API, DB, S3 e SMTP). |
 | **11. Diagrama de Implantação** | [uml/implantacao.drawio](uml/implantacao.drawio) <br> [uml/implantacao.svg](uml/implantacao.svg) | Draw.io / SVG | Topologia de nós físicos e lógicos, artefatos e protocolos de comunicação. |
-| **12. Pendências e Evidências** | [docs/pendencias-entrega.md](docs/pendencias-entrega.md) | Markdown | Procedimento para convite de `marcelobezerra-dotcom` e checklist AVA. |
+| **12. Pendências e Evidências** | [docs/pendencias-entrega.md](docs/pendencias-entrega.md) <br> [docs/evidencias/](docs/evidencias/convite-marcelobezerra-dotcom.png) | Markdown / PNG | Registro do convite a `marcelobezerra-dotcom` e checklist AVA. |
 
 ---
 

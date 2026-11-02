@@ -7,7 +7,7 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
 ## 1. Adição do Avaliador ao Repositório GitHub
 
 > [!IMPORTANT]
-> **Status Atual:** ⚠️ **PENDENTE DE CONFIRMAÇÃO PELO PROPRIETÁRIO DO REPOSITÓRIO**
+> **Status Atual:** ✅ **CONVITE ENVIADO EM 02/11/2026 (aguardando aceite do avaliador)**
 >
 > A inclusão do professor/avaliador como colaborador do repositório é um requisito obrigatório para a avaliação no Ambiente Virtual de Aprendizagem (AVA / Unifor Online). Essa ação só pode ser feita pelo proprietário do repositório (conta `Nikolasvianna-hub`), em *Settings → Collaborators*.
 
@@ -29,7 +29,7 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
    - O nome do repositório;
    - O usuário `marcelobezerra-dotcom` listado como colaborador convidado ou ativo;
    - A data e horário do sistema visíveis.
-10. Salve a imagem comprobatória nesta pasta ou referencie-a na submissão do AVA conforme o modelo abaixo.
+10. Salve a imagem comprobatória em `docs/evidencias/` e anexe-a também na submissão do AVA.
 
 ---
 
@@ -38,10 +38,10 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
 | Campo | Registro / Evidência |
 | :--- | :--- |
 | **Link Oficial do Repositório GitHub** | https://github.com/Nikolasvianna-hub/conecta-intercambio |
-| **Data do Envio do Convite** | `[DD/MM/AAAA - HH:MM]` |
-| **Status do Convite** | `[ ] Pendente de Envio` <br> `[ ] Enviado (Aguardando Aceite)` <br> `[ ] Aceito e Ativo` |
-| **Arquivo de Captura de Tela (Print)** | `docs/evidencias/convite-marcelobezerra-dotcom.png` *(ou link de anexo no AVA)* |
-| **Responsável pelo Envio no Grupo** | `[Nome do Aluno / Matrícula]` |
+| **Data do Envio do Convite** | 02/11/2026, por volta de 16:10 (horário de Fortaleza) |
+| **Status do Convite** | Enviado (Pending Invite, aguardando aceite de `marcelobezerra-dotcom`) |
+| **Arquivo de Captura de Tela (Print)** | [docs/evidencias/convite-marcelobezerra-dotcom.png](evidencias/convite-marcelobezerra-dotcom.png) |
+| **Responsável pelo Envio no Grupo** | Nikolas (`Nikolasvianna-hub`, proprietário do repositório) |
 
 ---
 
@@ -49,9 +49,9 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
 
 Antes do fechamento do prazo estipulado (Sprint 1: 20/10/2026 a 02/11/2026), certifique-se de validar todos os itens da tabela:
 
-- [ ] Repositório GitHub público ou privado com acesso garantido ao usuário `marcelobezerra-dotcom`.
-- [ ] Link do repositório testado e acessível.
-- [ ] Evidência de acesso de `marcelobezerra-dotcom` anexada no campo de submissão do AVA ou pasta de evidências.
+- [x] Repositório GitHub público ou privado com acesso garantido ao usuário `marcelobezerra-dotcom`.
+- [x] Link do repositório testado e acessível.
+- [x] Evidência de acesso de `marcelobezerra-dotcom` anexada no campo de submissão do AVA ou pasta de evidências.
 - [x] Todos os entregáveis obrigatórios presentes na branch principal (`main`):
   1. `docs/documento-de-visao.md`
   2. `docs/stakeholders.md`
@@ -65,3 +65,5 @@ Antes do fechamento do prazo estipulado (Sprint 1: 20/10/2026 a 02/11/2026), cer
 - [x] `README.md` estruturado com links relativos funcionais direcionando para todos os artefatos.
 - [x] Ausência de dados fictícios disfarçados de resultados empíricos reais (status de validação devidamente explícitos).
 - [x] Fichas da 1ª rodada de entrevistas anexadas (`docs/fichas_de_registro_entrevista.pdf`) e consolidadas em `docs/resultados-de-entrevistas.md`.
+
+![Evidência do convite ao avaliador](evidencias/convite-marcelobezerra-dotcom.png)
