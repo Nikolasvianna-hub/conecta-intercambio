@@ -23,7 +23,7 @@ Diferenciando-se de redes sociais comerciais e genéricas (como Instagram ou Wha
 
 - **Repositório GitHub:** `https://github.com/Nikolasvianna-hub/conecta-intercambio.git`
 - **Adição do Avaliador (`marcelobezerra-dotcom`):** ✅ **Convite enviado em 02/11/2026** (evidência em [docs/evidencias/convite-marcelobezerra-dotcom.png](docs/evidencias/convite-marcelobezerra-dotcom.png)).
-- **Ciclo Epistemológico:** Modelagem conceitual e especificação de requisitos concluídas; roteiros de entrevista estruturados; 1ª rodada de entrevistas com estudantes registrada e consolidada; entrevista com a Assessoria NEI pendente.
+- **Ciclo Epistemológico:** Modelagem conceitual e especificação de requisitos concluídas; roteiros de entrevista estruturados; 6 estudantes entrevistados e consolidados; entrevista com a Assessoria NEI pendente.
 
 ---
 
@@ -65,10 +65,10 @@ A tabela a seguir consolida os entregáveis da disciplina, seus arquivos corresp
 | **1. Documento de Visão** | [docs/documento-de-visao.md](docs/documento-de-visao.md) | Markdown | Problema investigado, justificativa, MVP, restrições e premissas. |
 | **2. Identificação de Stakeholders** | [docs/stakeholders.md](docs/stakeholders.md) | Markdown | 10 perfis de stakeholders, matriz Mendelow e estratégias de engajamento. |
 | **3. Roteiro de Entrevistas** | [docs/roteiro-de-entrevistas.md](docs/roteiro-de-entrevistas.md) | Markdown | Protocolo metodológico neutro para estudantes e gestores do NEI. |
-| **4. Resultados de Entrevistas** | [docs/resultados-de-entrevistas.md](docs/resultados-de-entrevistas.md) <br> [docs/fichas_de_registro_entrevista.pdf](docs/fichas_de_registro_entrevista.pdf) | Markdown / PDF | Situação da coleta, síntese da 1ª rodada com estudantes, hipóteses e limitações. |
-| **5. Requisitos de Software** | [docs/requisitos.md](docs/requisitos.md) | Markdown | 15 Requisitos Funcionais (RF) e 10 Não Funcionais (RNF) com critérios verificáveis. |
+| **4. Resultados de Entrevistas** | [docs/resultados-de-entrevistas.md](docs/resultados-de-entrevistas.md) <br> [docs/fichas_de_registro_entrevista.pdf](docs/fichas_de_registro_entrevista.pdf) | Markdown / PDF | 8 fichas de registro, síntese por tema de 6 entrevistados, decisões de escopo e limitações. |
+| **5. Requisitos de Software** | [docs/requisitos.md](docs/requisitos.md) | Markdown | 16 Requisitos Funcionais (RF) e 10 Não Funcionais (RNF), refinados pelas entrevistas. |
 | **6. Regras de Negócio** | [docs/regras-de-negocio.md](docs/regras-de-negocio.md) | Markdown | 10 Regras de Negócio (RN) cobrindo moderação, privacidade, moradia e vínculo. |
-| **7. Backlog Priorizado** | [docs/backlog.md](docs/backlog.md) | Markdown | 14 User Stories da Sprint 1 em 6 Épicos (49 SP Must + 21 SP Should), mais 4 itens futuros. |
+| **7. Backlog Priorizado** | [docs/backlog.md](docs/backlog.md) | Markdown | 15 User Stories da Sprint 1 em 6 Épicos (49 SP Must + 26 SP Should), mais 6 itens futuros. |
 | **8. Rastreabilidade e Glossário** | [docs/rastreabilidade.md](docs/rastreabilidade.md) <br> [docs/glossario.md](docs/glossario.md) | Markdown | Matriz bidirecional completa e vocabulário técnico padronizado. |
 | **9. Diagrama de Casos de Uso** | [uml/casos-de-uso.drawio](uml/casos-de-uso.drawio) <br> [uml/casos-de-uso.svg](uml/casos-de-uso.svg) | Draw.io / SVG | Atores, limite do sistema, casos de uso, `<<include>>` e `<<extend>>`. |
 | **10. Diagrama de Componentes** | [uml/componentes.drawio](uml/componentes.drawio) <br> [uml/componentes.svg](uml/componentes.svg) | Draw.io / SVG | Arquitetura em camadas (Frontend SPA, Backend REST API, DB, S3 e SMTP). |
@@ -113,7 +113,7 @@ Modela a topologia física conceitual de hardware, nós de execução e protocol
 
 ## 7. Próximos Passos (Transição para a Sprint 2 / P2)
 
-1. **Execução das Entrevistas de Campo:** Aplicação dos roteiros semiestruturados com estudantes internacionais e brasileiros no campus da Unifor.
+1. **Ampliação das Entrevistas de Campo:** Aplicação dos roteiros com ex-intercambistas e estudantes internacionais, ainda ausentes da amostra.
 2. **Reunião de Alinhamento com a Assessoria NEI:** Validação formal das regras de negócio de comunicados oficiais (RN01) e termos de isenção de moradia (RN08).
 3. **Prototipação de Baixa e Alta Fidelidade:** Elaboração de wireframes navegáveis baseados nos fluxos dos casos de uso modelados.
 4. **Refinamento do Modelo de Dados:** Criação do Diagrama Entidade-Relacionamento (DER) e modelagem de classes de domínio.

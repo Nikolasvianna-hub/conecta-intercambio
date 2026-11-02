@@ -7,7 +7,7 @@ Este documento apresenta a especificação detalhada dos **Requisitos Funcionais
 ## 1. Convenções e Metodologia de Classificação
 
 Cada requisito é especificado contendo:
-- **ID:** Código identificador único sequencial (`RF01` a `RF15` para funcionais; `RNF01` a `RNF10` para não funcionais).
+- **ID:** Código identificador único sequencial (`RF01` a `RF16` para funcionais; `RNF01` a `RNF10` para não funcionais).
 - **Nome:** Título autoexplicativo do requisito.
 - **Descrição Objetiva:** O comportamento observável ou a restrição de qualidade exigida.
 - **Justificativa:** Motivação técnica, acadêmica ou institucional para a existência do requisito.
@@ -39,7 +39,8 @@ Cada requisito é especificado contendo:
 - **Prioridade:** **Must have**.
 - **Critério de Aceitação:** O usuário pode editar suas informações a qualquer momento e visualizar o perfil conforme outros o veem. O selo institucional de vínculo é bloqueado para edição manual direta pelo usuário (atribuído exclusivamente pelo sistema/gestor).
 - **Fonte / Origem:** Proposta Conecta Intercâmbio (ENADE Unifor).
-- **Status de Validação:** **Validado pelo Escopo da P1**.
+- **Status de Validação:** **Validado pelo Escopo da P1**. Reforçado por entrevistas com estudantes.
+- **Refinamento pós-entrevistas:** Nome de exibição sem exigência de sobrenome completo; idade, empresa/cargo, histórico acadêmico e situação socioeconômica nunca são campos de perfil público (PART-B03, B05, B06).
 
 ---
 
@@ -72,7 +73,8 @@ Cada requisito é especificado contendo:
 - **Prioridade:** **Must have**.
 - **Critério de Aceitação:** Discentes comuns não visualizam opção de publicar na aba de Notícias Oficiais. Publicações do NEI são marcadas com banner "Comunicado Institucional Unifor" e não podem ser apagadas por moderadores voluntários comuns.
 - **Fonte / Origem:** Apresentação de Extensão - Internacionalização Unifor.
-- **Status de Validação:** **Validado pelo Escopo da P1**.
+- **Status de Validação:** **Validado pelo Escopo da P1**. Reforçado por entrevistas com estudantes.
+- **Refinamento pós-entrevistas:** Cada oportunidade deve informar **tipo** (intercâmbio semestral, curso curto de férias, estágio, bolsa), **duração**, **período** (para filtrar pelo recesso da Unifor), **custos obrigatórios conhecidos** (seguro-saúde, taxas) e, quando houver bolsa, o **cronograma previsto de liberação do valor** (PART-B03, B04, B06).
 
 ---
 
@@ -105,7 +107,8 @@ Cada requisito é especificado contendo:
 - **Prioridade:** **Must have**.
 - **Critério de Aceitação:** Relatos submetidos exibem campos padronizados (Avaliação 1 a 5 estrelas, Prós, Contras e Dicas Práticas) e contêm aviso fixo de que os valores monetários informados são estimativas informais do autor.
 - **Fonte / Origem:** Proposta Conecta Intercâmbio (ENADE Unifor).
-- **Status de Validação:** **Validado pelo Escopo da P1**.
+- **Status de Validação:** **Validado pelo Escopo da P1**. Reforçado por entrevistas com estudantes.
+- **Refinamento pós-entrevistas:** O formulário de relato passa a ter custos mensais por categoria (moradia, alimentação, transporte, seguro) e campos obrigatórios de **prós e contras**, para evitar relatos apenas positivos (PART-B04, B05). A agregação dos custos em uma "calculadora por destino" fica como *Could have*.
 
 ---
 
@@ -171,7 +174,8 @@ Cada requisito é especificado contendo:
 - **Prioridade:** **Should have**.
 - **Critério de Aceitação:** Notificações não lidas exibem badge numérico no cabeçalho; ao serem clicadas, redirecionam diretamente para o conteúdo alvo e são marcadas como lidas.
 - **Fonte / Origem:** Ementa da proposta Conecta Intercâmbio.
-- **Status de Validação:** **Validado pelo Escopo da P1**.
+- **Status de Validação:** **Validado pelo Escopo da P1**. Reforçado por entrevistas com estudantes.
+- **Refinamento pós-entrevistas:** O usuário deve poder escolher quais tipos de notificação recebe; notificações *push* no celular ficam **desativadas por padrão**, mantendo apenas o painel interno e os avisos oficiais urgentes (PART-B01, B06).
 
 ---
 
@@ -182,7 +186,19 @@ Cada requisito é especificado contendo:
 - **Prioridade:** **Must have**.
 - **Critério de Aceitação:** Toda publicação categorizada como moradia/acomodação exibe no rodapé aviso institucional padronizado e intransponível: *"A Unifor não intermedeia, não fiscaliza e não se responsabiliza por locações financeiras entre particulares."*
 - **Fonte / Origem:** Diretrizes de segurança da proposta ENADE Unifor.
-- **Status de Validação:** **Validado pelo Escopo da P1**.
+- **Status de Validação:** **Validado pelo Escopo da P1**. Reforçado por entrevistas com estudantes.
+- **Refinamento pós-entrevistas:** Somente usuários com vínculo verificado (RN02) podem publicar na categoria Moradia, e o perfil do anunciante exibe o selo de verificação. Avaliações de ex-moradores e distância estimada até a universidade ficam como *Could have* (PART-B02, B03, B04, B06).
+
+---
+
+### RF16 - Registro Colaborativo de Equivalências de Disciplinas
+- **Descrição Objetiva:** O sistema deve permitir que ex-intercambistas registrem, junto ao relato, as disciplinas cursadas na universidade parceira e a disciplina da Unifor que foi aproveitada, e que candidatos consultem esse histórico filtrando por curso e universidade parceira.
+- **Justificativa:** A equivalência de disciplinas, sobretudo as práticas, foi apontada como a informação mais difícil de obter e como motivo principal para usar a plataforma.
+- **Stakeholder Primário:** STK02, STK03, STK06.
+- **Prioridade:** **Should have**.
+- **Critério de Aceitação:** Ao filtrar "Cinema e Mídias Digitais" e uma universidade parceira, o sistema lista as equivalências registradas, com semestre de aproveitamento e o aviso "Informação colaborativa. A equivalência oficial depende de análise da coordenação do curso."
+- **Fonte / Origem:** Entrevistas PART-B01 e PART-B02.
+- **Status de Validação:** **Derivado de entrevistas (pendente de validação com coordenações e NEI)**.
 
 ---
 

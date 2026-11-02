@@ -27,12 +27,12 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 | [EP02] Feed Acadêmico, Comunidades e Interações Sociais (15 SP)                         |
 | [EP03] Comunicação Oficial, Notícias e Editais de Mobilidade (8 SP)                     |
 | [EP04] Acolhimento, Mentoria e Conexão por Buddy (13 SP)                                |
-| [EP05] Repositório de Relatos e Vivências de Intercâmbio (8 SP)                          |
+| [EP05] Repositório de Relatos e Vivências de Intercâmbio (13 SP)                         |
 | [EP06] Governança, Moderação Ética e Segurança Institucional (13 SP)                    |
-| [EP07] Funcionalidades Avançadas e Horizontes Futuros (Won't Have Now) (34 SP)         |
+| [EP07] Funcionalidades Avançadas e Horizontes Futuros (Won't Have Now) (50 SP)         |
 +-----------------------------------------------------------------------------------------+
  Total do MVP Essencial (Must Have): 49 Story Points
- Total da Sprint 1 / P1 (Must + Should): 70 Story Points
+ Total da Sprint 1 / P1 (Must + Should): 75 Story Points
 ```
 
 ---
@@ -224,6 +224,22 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
+#### US19 - Consulta e Registro de Equivalências de Disciplinas
+- **ID:** `US19` | **Épico:** `EP05` | **Prioridade:** **Should have** | **Estimativa:** **5 SP**
+- **História de Usuário:**  
+  *Como* estudante planejando intercâmbio,  
+  *quero* consultar quais disciplinas outros alunos do meu curso conseguiram aproveitar em cada universidade parceira,  
+  *para que* eu escolha um destino sabendo o impacto no meu currículo.
+- **Justificativa:** Informação apontada como a mais difícil de obter nas entrevistas (PART-B01, B02).
+- **Critérios de Aceitação:**  
+  - Ex-intercambista registra pares "disciplina cursada no exterior / disciplina aproveitada na Unifor" ao publicar o relato.
+  - Candidato filtra por curso e universidade parceira.
+  - Toda equivalência exibe aviso de que a análise oficial cabe à coordenação do curso.
+- **Dependências:** `US11`.
+- **Status de Validação:** **Derivado de entrevistas** (Vinculado a RF16, RN07).
+
+---
+
 ### Épico 6: Governança, Moderação Ética e Segurança Institucional (EP06)
 
 #### US12 - Denúncia de Conteúdos, Comentários e Perfis
@@ -283,6 +299,8 @@ As histórias a seguir foram concebidas durante as sessões de ideação e anál
 | **US16** | EP07 | *Chat Privado de Mensagens em Tempo Real (1-to-1)* - Troca instantânea de mensagens diretas entre discentes via WebSockets. | 8 SP | **Risco de Segurança e Infraestrutura:** Exige gestão de conexões concorrentes persistentes, criptografia fim a fim e política complexa de moderação de assédio privado. Na P1, o contato é viabilizado por perfis e conexões institucionais. |
 | **US17** | EP07 | *Algoritmo de Matching por Inteligência Artificial para o Buddy* - Pareamento automático de mentores discentes usando aprendizado de máquina. | 8 SP | **Desproporcionalidade Técnica Inicial:** O volume inicial de intercambistas no escopo da disciplina é atendido perfeitamente por regras determinísticas simples ou curadoria semiestruturada. |
 | **US18** | EP07 | *Tradução Automática Dinâmica de Postagens por IA* - Tradução em tempo real de publicações discentes em múltiplos idiomas. | 5 SP | **Dependência e Custo de API Externa:** Dependência de chaves pagas de APIs de tradução comercial, incompatível com premissas de protótipo acadêmico autônomo na Sprint 1. |
+| **US20** | EP07 | *Validação de Anunciante de Moradia via Unifor Online / Gov.br* - Verificação por CPF e matrícula integrada aos sistemas da Unifor e assinatura digital de termo de conformidade. | 8 SP | **Dependência de Integração Institucional:** Sugerida nas entrevistas (PART-B03, B06), mas exige acesso a sistemas da Unifor e ao Gov.br, sem autorização na P1. No MVP vale a verificação de vínculo da RN02. |
+| **US21** | EP07 | *Vídeo-chamada Interna com Anunciante de Moradia* - Chamada de vídeo para visitar o imóvel antes do acordo. | 8 SP | **Alta Complexidade e Risco:** Sugerida na entrevista PART-B05; exige infraestrutura de tempo real e moderação de comunicação privada, como a US16. |
 
 ---
 
@@ -291,10 +309,10 @@ As histórias a seguir foram concebidas durante as sessões de ideação e anál
 | Prioridade | Histórias | Total |
 | :--- | :--- | :---: |
 | **Must have** | US01 (5), US02 (5), US03 (3), US04 (5), US05 (5), US07 (5), US11 (8), US12 (3), US13 (5), US14 (5) | **49 SP** |
-| **Should have** | US06 (5), US08 (3), US09 (5), US10 (8) | **21 SP** |
+| **Should have** | US06 (5), US08 (3), US09 (5), US10 (8), US19 (5) | **26 SP** |
 | **Could have** | US15 (13) | 13 SP |
-| **Won't have now** | US16 (8), US17 (8), US18 (5) | 21 SP |
-| **Total Sprint 1 (Must + Should)** | 14 histórias | **70 SP** |
+| **Won't have now** | US16 (8), US17 (8), US18 (5), US20 (8), US21 (8) | 37 SP |
+| **Total Sprint 1 (Must + Should)** | 15 histórias | **75 SP** |
 
 > Ordem de execução sugerida: as histórias Must seguem a cadeia de dependências da Seção 5 (US01 → US02 → US04 → US12 → US13), garantindo que autenticação, perfil e moderação existam antes das funcionalidades sociais.
 
@@ -316,4 +334,5 @@ graph TD
     US07 --> US08[US08: Agenda de Eventos]
     US09 --> US10[US10: Solicitação de Buddy]
     US12 --> US13[US13: Painel de Moderação]
+    US11 --> US19[US19: Equivalências de Disciplinas]
 ```

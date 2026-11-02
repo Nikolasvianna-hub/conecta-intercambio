@@ -23,6 +23,7 @@ Este documento estabelece a rastreabilidade completa entre as necessidades de ne
 | **NEC09** | Proteger a comunidade contra discursos de ódio, assédio, desinformação e golpes de falsos aluguéis. | STK01, STK02, STK08, STK05 | Diretrizes de Governança / LGPD | RF10, RF11, RNF09, RNF10 | RN05, RN10 | US12, US13 | UC13 - Denunciar Conteúdo/Perfil<br>UC14 - Moderar Conteúdos e Denúncias | **Validado pelo Escopo da P1** |
 | **NEC10** | Permitir o uso autônomo da plataforma por intercambistas estrangeiros que ainda não dominam a língua portuguesa. | STK01, STK05 | Ementa Pedagógica da Disciplina | RF13, RNF08 | RN04 | US03 | Transversal a todos os Casos de Uso | **Validado pelo Escopo da P1** |
 | **NEC11** | Proteger a Universidade de Fortaleza de litígios jurídicos e indenizações em virtude de negociações de moradia. | STK05, STK10 | Diretrizes de Risco / Hipótese HIP04 | RF15, RNF02 | RN08 | US14 | Regra transversal em UC04, UC09 e UC10 | ⏳ **Pendente de Homologação Jurídica** |
+| **NEC12** | Informar candidatos sobre o aproveitamento de disciplinas cursadas em universidades parceiras. | STK02, STK03, STK06 | Entrevistas PART-B01 e PART-B02 | RF16, RF08 | RN07 | US19 | UC10 - Submeter Relato<br>UC03 - Buscar Estudantes e Relatos | ✅ **Derivado de entrevistas** |
 
 ---
 

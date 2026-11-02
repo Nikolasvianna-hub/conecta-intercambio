@@ -59,6 +59,7 @@ Este documento estabelece as diretrizes normativas, políticas operacionais e re
 
 ### RN04 - Privacidade por Padrão e Proteção de Dados de Contato
 - **Enunciado:** Em conformidade com a LGPD, o número de telefone celular pessoal, aplicativo de mensagens privadas (WhatsApp/Telegram), endereço de residência em Fortaleza e documento de identidade/passaporte NÃO podem ser exibidos publicamente no perfil do usuário por padrão (*Privacy by Default*). O compartilhamento desses dados deve decorrer de decisão expressa, bilateral e privada entre os discentes.
+- **Complemento pós-entrevistas:** também ficam ocultos por padrão, e fora do perfil público, o e-mail pessoal, o sobrenome completo, a idade, o cargo e a empresa onde trabalha, o histórico de notas, as disciplinas matriculadas e qualquer informação socioeconômica ou de auxílio financeiro (PART-B02 a B06).
 - **Justificativa:** Proteger a integridade e a tranquilidade dos estudantes, especialmente intercambistas recém-chegados, mitigando riscos de assédio, golpes, fraudes de locação ou exposição pública indesejada.
 - **Requisitos Relacionados:** RF02, RF03, RNF02.
 - **Stakeholders Envolvidos:** STK01, STK02, STK05, STK10.
@@ -99,6 +100,7 @@ Este documento estabelece as diretrizes normativas, políticas operacionais e re
 
 ### RN08 - Isenção Institucional e Diretrizes de Dicas de Moradia
 - **Enunciado:** A plataforma veda expressamente qualquer transação financeira, cobrança de caução, assinatura de contratos de locação ou cobrança de comissões imobiliárias em suas páginas. Toda postagem na categoria de "Moradia e Hospedagem" é de responsabilidade civil exclusiva de seu publicador, contendo de forma indelével a mensagem: *"A Universidade de Fortaleza (Unifor) e a plataforma Conecta Intercâmbio atuam exclusivamente como mural informativo acadêmico, não vistoriando imóveis, não intermediando contratos e não se responsabilizando por acordos financeiros entre partes privadas."*
+- **Complemento pós-entrevistas:** apenas usuários com vínculo verificado (RN02) podem publicar anúncios de moradia, e a publicação exibe o selo de verificação do anunciante. A validação por CPF integrada ao Unifor Online e a assinatura de termo via Gov.br, sugeridas nas entrevistas (PART-B03, B06), dependem de integração institucional e ficam para versões futuras.
 - **Justificativa:** Mitigar integralmente o risco jurídico da universidade frente a desavenças entre locadores e locatários e alertar os estudantes sobre a necessidade de cautela prévia antes de efetuar adiantamentos financeiros de moradia.
 - **Requisitos Relacionados:** RF10, RF15, RNF02.
 - **Stakeholders Envolvidos:** STK05, STK10 (Unifor Instituição), STK01.
