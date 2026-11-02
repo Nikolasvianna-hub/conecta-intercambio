@@ -1,6 +1,6 @@
-# Glossário de Termos — Conecta Intercâmbio
+# Glossário de Termos - Conecta Intercâmbio
 
-Este documento estabelece o vocabulário padronizado utilizado em toda a documentação de requisitos, modelagem de sistemas e gestão do projeto **Conecta Intercâmbio — Rede Social Acadêmica**, desenvolvido no âmbito da disciplina de **Requisitos e Modelagem de Sistemas** da **Universidade de Fortaleza (Unifor)** para a primeira avaliação (P1 — Sprint 1 / Milestone M1).
+Este documento estabelece o vocabulário padronizado utilizado em toda a documentação de requisitos, modelagem de sistemas e gestão do projeto **Conecta Intercâmbio - Rede Social Acadêmica**, desenvolvido no âmbito da disciplina de **Requisitos e Modelagem de Sistemas** da **Universidade de Fortaleza (Unifor)** para a primeira avaliação (P1 - Sprint 1 / Milestone M1).
 
 ---
 

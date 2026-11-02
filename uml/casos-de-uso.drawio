@@ -168,9 +168,6 @@
         <!-- UC15 (Exibir Isenção Legal de Moradia) extends UC04 (Publicar no Feed) sob condição de post sobre moradia -->
         <mxCell id="ext_uc15_uc04" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;&#xa;[post envolve moradia]" style="dashed=1;html=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.2;fontSize=10;verticalAlign=bottom;" edge="1" parent="1" source="uc15" target="uc04" />
 
-        <!-- UC14 (Moderar Conteúdos) extends UC13 (Denunciar Conteúdo) sob condição de denúncia submetida -->
-        <mxCell id="ext_uc14_uc13" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="dashed=1;html=1;endArrow=open;endFill=0;strokeColor=#dc2626;strokeWidth=1.2;fontSize=10;" edge="1" parent="1" source="uc14" target="uc13" />
-
       </root>
     </mxGraphModel>
   </diagram>

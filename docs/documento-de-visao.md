@@ -1,17 +1,17 @@
-# Documento de Visão — Conecta Intercâmbio
+# Documento de Visão - Conecta Intercâmbio
 
 **Rede Social Acadêmica e de Integração Internacional**  
 **Universidade de Fortaleza (Unifor)**  
 **Centro de Ciências Tecnológicas (CCT)**  
 **Disciplina:** Requisitos e Modelagem de Sistemas  
-**Ciclo de Entrega:** Avaliação P1 — Sprint 1 (Milestone M1) | Período: 20/10/2026 a 02/11/2026  
+**Ciclo de Entrega:** Avaliação P1 - Sprint 1 (Milestone M1) | Período: 20/10/2026 a 02/11/2026  
 **Eixo Temático de Extensão:** Internacionalização Universitária  
 
 ---
 
 ## 1. Identificação do Projeto
 
-- **Nome do Projeto:** Conecta Intercâmbio — Rede Social Acadêmica.
+- **Nome do Projeto:** Conecta Intercâmbio - Rede Social Acadêmica.
 - **Natureza do Sistema:** Plataforma Web responsiva de integração acadêmica, social e informativa para mobilidade internacional universitária.
 - **Equipe de Engenharia de Requisitos:** Grupo de Discentes de Engenharia de Software / Ciência da Computação (Unifor).
 - **Stakeholder Institucional Principal:** Assessoria de Relações Internacionais / Núcleo de Internacionalização (NEI) da Unifor.
@@ -23,7 +23,7 @@
 
 A internacionalização no ensino superior contemporâneo transcende a mera celebração de acordos bilaterais formais entre instituições de diferentes nações; ela demanda um ecossistema articulado capaz de propiciar acolhimento humanizado, engajamento intercultural e suporte continuado ao discente. No âmbito da **Universidade de Fortaleza (Unifor)**, as diretrizes de extensão curricular e os indicativos de formação global (alinhados às competências do ENADE) apontam para a necessidade de estreitar laços entre o corpo discente local, os estudantes estrangeiros em intercâmbio e os egressos de programas de mobilidade.
 
-O projeto **Conecta Intercâmbio** é desenvolvido como artefato central da disciplina **Requisitos e Modelagem de Sistemas**, cumprindo a etapa da **Sprint 1 (Milestone M1)** da avaliação P1. Seu propósito nesta fase é formular um arcabouço estruturado de engenharia de requisitos — compreendendo visão de produto, mapeamento de stakeholders, protocolos de entrevista, modelagem de requisitos funcionais e não funcionais, regras de negócio e diagramas UML fundamentais —, estabelecendo bases sólidas para a evolução sustentável do sistema sem antecipar prematuramente detalhes de implementação física.
+O projeto **Conecta Intercâmbio** é desenvolvido como artefato central da disciplina **Requisitos e Modelagem de Sistemas**, cumprindo a etapa da **Sprint 1 (Milestone M1)** da avaliação P1. Seu propósito nesta fase é formular um arcabouço estruturado de engenharia de requisitos - compreendendo visão de produto, mapeamento de stakeholders, protocolos de entrevista, modelagem de requisitos funcionais e não funcionais, regras de negócio e diagramas UML fundamentais -, estabelecendo bases sólidas para a evolução sustentável do sistema sem antecipar prematuramente detalhes de implementação física.
 
 ---
 
@@ -66,7 +66,7 @@ A solução estrutura-se em quatro eixos funcionais complementares:
 
 ```
 +-----------------------------------------------------------------------------------+
-|                        CONECTA INTERCÂMBIO — EIXOS DA SOLUÇÃO                     |
+|                        CONECTA INTERCÂMBIO - EIXOS DA SOLUÇÃO                     |
 +-----------------------------------------------------------------------------------+
 |  1. COMUNICAÇÃO OFICIAL     2. SOCIAL & COMUNIDADES    3. PROGRAMA DE BUDDY       |
 |  - Notícias e Editais NEI   - Feed acadêmico moderado  - Cadastro de mentores     |
@@ -143,7 +143,7 @@ As seguintes funcionalidades foram identificadas nas discussões de produto, mas
 ### 9.1. Restrições
 - **Restrição Acadêmica:** O projeto deve ser desenvolvido e modelado estritamente de acordo com o cronograma e os padrões avaliativos da disciplina Requisitos e Modelagem de Sistemas (Unifor), respeitando a entrega da P1 em 02/11/2026.
 - **Restrição Tecnológica:** A arquitetura do sistema deve adotar tecnologias web abertas e escaláveis, compatíveis com os ambientes computacionais da universidade e sem imposição prematura de infraestruturas onerosas.
-- **Restrição Legal:** O sistema deve operar em estrita conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD — Lei 13.709/2018), resguardando informações de contato e a privacidade dos estudantes estrangeiros.
+- **Restrição Legal:** O sistema deve operar em estrita conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD - Lei 13.709/2018), resguardando informações de contato e a privacidade dos estudantes estrangeiros.
 
 ### 9.2. Premissas
 - A comunidade acadêmica da Unifor possui conectividade regular à internet por meio de computadores pessoais e smartphones.
@@ -152,7 +152,7 @@ As seguintes funcionalidades foram identificadas nas discussões de produto, mas
 
 ### 9.3. Dependências Externas
 - Validação formal das diretrizes de publicação oficial junto à Assessoria de Relações Internacionais da Unifor.
-- Disponibilidade de interface de autenticação unificada (Single Sign-On — SSO) ou validação de e-mails institucionais `@edu.unifor.br`.
+- Disponibilidade de interface de autenticação unificada (Single Sign-On - SSO) ou validação de e-mails institucionais `@edu.unifor.br`.
 - Autorização institucional para utilização da identidade visual e marca da Universidade de Fortaleza no protótipo acadêmico.
 
 ---
@@ -190,11 +190,11 @@ As seguintes funcionalidades foram identificadas nas discussões de produto, mas
 ## 13. Referências Consultadas
 
 1. **Materiais de Referência da Disciplina (Unifor):**
-   - UNIVERSIDADE DE FORTALEZA. *Projeto de Extensão — Internacionalização — Requisitos e Modelagem de Sistemas*. Apresentação institucional de diretrizes pedagógicas da disciplina.
-   - UNIVERSIDADE DE FORTALEZA. *Propostas de Projetos de Internacionalização — ENADE Unifor*. Documento orientador de temas aplicados de engenharia de requisitos.
+   - UNIVERSIDADE DE FORTALEZA. *Projeto de Extensão - Internacionalização - Requisitos e Modelagem de Sistemas*. Apresentação institucional de diretrizes pedagógicas da disciplina.
+   - UNIVERSIDADE DE FORTALEZA. *Propostas de Projetos de Internacionalização - ENADE Unifor*. Documento orientador de temas aplicados de engenharia de requisitos.
    - *Nota de Registro Metodológico:* Como os arquivos originais em formato binário (.pptx.pdf e .docx) são disponibilizados via ambiente virtual da instituição e seu conteúdo direto de diretrizes foi incorporado ao escopo da atividade, suas prescrições sobre a rede social Conecta Intercâmbio, comunidades por destino, relatos de hospedagem e programa de Buddy foram integralmente mapeadas e referenciadas.
 2. **Normas e Literatura Especializada em Engenharia de Software:**
-   - ISO/IEC/IEEE 29148:2018. *Systems and software engineering — Life cycle processes — Requirements engineering*. IEEE, 2018.
+   - ISO/IEC/IEEE 29148:2018. *Systems and software engineering - Life cycle processes - Requirements engineering*. IEEE, 2018.
    - SOMMERVILLE, Ian. *Engenharia de Software*. 10. ed. São Paulo: Pearson Education do Brasil, 2019.
    - PRESSMAN, Roger S.; MAXIM, Bruce R. *Engenharia de Software: Uma Abordagem Profissional*. 9. ed. Porto Alegre: AMGH, 2021.
    - OBJECT MANAGEMENT GROUP (OMG). *Unified Modeling Language (OMG UML) Specification, Version 2.5.1*. OMG Document formal/2017-12-05, 2017.

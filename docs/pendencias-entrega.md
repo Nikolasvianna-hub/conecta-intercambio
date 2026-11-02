@@ -7,16 +7,16 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
 ## 1. Adição do Avaliador ao Repositório GitHub
 
 > [!IMPORTANT]
-> **Status Atual:** ⚠️ **PENDENTE DE CONFIRMAÇÃO MANUAL PELO PROPRIETÁRIO DO REPOSITÓRIO**
-> 
-> A inclusão do professor/avaliador como colaborador do repositório é um requisito obrigatório para a avaliação no Ambiente Virtual de Aprendizagem (AVA / Unifor Online). Como agente de desenvolvimento local, o Antigravity **não possui permissão nem autorização institucional** para enviar convites, gerenciar permissões administrativas ou autenticar-se na conta proprietária do GitHub. Essa ação deve ser realizada diretamente pelo estudante/líder do grupo proprietário do repositório.
+> **Status Atual:** ⚠️ **PENDENTE DE CONFIRMAÇÃO PELO PROPRIETÁRIO DO REPOSITÓRIO**
+>
+> A inclusão do professor/avaliador como colaborador do repositório é um requisito obrigatório para a avaliação no Ambiente Virtual de Aprendizagem (AVA / Unifor Online). Essa ação só pode ser feita pelo proprietário do repositório (conta `Nikolasvianna-hub`), em *Settings → Collaborators*.
 
 ### Informações do Avaliador
 - **Usuário do GitHub a ser adicionado:** `marcelobezerra-dotcom`
 - **Nível de acesso recomendado:** *Read* ou *Triage* (ou *Collaborator* conforme as orientações da disciplina).
 
 ### Instruções Passo a Passo para o Proprietário do Repositório:
-1. Acesse o repositório do projeto no GitHub pelo navegador: `https://github.com/[ORGANIZACAO-OU-USUARIO]/[NOME-DO-REPOSITORIO]`.
+1. Acesse o repositório do projeto no GitHub pelo navegador: `https://github.com/Nikolasvianna-hub/conecta-intercambio`.
 2. Clique na aba superior **Settings** (Configurações do Repositório).
 3. No menu lateral esquerdo, na seção *Access*, clique em **Collaborators** (ou *Collaborators and teams*).
 4. Insira sua senha ou confirmação biométrica do GitHub caso seja solicitada.
@@ -37,7 +37,7 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
 
 | Campo | Registro / Evidência |
 | :--- | :--- |
-| **Link Oficial do Repositório GitHub** | `[INSERIR_URL_DO_REPOSITORIO_GITHUB]` *(Ex: https://github.com/usuario/conecta-intercambio)* |
+| **Link Oficial do Repositório GitHub** | https://github.com/Nikolasvianna-hub/conecta-intercambio |
 | **Data do Envio do Convite** | `[DD/MM/AAAA - HH:MM]` |
 | **Status do Convite** | `[ ] Pendente de Envio` <br> `[ ] Enviado (Aguardando Aceite)` <br> `[ ] Aceito e Ativo` |
 | **Arquivo de Captura de Tela (Print)** | `docs/evidencias/convite-marcelobezerra-dotcom.png` *(ou link de anexo no AVA)* |
@@ -52,7 +52,7 @@ Antes do fechamento do prazo estipulado (Sprint 1: 20/10/2026 a 02/11/2026), cer
 - [ ] Repositório GitHub público ou privado com acesso garantido ao usuário `marcelobezerra-dotcom`.
 - [ ] Link do repositório testado e acessível.
 - [ ] Evidência de acesso de `marcelobezerra-dotcom` anexada no campo de submissão do AVA ou pasta de evidências.
-- [ ] Todos os 9 entregáveis obrigatórios presentes na branch principal (`main`):
+- [x] Todos os entregáveis obrigatórios presentes na branch principal (`main`):
   1. `docs/documento-de-visao.md`
   2. `docs/stakeholders.md`
   3. `docs/roteiro-de-entrevistas.md`
@@ -62,5 +62,6 @@ Antes do fechamento do prazo estipulado (Sprint 1: 20/10/2026 a 02/11/2026), cer
   7. `docs/backlog.md`
   8. `docs/rastreabilidade.md`
   9. Diagramas UML em `uml/`: Casos de Uso, Componentes e Implantação (.drawio e imagens exportadas).
-- [ ] `README.md` estruturado com links relativos funcionais direcionando para todos os artefatos.
-- [ ] Ausência de dados fictícios disfarçados de resultados empíricos reais (status de validação devidamente explícitos).
+- [x] `README.md` estruturado com links relativos funcionais direcionando para todos os artefatos.
+- [x] Ausência de dados fictícios disfarçados de resultados empíricos reais (status de validação devidamente explícitos).
+- [x] Fichas da 1ª rodada de entrevistas anexadas (`docs/fichas_de_registro_entrevista.pdf`) e consolidadas em `docs/resultados-de-entrevistas.md`.

@@ -1,6 +1,6 @@
-# Identificação e Análise de Stakeholders — Conecta Intercâmbio
+# Identificação e Análise de Stakeholders - Conecta Intercâmbio
 
-Este documento detalha o mapeamento, categorização e estratégia de engajamento de todas as partes interessadas (*stakeholders*) identificadas no ciclo de vida do projeto **Conecta Intercâmbio — Rede Social Acadêmica**, em conformidade com as diretrizes da disciplina **Requisitos e Modelagem de Sistemas** da Universidade de Fortaleza (Unifor).
+Este documento detalha o mapeamento, categorização e estratégia de engajamento de todas as partes interessadas (*stakeholders*) identificadas no ciclo de vida do projeto **Conecta Intercâmbio - Rede Social Acadêmica**, em conformidade com as diretrizes da disciplina **Requisitos e Modelagem de Sistemas** da Universidade de Fortaleza (Unifor).
 
 > [!IMPORTANT]
 > **Ressalva Metodológica de Governança Acadêmica:**  

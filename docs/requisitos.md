@@ -1,6 +1,6 @@
-# Especificação de Requisitos de Software — Conecta Intercâmbio
+# Especificação de Requisitos de Software - Conecta Intercâmbio
 
-Este documento apresenta a especificação detalhada dos **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** do sistema **Conecta Intercâmbio — Rede Social Acadêmica**, em conformidade com as diretrizes da norma ISO/IEC/IEEE 29148 e do programa avaliativo da P1 da disciplina **Requisitos e Modelagem de Sistemas** (Unifor).
+Este documento apresenta a especificação detalhada dos **Requisitos Funcionais (RF)** e **Requisitos Não Funcionais (RNF)** do sistema **Conecta Intercâmbio - Rede Social Acadêmica**, em conformidade com as diretrizes da norma ISO/IEC/IEEE 29148 e do programa avaliativo da P1 da disciplina **Requisitos e Modelagem de Sistemas** (Unifor).
 
 ---
 
@@ -21,7 +21,7 @@ Cada requisito é especificado contendo:
 
 ## 2. Requisitos Funcionais (RF)
 
-### RF01 — Autenticação e Gestão de Identidade Institucional
+### RF01 - Autenticação e Gestão de Identidade Institucional
 - **Descrição Objetiva:** O sistema deve permitir que os usuários se cadastrem e realizem login utilizando credenciais validadas (e-mail institucional da Unifor ou processo de verificação de matrícula/vínculo de intercâmbio), permitindo redefinição segura de senha.
 - **Justificativa:** Garantir a autenticidade do ambiente acadêmico, prevenindo criação de perfis falsos (*spambots*) e mantendo um ambiente seguro e auditável.
 - **Stakeholder Primário:** STK01, STK02, STK03, STK05.
@@ -32,7 +32,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF02 — Gerenciamento de Perfil Acadêmico e Intercultural
+### RF02 - Gerenciamento de Perfil Acadêmico e Intercultural
 - **Descrição Objetiva:** O sistema deve permitir que cada usuário mantenha um perfil público acadêmico contendo: foto, nome de exibição, biografia, curso/área de estudo, país de origem, país/universidade de destino (quando aplicável), idiomas falados e nível de fluência, e selo de vínculo (Intercambista, Brasileiro, Ex-Intercambista, Buddy, Gestor).
 - **Justificativa:** Possibilitar a identificação contextualizada dos membros da comunidade universitária, servindo de base para conexões por afinidade de destino, idioma e interesses.
 - **Stakeholder Primário:** STK01, STK02, STK03, STK04.
@@ -43,7 +43,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF03 — Descoberta e Busca Avançada de Estudantes
+### RF03 - Descoberta e Busca Avançada de Estudantes
 - **Descrição Objetiva:** O sistema deve disponibilizar ferramenta de busca e filtros para localização de perfis cadastrados por: país de origem, país de destino de interesse, curso, idiomas declarados e disponibilidade para mentoria/Buddy.
 - **Justificativa:** Facilitar que discentes prestes a viajar encontrem rapidamente veteranos do mesmo destino ou que intercambistas encontrem discentes com interesses comuns.
 - **Stakeholder Primário:** STK01, STK02, STK04.
@@ -54,7 +54,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF04 — Feed Acadêmico de Publicações e Interações
+### RF04 - Feed Acadêmico de Publicações e Interações
 - **Descrição Objetiva:** O sistema deve oferecer um feed dinâmico no qual estudantes e gestores possam publicar mensagens de texto (de até 1.000 caracteres) acompanhadas de imagens (até 4 fotos por post), com recursos de curtir, comentar e compartilhar publicações internamente.
 - **Justificativa:** Estimular a circulação orgânica de dúvidas, vivências cotidianas, celebrações de chegada e entrosamento na comunidade universitária.
 - **Stakeholder Primário:** STK01, STK02, STK03.
@@ -65,18 +65,18 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF05 — Canal Oficial de Notícias, Editais e Comunicados Institucionais
+### RF05 - Canal Oficial de Notícias, Editais e Comunicados Institucionais
 - **Descrição Objetiva:** O sistema deve fornecer uma seção exclusiva de notícias e comunicados institucionais alimentada unicamente por perfis com permissão de Gestor da Assessoria de Relações Internacionais (NEI), sinalizada visualmente com distintivo oficial.
 - **Justificativa:** Eliminar o ruído de desinformação e garantir que prazos de editais, convocações e alertas governamentais tenham fonte confiável e inquestionável.
 - **Stakeholder Primário:** STK05, STK01, STK02.
 - **Prioridade:** **Must have**.
 - **Critério de Aceitação:** Discentes comuns não visualizam opção de publicar na aba de Notícias Oficiais. Publicações do NEI são marcadas com banner "Comunicado Institucional Unifor" e não podem ser apagadas por moderadores voluntários comuns.
-- **Fonte / Origem:** Apresentação de Extensão — Internacionalização Unifor.
+- **Fonte / Origem:** Apresentação de Extensão - Internacionalização Unifor.
 - **Status de Validação:** **Validado pelo Escopo da P1**.
 
 ---
 
-### RF06 — Conexão e Gestão do Programa de Buddy
+### RF06 - Conexão e Gestão do Programa de Buddy
 - **Descrição Objetiva:** O sistema deve permitir que estudantes locais se cadastrem como voluntários do Programa de Buddy e que estudantes internacionais solicitem a designação de um Buddy, possibilitando a aceitação do vínculo e a visualização do par designado.
 - **Justificativa:** Viabilizar digitalmente a tutoria solidária e o apadrinhamento discente, promovendo a adaptação e o acolhimento seguro no campus da Unifor.
 - **Stakeholder Primário:** STK01, STK04, STK05.
@@ -87,7 +87,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF07 — Comunidades Temáticas por Destino e Interesses
+### RF07 - Comunidades Temáticas por Destino e Interesses
 - **Descrição Objetiva:** O sistema deve permitir a navegação e participação em grupos/comunidades temáticas organizadas por destino (ex.: "Intercâmbio Portugal", "Intercâmbio França"), por idioma (ex.: "English Conversation Club") ou por interesse acadêmico.
 - **Justificativa:** Segmentar as discussões e evitar que o feed principal fique sobrecarregado com dúvidas hiperespecíficas de determinadas cidades ou cursos.
 - **Stakeholder Primário:** STK01, STK02, STK03.
@@ -98,7 +98,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF08 — Repositório de Relatos Estruturados de Intercâmbio
+### RF08 - Repositório de Relatos Estruturados de Intercâmbio
 - **Descrição Objetiva:** O sistema deve disponibilizar um formulário estruturado para que ex-intercambistas submetam avaliações sobre universidades parceiras, abordando: facilidade de matrícula, custo de vida médio, opções de moradia, transporte e choque cultural.
 - **Justificativa:** Transformar a experiência dispersa dos egressos em um ativo de conhecimento institucional perene para candidatos a futuras mobilidades.
 - **Stakeholder Primário:** STK02, STK03, STK05.
@@ -109,18 +109,18 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF09 — Agenda Integrada de Eventos Acadêmicos e Culturais
+### RF09 - Agenda Integrada de Eventos Acadêmicos e Culturais
 - **Descrição Objetiva:** O sistema deve disponibilizar um calendário interativo com eventos voltados à internacionalização (Feira de Intercâmbio, Workshops de Idiomas, Encontros de Acolhimento, Sessões Informativas de Editais), permitindo marcar presença confirmada.
 - **Justificativa:** Ampliar a adesão discente aos encontros presenciais e remotos promovidos pela Unifor e por entidades estudantis.
 - **Stakeholder Primário:** STK01, STK02, STK05, STK06.
 - **Prioridade:** **Should have**.
 - **Critério de Aceitação:** Cada evento exibe título, data/hora, local físico (bloco/sala do campus) ou link remoto, organizador responsável e botão "Tenho Interesse / Comparecerei".
-- **Fonte / Origem:** Apresentação de Extensão — Internacionalização Unifor.
+- **Fonte / Origem:** Apresentação de Extensão - Internacionalização Unifor.
 - **Status de Validação:** **Validado pelo Escopo da P1**.
 
 ---
 
-### RF10 — Denúncia Colaborativa de Conteúdos e Perfis
+### RF10 - Denúncia Colaborativa de Conteúdos e Perfis
 - **Descrição Objetiva:** O sistema deve fornecer opção em todos os posts, comentários e perfis para que qualquer usuário reporte violações de conduta, assédio, preconceito, desinformação ou anúncio ilícito de moradia.
 - **Justificativa:** Assegurar a integridade ética, o respeito mútuo e a segurança da comunidade acadêmica em conformidade com o código de ética da universidade.
 - **Stakeholder Primário:** STK01, STK02, STK08, STK05.
@@ -131,7 +131,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF11 — Painel Administrativo de Moderação e Auditoria
+### RF11 - Painel Administrativo de Moderação e Auditoria
 - **Descrição Objetiva:** O sistema deve dispor de interface administrativa restrita para moderadores e gestores visualizarem denúncias pendentes, aprovarem publicações reportadas, removerem conteúdos infratores ou suspenderem preventivamente perfis abusivos.
 - **Justificativa:** Garantir controle operacional ágil e suporte à governança institucional da plataforma.
 - **Stakeholder Primário:** STK08, STK05.
@@ -142,7 +142,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF12 — Feed Vertical de Vídeos Curtos Acadêmicos (*Hipótese de Produto*)
+### RF12 - Feed Vertical de Vídeos Curtos Acadêmicos (*Hipótese de Produto*)
 - **Descrição Objetiva:** O sistema deve possibilitar a visualização e publicação em formato vertical (estilo *reels*) de vídeos de curta duração (até 60 segundos) com foco exclusivo em apresentação de cursos, dicas do campus, vida cultural de Fortaleza e momentos do intercâmbio.
 - **Justificativa:** Atrair a atenção e o engajamento visual do público universitário jovem habituado a mídias dinâmicas.
 - **Stakeholder Primário:** STK01, STK02.
@@ -153,7 +153,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF13 — Suporte à Interface Multilíngue (i18n)
+### RF13 - Suporte à Interface Multilíngue (i18n)
 - **Descrição Objetiva:** O sistema deve permitir que o usuário alterne dinamicamente o idioma da interface gráfica da plataforma entre **Português (pt-BR)** e **Inglês (en-US)** em qualquer tela sem necessidade de recarregar a página ou perder o estado atual.
 - **Justificativa:** Atender com dignidade e autonomia os estudantes estrangeiros em fase inicial de aquisição do português.
 - **Stakeholder Primário:** STK01, STK05.
@@ -164,7 +164,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF14 — Notificações Centrais do Sistema
+### RF14 - Notificações Centrais do Sistema
 - **Descrição Objetiva:** O sistema deve emitir notificações visuais (em painel central na interface) para alertar o discente sobre: respostas aos seus comentários, avisos oficiais urgentes da Assessoria NEI, designação de Buddy e interações em suas publicações.
 - **Justificativa:** Manter os estudantes engajados e garantir que avisos críticos de intercâmbio não passem despercebidos.
 - **Stakeholder Primário:** STK01, STK02, STK04, STK05.
@@ -175,7 +175,7 @@ Cada requisito é especificado contendo:
 
 ---
 
-### RF15 — Isenção de Responsabilidade sobre Moradia e Hospedagem
+### RF15 - Isenção de Responsabilidade sobre Moradia e Hospedagem
 - **Descrição Objetiva:** O sistema deve exibir de forma compulsória um termo de ciência e isenção institucional em qualquer publicação ou comunidade que envolva orientações, indicações ou repasses de moradia, alertando sobre a natureza estritamente privada da negociação.
 - **Justificativa:** Proteger a Universidade de Fortaleza de corresponsabilidade civil em caso de litígios locatícios ou fraudes praticadas por terceiros.
 - **Stakeholder Primário:** STK05, STK10, STK01.

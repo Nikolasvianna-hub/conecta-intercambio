@@ -1,6 +1,6 @@
-# Backlog Priorizado do Produto — Conecta Intercâmbio
+# Backlog Priorizado do Produto - Conecta Intercâmbio
 
-Este documento apresenta o **Product Backlog** do projeto **Conecta Intercâmbio — Rede Social Acadêmica**, estruturado em Épicos e Histórias de Usuário (*User Stories*), priorizado segundo a metodologia **MoSCoW** para o ciclo da **Sprint 1 (Milestone M1 / Avaliação P1)** da disciplina **Requisitos e Modelagem de Sistemas** da Universidade de Fortaleza (Unifor).
+Este documento apresenta o **Product Backlog** do projeto **Conecta Intercâmbio - Rede Social Acadêmica**, estruturado em Épicos e Histórias de Usuário (*User Stories*), priorizado segundo a metodologia **MoSCoW** para o ciclo da **Sprint 1 (Milestone M1 / Avaliação P1)** da disciplina **Requisitos e Modelagem de Sistemas** da Universidade de Fortaleza (Unifor).
 
 ---
 
@@ -24,15 +24,15 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 |                                    EPIC OVERVIEW MAP                                    |
 +-----------------------------------------------------------------------------------------+
 | [EP01] Gestão de Identidade, Autenticação e Perfis Acadêmicos (13 SP)                   |
-| [EP02] Feed Acadêmico, Comunidades e Interações Sociais (16 SP)                         |
+| [EP02] Feed Acadêmico, Comunidades e Interações Sociais (15 SP)                         |
 | [EP03] Comunicação Oficial, Notícias e Editais de Mobilidade (8 SP)                     |
 | [EP04] Acolhimento, Mentoria e Conexão por Buddy (13 SP)                                |
 | [EP05] Repositório de Relatos e Vivências de Intercâmbio (8 SP)                          |
 | [EP06] Governança, Moderação Ética e Segurança Institucional (13 SP)                    |
 | [EP07] Funcionalidades Avançadas e Horizontes Futuros (Won't Have Now) (34 SP)         |
 +-----------------------------------------------------------------------------------------+
- Total do MVP Essencial (Must Have): 42 Story Points
- Total da Sprint 1 / P1 (Must + Should): 71 Story Points
+ Total do MVP Essencial (Must Have): 49 Story Points
+ Total da Sprint 1 / P1 (Must + Should): 70 Story Points
 ```
 
 ---
@@ -41,7 +41,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ### Épico 1: Gestão de Identidade, Autenticação e Perfis Acadêmicos (EP01)
 
-#### US01 — Cadastro e Autenticação com Validação de Vínculo
+#### US01 - Cadastro e Autenticação com Validação de Vínculo
 - **ID:** `US01` | **Épico:** `EP01` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* estudante ou colaborador da Unifor,  
@@ -57,7 +57,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US02 — Configuração de Perfil Intercultural e Histórico de Mobilidade
+#### US02 - Configuração de Perfil Intercultural e Histórico de Mobilidade
 - **ID:** `US02` | **Épico:** `EP01` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* usuário cadastrado (estudante local, intercambista ou egresso),  
@@ -73,7 +73,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US03 — Seleção Dinâmica de Idioma da Interface (Português / Inglês)
+#### US03 - Seleção Dinâmica de Idioma da Interface (Português / Inglês)
 - **ID:** `US03` | **Épico:** `EP01` | **Prioridade:** **Must have** | **Estimativa:** **3 SP**
 - **História de Usuário:**  
   *Como* estudante estrangeiro recém-chegado que ainda não domina o português,  
@@ -91,7 +91,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ### Épico 2: Feed Acadêmico, Comunidades e Interações Sociais (EP02)
 
-#### US04 — Publicação e Interação no Feed Acadêmico
+#### US04 - Publicação e Interação no Feed Acadêmico
 - **ID:** `US04` | **Épico:** `EP02` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* estudante internacional ou local,  
@@ -108,7 +108,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US05 — Busca e Descoberta de Perfis por Destino e Idioma
+#### US05 - Busca e Descoberta de Perfis por Destino e Idioma
 - **ID:** `US05` | **Épico:** `EP02` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* estudante brasileiro planejando intercâmbio,  
@@ -124,8 +124,8 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US06 — Participação em Comunidades Temáticas por Destino
-- **ID:** `US06` | **Épico:** `EP02` | **Prioridade:** **Should have** | **Estimativa:** **6 SP**
+#### US06 - Participação em Comunidades Temáticas por Destino
+- **ID:** `US06` | **Épico:** `EP02` | **Prioridade:** **Should have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* intercambista ou candidato a intercâmbio,  
   *quero* ingressar em comunidades temáticas segmentadas (ex.: "Intercâmbio Portugal", "Tandem Idiomas"),  
@@ -141,7 +141,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ### Épico 3: Comunicação Oficial, Notícias e Editais de Mobilidade (EP03)
 
-#### US07 — Mural Oficial de Notícias e Editais da Assessoria NEI
+#### US07 - Mural Oficial de Notícias e Editais da Assessoria NEI
 - **ID:** `US07` | **Épico:** `EP03` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* discente interessado em mobilidade acadêmica,  
@@ -157,7 +157,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US08 — Agenda de Eventos Acadêmicos e Culturais
+#### US08 - Agenda de Eventos Acadêmicos e Culturais
 - **ID:** `US08` | **Épico:** `EP03` | **Prioridade:** **Should have** | **Estimativa:** **3 SP**
 - **História de Usuário:**  
   *Como* estudante internacional ou local,  
@@ -174,7 +174,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ### Épico 4: Acolhimento, Mentoria e Conexão por Buddy (EP04)
 
-#### US09 — Cadastro de Estudante Voluntário no Programa de Buddy
+#### US09 - Cadastro de Estudante Voluntário no Programa de Buddy
 - **ID:** `US09` | **Épico:** `EP04` | **Prioridade:** **Should have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* estudante brasileiro veterano da Unifor,  
@@ -190,7 +190,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US10 — Solicitação e Vinculação de Apadrinhamento por Buddy
+#### US10 - Solicitação e Vinculação de Apadrinhamento por Buddy
 - **ID:** `US10` | **Épico:** `EP04` | **Prioridade:** **Should have** | **Estimativa:** **8 SP**
 - **História de Usuário:**  
   *Como* estudante internacional recém-admitido na Unifor,  
@@ -208,7 +208,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ### Épico 5: Repositório de Relatos e Vivências de Intercâmbio (EP05)
 
-#### US11 — Publicação e Consulta de Relatos Estruturados de Intercâmbio
+#### US11 - Publicação e Consulta de Relatos Estruturados de Intercâmbio
 - **ID:** `US11` | **Épico:** `EP05` | **Prioridade:** **Must have** | **Estimativa:** **8 SP**
 - **História de Usuário:**  
   *Como* ex-intercambista da Unifor,  
@@ -226,7 +226,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ### Épico 6: Governança, Moderação Ética e Segurança Institucional (EP06)
 
-#### US12 — Denúncia de Conteúdos, Comentários e Perfis
+#### US12 - Denúncia de Conteúdos, Comentários e Perfis
 - **ID:** `US12` | **Épico:** `EP06` | **Prioridade:** **Must have** | **Estimativa:** **3 SP**
 - **História de Usuário:**  
   *Como* membro da comunidade acadêmica,  
@@ -242,7 +242,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US13 — Painel de Triagem e Resolução de Moderação
+#### US13 - Painel de Triagem e Resolução de Moderação
 - **ID:** `US13` | **Épico:** `EP06` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* moderador ou administrador institucional da plataforma,  
@@ -258,7 +258,7 @@ A complexidade e o esforço de cada história são mensurados utilizando a sequ�
 
 ---
 
-#### US14 — Termo Compulsório de Isenção em Dicas de Moradia
+#### US14 - Termo Compulsório de Isenção em Dicas de Moradia
 - **ID:** `US14` | **Épico:** `EP06` | **Prioridade:** **Must have** | **Estimativa:** **5 SP**
 - **História de Usuário:**  
   *Como* gestor institucional e representante da Unifor,  
@@ -279,10 +279,24 @@ As histórias a seguir foram concebidas durante as sessões de ideação e anál
 
 | ID | Épico | História de Usuário (Resumo) | Estimativa | Motivo da Exclusão do Escopo da P1 |
 | :---: | :---: | :--- | :---: | :--- |
-| **US15** | EP07 | *Feed Vertical de Vídeos Curtos (Reels/Shorts)* — Visualização e gravação de vídeos curtos de até 60s pelo aplicativo móvel. | 13 SP | **Alta Complexidade de Infraestrutura:** Exige pipeline de codificação de vídeo, streaming adaptativo (HLS), alto consumo de armazenamento em nuvem e moderação visual pesada. Mantido como hipótese Could Have técnica (RF12). |
-| **US16** | EP07 | *Chat Privado de Mensagens em Tempo Real (1-to-1)* — Troca instantânea de mensagens diretas entre discentes via WebSockets. | 8 SP | **Risco de Segurança e Infraestrutura:** Exige gestão de conexões concorrentes persistentes, criptografia fim a fim e política complexa de moderação de assédio privado. Na P1, o contato é viabilizado por perfis e conexões institucionais. |
-| **US17** | EP07 | *Algoritmo de Matching por Inteligência Artificial para o Buddy* — Pareamento automático de mentores discentes usando aprendizado de máquina. | 8 SP | **Desproporcionalidade Técnica Inicial:** O volume inicial de intercambistas no escopo da disciplina é atendido perfeitamente por regras determinísticas simples ou curadoria semiestruturada. |
-| **US18** | EP07 | *Tradução Automática Dinâmica de Postagens por IA* — Tradução em tempo real de publicações discentes em múltiplos idiomas. | 5 SP | **Dependência e Custo de API Externa:** Dependência de chaves pagas de APIs de tradução comercial, incompatível com premissas de protótipo acadêmico autônomo na Sprint 1. |
+| **US15** | EP07 | *Feed Vertical de Vídeos Curtos (Reels/Shorts)* - Visualização e gravação de vídeos curtos de até 60s pelo aplicativo móvel. | 13 SP | **Alta Complexidade de Infraestrutura:** Exige pipeline de codificação de vídeo, streaming adaptativo (HLS), alto consumo de armazenamento em nuvem e moderação visual pesada. Mantido como hipótese Could Have técnica (RF12). |
+| **US16** | EP07 | *Chat Privado de Mensagens em Tempo Real (1-to-1)* - Troca instantânea de mensagens diretas entre discentes via WebSockets. | 8 SP | **Risco de Segurança e Infraestrutura:** Exige gestão de conexões concorrentes persistentes, criptografia fim a fim e política complexa de moderação de assédio privado. Na P1, o contato é viabilizado por perfis e conexões institucionais. |
+| **US17** | EP07 | *Algoritmo de Matching por Inteligência Artificial para o Buddy* - Pareamento automático de mentores discentes usando aprendizado de máquina. | 8 SP | **Desproporcionalidade Técnica Inicial:** O volume inicial de intercambistas no escopo da disciplina é atendido perfeitamente por regras determinísticas simples ou curadoria semiestruturada. |
+| **US18** | EP07 | *Tradução Automática Dinâmica de Postagens por IA* - Tradução em tempo real de publicações discentes em múltiplos idiomas. | 5 SP | **Dependência e Custo de API Externa:** Dependência de chaves pagas de APIs de tradução comercial, incompatível com premissas de protótipo acadêmico autônomo na Sprint 1. |
+
+---
+
+## 4.1. Resumo da Priorização (MoSCoW x Story Points)
+
+| Prioridade | Histórias | Total |
+| :--- | :--- | :---: |
+| **Must have** | US01 (5), US02 (5), US03 (3), US04 (5), US05 (5), US07 (5), US11 (8), US12 (3), US13 (5), US14 (5) | **49 SP** |
+| **Should have** | US06 (5), US08 (3), US09 (5), US10 (8) | **21 SP** |
+| **Could have** | US15 (13) | 13 SP |
+| **Won't have now** | US16 (8), US17 (8), US18 (5) | 21 SP |
+| **Total Sprint 1 (Must + Should)** | 14 histórias | **70 SP** |
+
+> Ordem de execução sugerida: as histórias Must seguem a cadeia de dependências da Seção 5 (US01 → US02 → US04 → US12 → US13), garantindo que autenticação, perfil e moderação existam antes das funcionalidades sociais.
 
 ---
 

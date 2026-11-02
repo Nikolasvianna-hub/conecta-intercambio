@@ -1,6 +1,6 @@
-# Roteiro de Entrevistas Semiestruturadas — Conecta Intercâmbio
+# Roteiro de Entrevistas Semiestruturadas - Conecta Intercâmbio
 
-Este documento estabelece o protocolo metodológico e os roteiros de entrevistas semiestruturadas para o processo de elicitação de requisitos do projeto **Conecta Intercâmbio — Rede Social Acadêmica** (Unifor — Sprint 1 / P1).
+Este documento estabelece o protocolo metodológico e os roteiros de entrevistas semiestruturadas para o processo de elicitação de requisitos do projeto **Conecta Intercâmbio - Rede Social Acadêmica** (Unifor - Sprint 1 / P1).
 
 ---
 
@@ -16,7 +16,7 @@ A técnica de entrevista semiestruturada foi escolhida por permitir uma explora�
 
 ---
 
-## 2. Roteiro A — Estudantes Internacionais (*Incoming*)
+## 2. Roteiro A - Estudantes Internacionais (*Incoming*)
 
 - **Objetivo da Entrevista:** Compreender a experiência real de chegada, acolhimento e adaptação do estudante estrangeiro na Unifor e em Fortaleza, identificando lacunas informativas, barreiras socioculturais, canais de comunicação utilizados e preocupações com segurança e privacidade.
 - **Perfil do Entrevistado:** Estudante estrangeiro regularmente matriculado em modalidade de intercâmbio/mobilidade acadêmica na Unifor.
@@ -48,7 +48,7 @@ A técnica de entrevista semiestruturada foi escolhida por permitir uma explora�
 
 ---
 
-## 3. Roteiro B — Estudantes Brasileiros (*Outgoing*) e Ex-Intercambistas (*Alumni*)
+## 3. Roteiro B - Estudantes Brasileiros (*Outgoing*) e Ex-Intercambistas (*Alumni*)
 
 - **Objetivo da Entrevista:** Investigar o processo de busca por intercâmbios pelo aluno local, identificar as necessidades de orientação de quem planeja viajar e verificar a disposição dos ex-intercambistas em documentar relatos, oferecer mentorias e voluntariar-se como Buddies.
 - **Perfil do Entrevistado:** Discentes da Unifor candidatos/interessados em mobilidade acadêmica ou alunos/egressos que já retornaram de intercâmbio no exterior.
@@ -76,7 +76,7 @@ A técnica de entrevista semiestruturada foi escolhida por permitir uma explora�
 
 ---
 
-## 4. Roteiro C — Representantes da Equipe de Internacionalização (Assessoria NEI)
+## 4. Roteiro C - Representantes da Equipe de Internacionalização (Assessoria NEI)
 
 - **Objetivo da Entrevista:** Elicitar a perspectiva institucional sobre os fluxos oficiais de mobilidade, diretrizes de publicação de editais, critérios de moderação, limitações operacionais da equipe e exigências de governança e segurança da informação.
 - **Perfil do Entrevistado:** Gestores, analistas ou técnicos administrativos vinculados à Assessoria de Relações Internacionais / NEI da Unifor.

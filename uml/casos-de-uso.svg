@@ -265,8 +265,4 @@
   <rect x="475" y="340" width="75" height="18" fill="#ffffff" rx="4" />
   <text x="512" y="353" class="extend-text" font-weight="bold">&lt;&lt;extend&gt;&gt;</text>
 
-  <!-- UC14 include UC13 -->
-  <line x1="830" y1="475" x2="750" y2="488" class="include-line" style="stroke: #dc2626;" />
-  <rect x="755" y="465" width="70" height="18" fill="#ffffff" rx="4" />
-  <text x="790" y="478" class="rel-text" style="fill: #dc2626;">&lt;&lt;include&gt;&gt;</text>
 </svg>
