@@ -9,6 +9,16 @@
 
 ---
 
+## Equipe
+
+| Integrante | Matrícula | GitHub |
+| :--- | :---: | :--- |
+| Nikolas Vianna de Carvalho | 2623878 | [@Nikolasvianna-hub](https://github.com/Nikolasvianna-hub) |
+| Arthur Maia Roberto | 2310641 | - |
+| Bruno Vasconcelos Rocha | 2612659 | [@brunovasr](https://github.com/brunovasr) |
+
+---
+
 ## 1. Visão Geral do Projeto
 
 O **Conecta Intercâmbio** é uma plataforma digital colaborativa desenvolvida para aproximar e integrar estudantes brasileiros (*outgoing*), estudantes estrangeiros em mobilidade na Unifor (*incoming*), ex-intercambistas (*alumni*) e a equipe da **Assessoria de Relações Internacionais / Núcleo de Internacionalização (NEI)** da Universidade de Fortaleza.

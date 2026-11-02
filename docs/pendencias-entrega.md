@@ -41,7 +41,7 @@ Este documento consolida os itens administrativos e procedimentais pendentes par
 | **Data do Envio do Convite** | 02/11/2026, por volta de 16:10 (horário de Fortaleza) |
 | **Status do Convite** | Enviado (Pending Invite, aguardando aceite de `marcelobezerra-dotcom`) |
 | **Arquivo de Captura de Tela (Print)** | [docs/evidencias/convite-marcelobezerra-dotcom.png](evidencias/convite-marcelobezerra-dotcom.png) |
-| **Responsável pelo Envio no Grupo** | Nikolas (`Nikolasvianna-hub`, proprietário do repositório) |
+| **Responsável pelo Envio no Grupo** | Nikolas Vianna de Carvalho, matrícula 2623878 (`Nikolasvianna-hub`, proprietário do repositório) |
 
 ---
 

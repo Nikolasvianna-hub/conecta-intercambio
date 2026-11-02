@@ -13,7 +13,7 @@
 
 - **Nome do Projeto:** Conecta Intercâmbio - Rede Social Acadêmica.
 - **Natureza do Sistema:** Plataforma Web responsiva de integração acadêmica, social e informativa para mobilidade internacional universitária.
-- **Equipe de Engenharia de Requisitos:** Grupo de Discentes de Engenharia de Software / Ciência da Computação (Unifor).
+- **Equipe de Engenharia de Requisitos:** Nikolas Vianna de Carvalho (2623878), Arthur Maia Roberto (2310641) e Bruno Vasconcelos Rocha (2612659).
 - **Stakeholder Institucional Principal:** Assessoria de Relações Internacionais / Núcleo de Internacionalização (NEI) da Unifor.
 - **Avaliador da Disciplina:** Prof. Marcelo Bezerra (`marcelobezerra-dotcom`).
 
