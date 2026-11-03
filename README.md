@@ -14,7 +14,7 @@
 | Integrante | Matrícula | GitHub |
 | :--- | :---: | :--- |
 | Nikolas Vianna de Carvalho | 2623878 | [@Nikolasvianna-hub](https://github.com/Nikolasvianna-hub) |
-| Arthur Maia Roberto | 2310641 | - |
+| Arthur Maia Roberto | 2310641 | [@arthurmaiaz](https://github.com/arthurmaiaz) |
 | Bruno Vasconcelos Rocha | 2612659 | [@brunovasr](https://github.com/brunovasr) |
 
 ---
