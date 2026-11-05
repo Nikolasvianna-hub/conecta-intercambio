@@ -127,3 +127,25 @@ Modela a topologia física conceitual de hardware, nós de execução e protocol
 2. **Reunião de Alinhamento com a Assessoria NEI:** Validação formal das regras de negócio de comunicados oficiais (RN01) e termos de isenção de moradia (RN08).
 3. **Prototipação de Baixa e Alta Fidelidade:** Elaboração de wireframes navegáveis baseados nos fluxos dos casos de uso modelados.
 4. **Refinamento do Modelo de Dados:** Criação do Diagrama Entidade-Relacionamento (DER) e modelagem de classes de domínio.
+
+---
+
+## 8. Sprint 2 (P2, Milestone M2: 03/11 a 23/11/2026) — em andamento
+
+| Entregável P2 | Arquivo |
+| :--- | :--- |
+| **SRS (IEEE 830) com casos de uso** | [`docs/srs.md`](docs/srs.md) |
+| **Revisão de consistência UML × requisitos** | [`docs/revisao-de-consistencia.md`](docs/revisao-de-consistencia.md) |
+| **Wireframes + protótipo navegável** | [`docs/prototipo.md`](docs/prototipo.md) · código em [`app/`](app) |
+| **UML atualizada** | [`uml/casos-de-uso-v2.svg`](uml/casos-de-uso-v2.svg) (UC16–UC23) · [`uml/componentes-v2.svg`](uml/componentes-v2.svg) |
+| Requisitos novos | RF17–RF23, RNF11–RNF12 em [`docs/requisitos.md`](docs/requisitos.md) · RN11–RN14 em [`docs/regras-de-negocio.md`](docs/regras-de-negocio.md) |
+| Backlog e issues da Sprint 2 | [`docs/backlog.md` §6](docs/backlog.md) |
+
+**Protótipo online:** https://nikolasvianna-hub.github.io/conecta-intercambio/ (publicado pelo workflow `.github/workflows/deploy-pages.yml`).
+
+### Navegação do app (5 abas, identidade Unifor Mobile)
+`🔍 Explorar` (fórum e guia da cidade) · `💬 Conversas` (estilo WhatsApp, com busca de perfis) · `🎬 Unifor` (jornal e reels da universidade) · `☰ Menu` (idioma, tema claro/noturno/personalizado, LGPD) · `👤 Perfil` (com notícias do meu curso)
+
+### Diagramas da Sprint 2
+![Casos de uso — Sprint 2](uml/casos-de-uso-v2.svg)
+![Componentes — Sprint 2](uml/componentes-v2.svg)

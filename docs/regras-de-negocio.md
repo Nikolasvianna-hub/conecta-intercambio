@@ -22,6 +22,10 @@ Este documento estabelece as diretrizes normativas, políticas operacionais e re
 | **RN08** | Isenção Institucional e Diretrizes de Dicas de Moradia | Jurídico e Risco | Proposta da Equipe (Pendente de Validação Jurídica) | RF10, RF15 |
 | **RN09** | Chancela e Destaque de Eventos Acadêmicos e Culturais | Divulgação e Calendário | Proposta da Equipe (Pendente de Validação NEI) | RF09 |
 | **RN10** | Suspensão Cautelar por Reincidência de Infrações | Moderação e Governança | Validada pelo Escopo da P1 | RF10, RF11 |
+| **RN11** | Mensagens Privadas Condicionadas a Conexão ou Aceite | Conduta e Segurança | Proposta da Equipe (Sprint 2) | RF17, RF20, RF22 |
+| **RN12** | Confidencialidade das Conversas e Acesso Restrito da Moderação | Privacidade e LGPD | Proposta da Equipe (Sprint 2) | RF17, RF11, RNF02 |
+| **RN13** | Personalização por Curso Dependente de Consentimento | Privacidade e LGPD | Proposta da Equipe (Sprint 2) | RF20, RF21 |
+| **RN14** | Guia da Cidade sem Publicidade Paga | Curadoria de Conteúdo | Proposta da Equipe (Sprint 2) | RF18 |
 
 ---
 
@@ -126,3 +130,37 @@ Este documento estabelece as diretrizes normativas, políticas operacionais e re
 - **Stakeholders Envolvidos:** STK08 (Moderação), STK05, STK10.
 - **Fonte:** Regimento Geral da Unifor e boas práticas de moderação ética.
 - **Status de Validação:** **Validada pelo Escopo da P1**.
+
+---
+
+## 3. Regras de Negócio incluídas na Sprint 2 (M2)
+
+### RN11 - Mensagens Privadas Condicionadas a Conexão ou Aceite
+- **Enunciado:** Um usuário só pode conversar livremente com suas conexões (RF22). A mensagem de quem não é conexão vira um **pedido de mensagem**: o destinatário vê a primeira mensagem sem que o remetente saiba se ela foi lida, e só pode responder depois de aceitar. Se o destinatário configurou "Quem pode me mandar mensagem = Ninguém" (RF20), o envio fica bloqueado. Uma conta bloqueada não envia mensagens nem pedidos de conexão para quem a bloqueou.
+- **Justificativa:** Reduz o risco de assédio e de golpes de moradia, que foram os motivos para deixar o chat fora do escopo na P1.
+- **Requisitos Relacionados:** RF17, RF20, RF22, RF10.
+- **Status de Validação:** **Proposta da Equipe (Sprint 2), prototipada**.
+
+---
+
+### RN12 - Confidencialidade das Conversas e Acesso Restrito da Moderação
+- **Enunciado:** Moderadores e gestores não têm acesso ao conteúdo das conversas privadas. Quando uma conversa é denunciada (RF10), vão para a fila de moderação somente as mensagens selecionadas pelo denunciante, junto com o contexto imediato (até 5 mensagens antes e 5 depois).
+- **Justificativa:** Aplica o princípio da necessidade (Art. 6º, III, LGPD) sem impedir a apuração de abusos.
+- **Requisitos Relacionados:** RF17, RF11, RNF02, RNF09.
+- **Status de Validação:** **Proposta da Equipe (Sprint 2), pendente de validação jurídica**.
+
+---
+
+### RN13 - Personalização por Curso Dependente de Consentimento
+- **Enunciado:** O curso do estudante só pode ser usado para filtrar ou priorizar notícias (RF21) e notificações de curso (RF14) enquanto o consentimento "Personalizar notícias pelo curso" (RF20) estiver ativo. Ao revogar, o efeito é imediato e a revogação fica registrada no histórico de consentimentos.
+- **Justificativa:** Usar dados para personalizar conteúdo é uma finalidade diferente da autenticação. Por isso exige base legal própria e pode ser revogado.
+- **Requisitos Relacionados:** RF20, RF21, RF14.
+- **Status de Validação:** **Proposta da Equipe (Sprint 2), prototipada**.
+
+---
+
+### RN14 - Guia da Cidade sem Publicidade Paga
+- **Enunciado:** Lugares do guia (RF18) são sugeridos pela comunidade ou pelo NEI e não podem ser patrocinados nem impulsionados por pagamento. Publicações com link de afiliado, cupom pago ou anúncio comercial devem ser denunciadas como "Spam ou golpe" (RF10).
+- **Justificativa:** Mantém a confiabilidade das recomendações e evita conflito com a política de isenção institucional (RN08).
+- **Requisitos Relacionados:** RF18, RF10, RN08.
+- **Status de Validação:** **Proposta da Equipe (Sprint 2)**.
