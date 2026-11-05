@@ -7,7 +7,7 @@ Este documento apresenta a especificação detalhada dos **Requisitos Funcionais
 ## 1. Convenções e Metodologia de Classificação
 
 Cada requisito é especificado contendo:
-- **ID:** Código identificador único sequencial (`RF01` a `RF16` para funcionais; `RNF01` a `RNF10` para não funcionais).
+- **ID:** Código identificador único sequencial (`RF01` a `RF23` para funcionais, sendo RF17–RF23 incluídos na Sprint 2; `RNF01` a `RNF12` para não funcionais).
 - **Nome:** Título autoexplicativo do requisito.
 - **Descrição Objetiva:** O comportamento observável ou a restrição de qualidade exigida.
 - **Justificativa:** Motivação técnica, acadêmica ou institucional para a existência do requisito.
@@ -202,6 +202,96 @@ Cada requisito é especificado contendo:
 
 ---
 
+## 2.1 Requisitos Funcionais incluídos na Sprint 2 (M2)
+
+> **Contexto da mudança (05/11/2026):** na Sprint 2 o grupo definiu a navegação do app em cinco abas (Explorar · Conversas · Unifor · Menu · Perfil), seguindo a identidade visual do Unifor Mobile. A proposta junta recursos de LinkedIn (perfil acadêmico e conexões), WhatsApp (conversas), Instagram/TikTok (posts e reels) e um fórum da cidade. Por isso, alguns itens que estavam fora do escopo na P1 foram repriorizados. A tabela de mudanças está em [`revisao-de-consistencia.md`](revisao-de-consistencia.md).
+
+### Repriorizações
+| Requisito | P1 | Sprint 2 | Motivo |
+| :--- | :--- | :--- | :--- |
+| RF12 — Feed vertical de vídeos curtos | Could have | **Should have** | Virou a aba central "Unifor" (jornal + reels). O conteúdo fica restrito a temas da universidade (RN06) e o protótipo usa vídeo simulado, sem custo de infraestrutura. |
+| US16 — Chat privado | Won't have now | **Should have** (RF17) | É a segunda aba do app. Os riscos de assédio apontados na P1 são tratados pelas regras RN11 e RN12. |
+| RF13 — Idiomas | PT/EN | PT/EN + **ES (Could have)** | Muitos intercambistas *incoming* vêm da América Latina e da Espanha. RNF08 já previa idiomas novos sem mudar a lógica. |
+
+---
+
+### RF17 - Conversas Privadas e em Grupo (estilo mensageiro)
+- **Descrição Objetiva:** O sistema deve permitir conversas de texto 1-para-1 entre usuários conectados e conversas em grupo ligadas às comunidades (RF07), mostrando lista de conversas, quem está online, confirmação de leitura (configurável) e separando os **pedidos de mensagem** de quem ainda não é conexão.
+- **Justificativa:** Na P1 os grupos de WhatsApp externos foram apontados como o canal mais usado e o mais desorganizado. Trazer a conversa para dentro do app, com vínculo verificado, reduz golpes e mantém o histórico perto do conteúdo oficial.
+- **Stakeholder Primário:** STK01, STK02, STK04.
+- **Prioridade:** **Should have**.
+- **Critério de Aceitação:** Dado um usuário A que não é conexão de B, quando A envia a primeira mensagem, então ela aparece para B na aba "Pedidos", e B só pode responder depois de "Aceitar". Toda conversa tem as opções "Denunciar" (RF10) e "Bloquear". Depois de bloquear, A não consegue enviar novas mensagens.
+- **Fonte / Origem:** Ideação da equipe na Sprint 2 (rascunho de navegação) e entrevistas PART-B02 e B06 (dispersão em grupos externos).
+- **Status de Validação:** **Hipótese da equipe, prototipada** (ver `app/`).
+
+---
+
+### RF18 - Explorar: Guia da Cidade e Fórum de Tópicos em Alta
+- **Descrição Objetiva:** O sistema deve ter a aba "Explorar", com: (a) busca textual; (b) categorias (Moradia, Restaurantes, Transporte, Saúde, Lazer e turismo, Documentação, Vida acadêmica, Segurança); (c) guia de lugares com distância estimada até a Unifor, faixa de preço e nota; (d) fórum de tópicos ordenado por relevância ("Em alta"), com respostas e a marcação "Útil"; (e) acesso aos relatos (RF08) e às equivalências (RF16).
+- **Justificativa:** O intercambista *incoming* precisa de informação prática sobre Fortaleza (onde morar, comer, como se locomover, como tirar o RNM). Hoje isso fica espalhado em grupos e perfis pessoais.
+- **Stakeholder Primário:** STK01, STK02, STK03.
+- **Prioridade:** **Must have**.
+- **Critério de Aceitação:** Ao selecionar a categoria "Moradia", só aparecem tópicos e lugares dessa categoria, e cada tópico mostra o aviso do RF15. A lista "Em alta" é ordenada por (votos de "Útil" + 5 × número de respostas). Para criar um tópico em Moradia é preciso ter vínculo verificado (RN02).
+- **Fonte / Origem:** Ideação da equipe (aba "lupa" do rascunho) e entrevistas PART-B02, B03 e B04.
+- **Status de Validação:** **Hipótese da equipe, prototipada**.
+
+---
+
+### RF19 - Personalização de Aparência
+- **Descrição Objetiva:** O sistema deve permitir escolher o modo de tema **Claro**, **Noturno** ou **Automático** (segue o sistema operacional), escolher uma **cor de destaque** entre as cores da paleta Unifor ou uma cor personalizada (seletor livre), ajustar o tamanho do texto e ativar "Reduzir animações".
+- **Justificativa:** Conforto visual e acessibilidade (RNF04). Também mantém coerência com o Unifor Mobile, que usa tema escuro por padrão.
+- **Stakeholder Primário:** STK01, STK02.
+- **Prioridade:** **Should have**.
+- **Critério de Aceitação:** A mudança de tema ou de cor vale na hora para todas as telas, sem recarregar, e continua salva na próxima sessão. Com uma cor personalizada, botões, abas ativas e destaques usam essa cor, e o contraste do texto sobre o fundo continua ≥ 4,5:1.
+- **Fonte / Origem:** Ideação da equipe (aba Menu).
+- **Status de Validação:** **Hipótese da equipe, prototipada**.
+
+---
+
+### RF20 - Central de Privacidade e Direitos do Titular (LGPD)
+- **Descrição Objetiva:** O sistema deve oferecer, no Menu, uma central para: definir quem vê o perfil (Comunidade Unifor / Somente conexões / Privado); definir quem pode mandar mensagem (Comunidade / Conexões / Ninguém); ligar ou desligar status online, confirmação de leitura e país de origem; dar ou revogar consentimentos específicos (personalizar notícias pelo curso e enviar dados de uso anônimos); **baixar uma cópia dos dados** (portabilidade); ver o **histórico de consentimentos**; **pedir a exclusão da conta**; ver o contato do Encarregado (DPO); e gerenciar contas bloqueadas.
+- **Justificativa:** Atende os direitos do titular do Art. 18 da LGPD (acesso, portabilidade, eliminação e revogação de consentimento) e detalha o RNF02, que na P1 era só uma restrição geral.
+- **Stakeholder Primário:** STK01, STK02, STK05, STK10.
+- **Prioridade:** **Must have**.
+- **Critério de Aceitação:** (1) Cada mudança de consentimento gera um registro com data e hora no histórico. (2) "Baixar meus dados" gera um arquivo JSON com perfil, preferências, conexões e consentimentos. (3) O pedido de exclusão gera um número de protocolo e informa o prazo de anonimização (até 15 dias), avisando que os logs de auditoria ficam guardados pelo prazo do RNF10. (4) Analytics vem **desligado** por padrão.
+- **Fonte / Origem:** Lei nº 13.709/2018, RNF02 e entrevistas PART-B01, B05 e B06.
+- **Status de Validação:** **Validado pelo requisito legal, prototipado**.
+
+---
+
+### RF21 - Notícias Segmentadas por Curso no Perfil
+- **Descrição Objetiva:** O sistema deve mostrar no Perfil do usuário a seção "Notícias do meu curso", com publicações institucionais marcadas com o curso dele (chegada ou saída de professores, editais específicos, convênios da área). Na aba Unifor deve existir também o filtro "Meu curso".
+- **Justificativa:** O estudante recebe muitos comunicados gerais. Filtrar pelo curso aumenta a relevância e o engajamento com o canal oficial.
+- **Stakeholder Primário:** STK01, STK02, STK05, STK06.
+- **Prioridade:** **Should have**.
+- **Critério de Aceitação:** Um estudante de ADS vê no perfil as notícias marcadas com "Análise e Desenv. de Sistemas" e não vê as marcadas só com outros cursos. Se o consentimento "personalizar notícias pelo curso" (RF20) estiver desligado, a seção mostra o aviso explicando como ativar e não usa o dado do curso.
+- **Fonte / Origem:** Ideação da equipe (aba Perfil inspirada no Unifor Mobile).
+- **Status de Validação:** **Hipótese da equipe, prototipada**.
+
+---
+
+### RF22 - Conexões Acadêmicas entre Perfis
+- **Descrição Objetiva:** O sistema deve permitir enviar pedido de conexão a outro perfil, aceitar ou recusar pedidos, e mostrar no perfil o número de conexões, idiomas com nível de fluência, curso, país de origem e destino, além de uma grade com as publicações da pessoa.
+- **Justificativa:** A conexão é o que libera as conversas (RN11) e a visualização de perfis privados, ao mesmo tempo que forma uma rede acadêmica parecida com o LinkedIn.
+- **Stakeholder Primário:** STK01, STK02, STK03, STK04.
+- **Prioridade:** **Should have**.
+- **Critério de Aceitação:** Ao tocar em "Conectar", o estado muda para "Pendente". Perfis com visibilidade "Privado" mostram para quem não é conexão apenas nome, selo, curso e país.
+- **Fonte / Origem:** Ideação da equipe e RF03.
+- **Status de Validação:** **Hipótese da equipe, prototipada**.
+
+---
+
+### RF23 - Publicação de Conteúdo Institucional por Equipes de Comunicação
+- **Descrição Objetiva:** O sistema deve ter um perfil de acesso "Equipe de Comunicação" (TV Unifor, NEI, coordenações de curso) que pode publicar notícias e reels institucionais com o selo oficial, classificando cada publicação por tipo (Edital, Professores, Eventos, TV Unifor, Internacional) e pelos cursos-alvo.
+- **Justificativa:** Permite que a aba Unifor funcione como um jornal da universidade. A proposta prevê contato com a TV Unifor para integrar o conteúdo dela.
+- **Stakeholder Primário:** STK07 (Comunicação Institucional, incluindo a TV Unifor), STK05, STK06.
+- **Prioridade:** **Should have**.
+- **Critério de Aceitação:** Publicações desse perfil aparecem com o selo "Comunicado Institucional Unifor" e não precisam passar pela fila de moderação. Publicações de estudantes na aba Unifor vão para a fila (RN06).
+- **Fonte / Origem:** Ideação da equipe e extensão de RF05 / RN01.
+- **Status de Validação:** **Pendente de contato com a TV Unifor e o NEI**.
+
+---
+
 ## 3. Requisitos Não Funcionais (RNF)
 
 | ID | Nome do RNF | Categoria | Descrição Objetiva e Critério de Aceitação Verificável | Prioridade | Fonte / Validação |
@@ -216,3 +306,5 @@ Cada requisito é especificado contendo:
 | **RNF08** | **Internacionalização da Arquitetura** | Arquitetura | O código-fonte não deve conter textos de interface codificados diretamente (*hardcoded*). Todas as mensagens, legendas e textos de sistema devem residir em arquivos padronizados de recursos de localização (dicionários JSON i18n), permitindo inclusão de novos idiomas (ex.: Espanhol) sem alteração de lógica. | **Must have** | Escopo Multilíngue da P1 / Validado. |
 | **RNF09** | **Integridade e Auditoria Administrativa** | Confiabilidade | Todas as ações de moderação (remoção de posts, suspensão de usuários, encerramento de denúncias) devem gerar registros de log indeléveis contendo: identificador do moderador, identificador do conteúdo, timestamp preciso UTC e justificativa formal. | **Must have** | Governança Institucional / Validado. |
 | **RNF10** | **Retenção e Descarte de Registros** | Governança de Dados | Logs de auditoria administrativa de denúncias e segurança devem ser mantidos armazenados de forma segura pelo período mínimo de 6 (seis) meses, após o qual poderão ser arquivados ou expurgados segundo as diretrizes de descarte da instituição. | **Should have** | Diretrizes de Auditoria Acadêmica / Validado. |
+| **RNF11** | **Identidade Visual Institucional** | Usabilidade / Marca | A interface deve seguir a linguagem visual do Unifor Mobile: tema escuro como padrão, cartões com cantos arredondados, azul Unifor como cor de destaque, cabeçalho de perfil em azul royal e navegação por barra inferior com 5 abas. A logomarca oficial só pode ser usada com autorização da Comunicação Institucional. | **Must have** | Sprint 2 / Referências: Unifor Mobile, AVA e Unifor Online. |
+| **RNF12** | **Tempo Real nas Conversas** | Desempenho | Na operação real, as mensagens de RF17 devem chegar ao destinatário online em até 2 segundos no percentil 95 (WebSocket com *fallback* para *long-polling*). O protótipo da Sprint 2 simula essa troca localmente. | **Should have** | Sprint 2 / Hipótese da equipe (pendente de prova de conceito). |

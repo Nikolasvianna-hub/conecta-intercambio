@@ -336,3 +336,70 @@ graph TD
     US12 --> US13[US13: Painel de Moderação]
     US11 --> US19[US19: Equivalências de Disciplinas]
 ```
+
+---
+
+## 6. Backlog da Sprint 2 (Milestone M2 — 03/11 a 23/11/2026)
+
+Na Sprint 2 a equipe definiu a navegação do app em **cinco abas**, seguindo o Unifor Mobile:
+
+| Aba | Ícone | Conteúdo | Requisitos |
+| :--- | :---: | :--- | :--- |
+| **Explorar** | 🔍 | Fórum com tópicos em alta, guia da cidade (moradia, restaurantes, transporte, documentação), relatos e equivalências | RF18, RF08, RF15, RF16 |
+| **Conversas** | 💬 | Mensagens 1-1 e em grupo (estilo WhatsApp), pedidos de mensagem e busca de perfis | RF17, RF22, RF03 |
+| **Unifor** (central) | 🎬 | Jornal da universidade (editais, professores, eventos, TV Unifor, internacional) e reels institucionais | RF05, RF12, RF23 |
+| **Menu** | ☰ | Idioma, aparência (claro/noturno/automático/cor personalizada), privacidade e LGPD, notificações, Buddy, eventos, moderação e FAQ | RF13, RF19, RF20, RF14, RF06, RF09, RF11 |
+| **Perfil** | 👤 | Perfil no padrão Unifor Mobile, com dados de intercâmbio, idiomas e **notícias do meu curso** | RF02, RF21, RF22 |
+
+### 6.1 Repriorizações
+- **US15 (Reels)** passa de *Won't have now* para **Should have**, agora como RF12 + RF23. O conteúdo é restrito a temas da universidade e posts de estudantes passam por moderação (RN06).
+- **US16 (Chat 1-1)** passa de *Won't have now* para **Should have** e é substituída pelas US22 e US23 abaixo. Os riscos são tratados por RN11 e RN12.
+
+### 6.2 Novas histórias de usuário
+
+#### US22 - Conversar com conexões e grupos
+- **Épico:** EP02 | **Prioridade:** Should have | **Estimativa:** 8 SP | **Requisitos:** RF17, RN11, RN12, RNF12 | **UC:** UC16
+- *Como* estudante, *quero* conversar em particular com minhas conexões e nos grupos das comunidades, *para* tirar dúvidas rápidas sem precisar de grupos externos.
+- **Critérios de aceitação:** (1) mensagens de quem não é conexão vão para "Pedidos" e só podem ser respondidas depois do aceite; (2) toda conversa tem "Denunciar" e "Bloquear"; (3) confirmação de leitura respeita a configuração de privacidade.
+
+#### US23 - Buscar pessoas e me conectar
+- **Épico:** EP01 | **Prioridade:** Should have | **Estimativa:** 5 SP | **Requisitos:** RF03, RF22 | **UC:** UC17
+- *Como* estudante, *quero* buscar perfis por nome, curso ou país e enviar pedido de conexão, *para* montar minha rede acadêmica.
+- **Critérios de aceitação:** busca na aba Conversas retorna pessoas; "Conectar" muda para "Pendente"; perfis privados mostram só dados básicos para quem não é conexão.
+
+#### US24 - Explorar a cidade e o fórum
+- **Épico:** EP05 | **Prioridade:** Must have | **Estimativa:** 8 SP | **Requisitos:** RF18, RF15, RN14 | **UC:** UC18
+- *Como* intercambista recém-chegado, *quero* ver tópicos em alta e um guia de lugares por categoria, *para* resolver moradia, alimentação, transporte e documentos.
+- **Critérios de aceitação:** filtro por categoria; ordenação "Em alta"; aviso de isenção em Moradia; criar tópico com até 1.000 caracteres.
+
+#### US25 - Controlar minha privacidade e a aparência do app
+- **Épico:** EP06 | **Prioridade:** Must have | **Estimativa:** 8 SP | **Requisitos:** RF19, RF20, RN13 | **UC:** UC19, UC20
+- *Como* usuário, *quero* escolher tema, cor, idioma e quem vê meu perfil, além de baixar ou excluir meus dados, *para* usar o app com conforto e segurança.
+- **Critérios de aceitação:** tema e cor mudam na hora e ficam salvos; consentimentos geram histórico; exportação gera JSON; exclusão gera protocolo.
+
+#### US26 - Ver as notícias do meu curso
+- **Épico:** EP03 | **Prioridade:** Should have | **Estimativa:** 3 SP | **Requisitos:** RF21, RN13 | **UC:** UC21
+- *Como* estudante, *quero* ver no meu perfil as notícias do meu curso (professores que chegam ou saem, editais da área), *para* não perder o que me afeta diretamente.
+- **Critérios de aceitação:** só aparecem notícias marcadas com o curso do usuário; sem consentimento, aparece o aviso explicando como ativar.
+
+#### US27 - Publicar conteúdo institucional (TV Unifor / NEI / Coordenações)
+- **Épico:** EP03 | **Prioridade:** Should have | **Estimativa:** 5 SP | **Requisitos:** RF23, RF05, RN01 | **UC:** UC23
+- *Como* membro da equipe de comunicação, *quero* publicar notícias e reels com o selo oficial e marcar os cursos-alvo, *para* manter a comunidade informada.
+- **Critérios de aceitação:** selo "Comunicado Institucional Unifor"; classificação por tipo e curso; publicação sem fila de moderação.
+
+### 6.3 Issues sugeridas para o GitHub (Milestone M2)
+
+| # | Issue | Labels | Entregável |
+| :---: | :--- | :--- | :--- |
+| 1 | Redigir SRS (IEEE 830) com casos de uso detalhados | `docs`, `sprint-2` | [`docs/srs.md`](srs.md) |
+| 2 | Revisão de consistência UML × requisitos | `docs`, `uml`, `sprint-2` | [`docs/revisao-de-consistencia.md`](revisao-de-consistencia.md) |
+| 3 | Atualizar diagrama de casos de uso (UC16–UC23) | `uml`, `sprint-2` | [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg) |
+| 4 | Atualizar diagrama de componentes (ChatService, ContentService, PrivacyService) | `uml`, `sprint-2` | `uml/componentes.drawio` |
+| 5 | Wireframes das 5 abas | `prototipo`, `sprint-2` | [`docs/prototipo.md`](prototipo.md) |
+| 6 | Protótipo navegável — aba Explorar | `prototipo`, `sprint-2` | `app/src/pages/Explore.tsx` |
+| 7 | Protótipo navegável — aba Conversas e perfis | `prototipo`, `sprint-2` | `app/src/pages/Chats.tsx` |
+| 8 | Protótipo navegável — aba Unifor (notícias + reels) | `prototipo`, `sprint-2` | `app/src/pages/Unifor.tsx` |
+| 9 | Protótipo navegável — Menu, aparência e LGPD | `prototipo`, `sprint-2` | `app/src/pages/Menu.tsx` |
+| 10 | Protótipo navegável — Perfil e notícias do curso | `prototipo`, `sprint-2` | `app/src/pages/Profile.tsx` |
+| 11 | Publicar protótipo no GitHub Pages | `devops`, `sprint-2` | `.github/workflows/deploy-pages.yml` |
+| 12 | Validar RN11–RN14 com NEI e contato com TV Unifor | `elicitação`, `sprint-2` | Ata / resultados de entrevista |

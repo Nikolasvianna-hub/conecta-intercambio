@@ -24,6 +24,10 @@ Este documento estabelece a rastreabilidade completa entre as necessidades de ne
 | **NEC10** | Permitir o uso autônomo da plataforma por intercambistas estrangeiros que ainda não dominam a língua portuguesa. | STK01, STK05 | Ementa Pedagógica da Disciplina | RF13, RNF08 | RN04 | US03 | Transversal a todos os Casos de Uso | **Validado pelo Escopo da P1** |
 | **NEC11** | Proteger a Universidade de Fortaleza de litígios jurídicos e indenizações em virtude de negociações de moradia. | STK05, STK10 | Diretrizes de Risco / Hipótese HIP04 | RF15, RNF02 | RN08 | US14 | Regra transversal em UC04, UC09 e UC10 | ⏳ **Pendente de Homologação Jurídica** |
 | **NEC12** | Informar candidatos sobre o aproveitamento de disciplinas cursadas em universidades parceiras. | STK02, STK03, STK06 | Entrevistas PART-B01 e PART-B02 | RF16, RF08 | RN07 | US19 | UC10 - Submeter Relato<br>UC03 - Buscar Estudantes e Relatos | ✅ **Derivado de entrevistas** |
+| **NEC13** | Conversar com colegas e intercambistas dentro de um ambiente verificado, sem depender de grupos externos. | STK01, STK02, STK04 | Sprint 2 / PART-B02, B06 | RF17, RF22, RNF12 | RN11, RN12 | US22, US23 | UC16 - Conversar<br>UC17 - Buscar Perfis e Conexões | 🟡 **Hipótese prototipada (Sprint 2)** |
+| **NEC14** | Encontrar informação prática sobre Fortaleza (moradia, comida, transporte, documentos) em um só lugar. | STK01, STK02, STK03 | Sprint 2 / PART-B02, B03, B04 | RF18, RF15 | RN08, RN14 | US24 | UC18 - Explorar Guia e Fórum | 🟡 **Hipótese prototipada (Sprint 2)** |
+| **NEC15** | Acompanhar as novidades da universidade e do próprio curso em formato atrativo (jornal + reels). | STK01, STK02, STK05, STK06 | Sprint 2 / TV Unifor | RF05, RF12, RF21, RF23 | RN01, RN06, RN13 | US15, US26, US27 | UC21 - Notícias do Curso<br>UC22 - Reels<br>UC23 - Publicar Institucional | 🟡 **Hipótese prototipada (Sprint 2)** |
+| **NEC16** | Controlar a própria privacidade e a aparência do app (tema, cor, idioma) com autonomia. | STK01, STK02, STK10 | LGPD / RNF02, RNF04 | RF13, RF19, RF20 | RN04, RN13 | US03, US25 | UC19 - Personalizar<br>UC20 - Privacidade LGPD | ✅ **Requisito legal + prototipado** |
 
 ---
 
@@ -43,3 +47,5 @@ A tabela abaixo demonstra como os atributos de qualidade exigidos pelos RNFs sã
 | **RNF08** | Internacionalização (i18n) | `Frontend i18n Engine` | Arquivos estáticos de localização (dicionários JSON pt/en). | 100% de strings desacopladas de código duro. |
 | **RNF09** | Auditoria e Não Repúdio | `ModerationService`, `AuditLogger` | Tabela de Logs de Auditoria com timestamps UTC e integridade referencial. | Registro indelével de toda ação punitiva ou moderadora. |
 | **RNF10** | Retenção de Registros | `AuditLogger` | Volume de Armazenamento persistente de logs por 6 meses. | Política de retenção e expurgo automatizada configurada. |
+| **RNF11** | Identidade Visual Institucional | `Frontend (Design System / tokens CSS)` | Variáveis CSS `--accent`, `--brand-royal`; tema `data-theme`. | Revisão visual comparando com o Unifor Mobile. |
+| **RNF12** | Tempo Real nas Conversas | `ChatService` (WebSocket) | Servidor de aplicação com canal WebSocket via TLS. | Entrega P95 ≤ 2s em teste de carga. |

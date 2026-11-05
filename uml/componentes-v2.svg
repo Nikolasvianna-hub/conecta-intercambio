@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="100%" height="100%" style="background:#fff;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#334155" stroke-width="1.5"/></marker>
+    <style>
+      .sub{fill:#f8fafc;stroke:#334155;stroke-width:2}
+      .subt{font-size:14px;font-weight:700;fill:#0f172a}
+      .c{fill:#fff;stroke:#1e40af;stroke-width:1.6}
+      .cn{fill:#eff6ff;stroke:#1d4ed8;stroke-width:2.4}
+      .cx{fill:#fff;stroke:#94a3b8;stroke-width:1.3;stroke-dasharray:4 3}
+      .st{font-size:10px;fill:#475569;font-style:italic}
+      .n{font-size:12.5px;font-weight:700;fill:#0f172a}
+      .d{font-size:10.5px;fill:#334155}
+      .l{stroke:#334155;stroke-width:1.3;fill:none}
+      .ld{stroke:#334155;stroke-width:1.3;fill:none;stroke-dasharray:6 4}
+      .lab{font-size:10.5px;fill:#1e293b;font-weight:600}
+    </style>
+    <g id="ic"><rect x="0" y="0" width="14" height="16" fill="#fff" stroke="#1e40af"/><rect x="-4" y="3" width="8" height="3" fill="#fff" stroke="#1e40af"/><rect x="-4" y="10" width="8" height="3" fill="#fff" stroke="#1e40af"/></g>
+  </defs>
+
+  <text x="600" y="28" text-anchor="middle" style="font-size:20px;font-weight:800;fill:#0f172a">Diagrama de Componentes — Extensão Sprint 2</text>
+  <text x="600" y="47" text-anchor="middle" class="st">Azul forte = componente novo na Sprint 2 · Tracejado = componente da P1 já existente em uml/componentes.svg</text>
+
+  <!-- Frontend -->
+  <rect class="sub" x="30" y="70" width="1140" height="190" rx="10"/>
+  <text class="subt" x="46" y="92">«subsystem» App Mobile-first (SPA / PWA) — navegador do cliente</text>
+
+  <rect class="cn" x="50" y="108" width="200" height="66" rx="6"/><use href="#ic" x="228" y="114"/>
+  <text class="st" x="60" y="124">«component»</text><text class="n" x="60" y="141">Shell de Navegação</text><text class="d" x="60" y="158">5 abas · rotas · RNF11</text>
+
+  <rect class="cn" x="270" y="108" width="200" height="66" rx="6"/><use href="#ic" x="448" y="114"/>
+  <text class="st" x="280" y="124">«component»</text><text class="n" x="280" y="141">Theme Engine</text><text class="d" x="280" y="158">claro/noturno/auto/cor · RF19</text>
+
+  <rect class="cx" x="490" y="108" width="200" height="66" rx="6"/>
+  <text class="st" x="500" y="124">«component» (P1, ampliado)</text><text class="n" x="500" y="141">Motor de Localização</text><text class="d" x="500" y="158">i18n PT/EN + ES · RF13, RNF08</text>
+
+  <rect class="cn" x="710" y="108" width="210" height="66" rx="6"/><use href="#ic" x="898" y="114"/>
+  <text class="st" x="720" y="124">«component»</text><text class="n" x="720" y="141">Realtime Client</text><text class="d" x="720" y="158">WebSocket p/ conversas · RNF12</text>
+
+  <rect class="cx" x="940" y="108" width="210" height="66" rx="6"/>
+  <text class="st" x="950" y="124">«component» (P1)</text><text class="n" x="950" y="141">Gerenciador de Estado</text><text class="d" x="950" y="158">cache + preferências locais</text>
+
+  <text class="d" x="50" y="200">Telas: Explorar (RF18) · Conversas (RF17, RF22) · Unifor — Notícias/Reels (RF05, RF12, RF21) · Menu — Aparência/Idioma/Privacidade (RF19, RF13, RF20) · Perfil (RF02, RF21)</text>
+  <text class="d" x="50" y="220">Protótipo Sprint 2: React 19 + TypeScript + Vite em app/ — estado local em localStorage, sem backend, dados fictícios.</text>
+
+  <!-- Interfaces -->
+  <circle cx="420" cy="290" r="9" fill="#fff" stroke="#334155" stroke-width="1.6"/>
+  <text class="lab" x="436" y="294">API REST (JSON / HTTPS)</text>
+  <circle cx="815" cy="290" r="9" fill="#fff" stroke="#334155" stroke-width="1.6"/>
+  <text class="lab" x="831" y="294">Canal WSS (mensagens)</text>
+  <path class="ld" d="M420,260 L420,281" marker-end="url(#arr)"/>
+  <path class="ld" d="M815,174 L815,281" marker-end="url(#arr)"/>
+  <path class="l" d="M420,299 L420,320"/>
+  <path class="l" d="M815,299 L815,320"/>
+
+  <!-- Backend -->
+  <rect class="sub" x="30" y="320" width="1140" height="270" rx="10"/>
+  <text class="subt" x="46" y="342">«subsystem» Serviços de Backend (regras de negócio)</text>
+
+  <rect class="cn" x="50" y="360" width="260" height="76" rx="6"/><use href="#ic" x="288" y="366"/>
+  <text class="st" x="60" y="376">«component»</text><text class="n" x="60" y="393">Chat &amp; Messaging Module</text><text class="d" x="60" y="410">1-1, grupos, pedidos, bloqueio</text><text class="d" x="60" y="425">[RF17, RN11, RN12, RNF12]</text>
+
+  <rect class="cn" x="330" y="360" width="260" height="76" rx="6"/><use href="#ic" x="568" y="366"/>
+  <text class="st" x="340" y="376">«component»</text><text class="n" x="340" y="393">Connections Module</text><text class="d" x="340" y="410">pedidos de conexão, visibilidade</text><text class="d" x="340" y="425">[RF22, RN04, RN11]</text>
+
+  <rect class="cn" x="610" y="360" width="260" height="76" rx="6"/><use href="#ic" x="848" y="366"/>
+  <text class="st" x="620" y="376">«component»</text><text class="n" x="620" y="393">City Guide &amp; Forum Module</text><text class="d" x="620" y="410">lugares, tópicos, “Em alta”, “Útil”</text><text class="d" x="620" y="425">[RF18, RF15, RN08, RN14]</text>
+
+  <rect class="cn" x="890" y="360" width="260" height="76" rx="6"/><use href="#ic" x="1128" y="366"/>
+  <text class="st" x="900" y="376">«component»</text><text class="n" x="900" y="393">Privacy &amp; Consent Module</text><text class="d" x="900" y="410">preferências, consentimentos, export, exclusão</text><text class="d" x="900" y="425">[RF20, RN13, RNF02]</text>
+
+  <rect class="cn" x="50" y="456" width="260" height="76" rx="6"/><use href="#ic" x="288" y="462"/>
+  <text class="st" x="60" y="472">«component»</text><text class="n" x="60" y="489">Media &amp; Reels Module</text><text class="d" x="60" y="506">vídeos ≤ 60 s, transcodificação</text><text class="d" x="60" y="521">[RF12, RN06]</text>
+
+  <rect class="cx" x="330" y="456" width="260" height="76" rx="6"/>
+  <text class="st" x="340" y="472">«component» (P1, ampliado)</text><text class="n" x="340" y="489">Institutional News Module</text><text class="d" x="340" y="506">+ tipo, cursos-alvo, TV Unifor</text><text class="d" x="340" y="521">[RF05, RF21, RF23, RN01]</text>
+
+  <rect class="cx" x="610" y="456" width="260" height="76" rx="6"/>
+  <text class="st" x="620" y="472">«component» (P1, ampliado)</text><text class="n" x="620" y="489">Moderation &amp; Audit Module</text><text class="d" x="620" y="506">+ trechos de conversa, fila de reels</text><text class="d" x="620" y="521">[RF10, RF11, RN05, RN12]</text>
+
+  <rect class="cx" x="890" y="456" width="260" height="76" rx="6"/>
+  <text class="st" x="900" y="472">«component» (P1, ampliado)</text><text class="n" x="900" y="489">Serviço de Notificação</text><text class="d" x="900" y="506">+ push opt-in, notícias por curso</text><text class="d" x="900" y="521">[RF14, RN13]</text>
+
+  <!-- dependências -->
+  <path class="ld" d="M310,398 L330,398" marker-end="url(#arr)"/>
+  <path class="ld" d="M180,436 C180,445 740,445 740,456" marker-end="url(#arr)"/>
+  <text class="st" x="420" y="441">«use» denúncias de conversa</text>
+  <path class="ld" d="M180,532 C180,560 740,560 740,532" marker-end="url(#arr)"/>
+  <text class="st" x="400" y="575">«use» fila de moderação de reels</text>
+  <path class="ld" d="M1020,436 L1020,456" marker-end="url(#arr)"/>
+  <text class="st" x="1026" y="450">«use» consentimento</text>
+
+  <!-- Persistência -->
+  <rect class="sub" x="30" y="610" width="1140" height="130" rx="10"/>
+  <text class="subt" x="46" y="632">«subsystem» Persistência e Serviços Externos</text>
+  <rect class="cx" x="50" y="648" width="260" height="72" rx="6"/><text class="n" x="60" y="676">Banco de Dados Relacional</text><text class="d" x="60" y="694">+ Conversa, Mensagem, Conexao,</text><text class="d" x="60" y="708">Topico, Lugar, Consentimento</text>
+  <rect class="cx" x="330" y="648" width="260" height="72" rx="6"/><text class="n" x="340" y="676">Armazenamento de Mídias</text><text class="d" x="340" y="694">+ vídeos de reels (S3)</text>
+  <rect class="cn" x="610" y="648" width="260" height="72" rx="6"/><text class="n" x="620" y="676">Pub/Sub de Mensagens</text><text class="d" x="620" y="694">fan-out WebSocket (ex.: Redis)</text><text class="d" x="620" y="708">[RNF12]</text>
+  <rect class="cx" x="890" y="648" width="260" height="72" rx="6"/><text class="n" x="900" y="676">SMTP / Web Push</text><text class="d" x="900" y="694">e-mail institucional e push opt-in</text>
+  <path class="ld" d="M180,590 L180,648" marker-end="url(#arr)"/>
+  <path class="ld" d="M300,590 L460,648" marker-end="url(#arr)"/>
+  <path class="ld" d="M200,590 L740,648" marker-end="url(#arr)"/>
+  <path class="ld" d="M1020,590 L1020,648" marker-end="url(#arr)"/>
+</svg>
