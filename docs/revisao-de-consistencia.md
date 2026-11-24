@@ -1,7 +1,7 @@
 # Revisão de Consistência — UML × Requisitos × Protótipo (Sprint 2)
 
 > **Entregável P2:** “Revisão de consistência: alinhamento entre UML e requisitos”
-> **Data da revisão:** 05/11/2026 · **Atualizada em:** 24/11/2026 (I-04 resolvida, UML v2 com fontes `.drawio`) · **Artefatos revisados:** [`requisitos.md`](requisitos.md), [`regras-de-negocio.md`](regras-de-negocio.md), [`backlog.md`](backlog.md), [`srs.md`](srs.md), [`uml/casos-de-uso.svg`](../uml/casos-de-uso.svg), [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg), [`uml/componentes.svg`](../uml/componentes.svg), [`uml/componentes-v2.svg`](../uml/componentes-v2.svg), [`uml/implantacao.svg`](../uml/implantacao.svg) e o protótipo em [`app/`](../app).
+> **Data da revisão:** 05/11/2026 · **Atualizada em:** 24/11/2026 (I-04 resolvida, UML v2 com fontes `.drawio`; Sprint 3: I-08 e I-11 resolvidas) · **Artefatos revisados:** [`requisitos.md`](requisitos.md), [`regras-de-negocio.md`](regras-de-negocio.md), [`backlog.md`](backlog.md), [`srs.md`](srs.md), [`uml/casos-de-uso.svg`](../uml/casos-de-uso.svg), [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg), [`uml/componentes.svg`](../uml/componentes.svg), [`uml/componentes-v2.svg`](../uml/componentes-v2.svg), [`uml/implantacao.svg`](../uml/implantacao.svg) e o protótipo em [`app/`](../app).
 
 ## 1. Método
 1. **Cobertura direta:** todo RF deve ter pelo menos um caso de uso, ou ser declarado como requisito transversal ou de sistema.
@@ -22,7 +22,7 @@
 | RF05 Notícias oficiais | Must | UC06, UC12 | Institutional News | Unifor → Notícias, Detalhe | ✅ (UC12 é back-office, sem tela) |
 | RF06 Buddy | Should | UC07, UC08 | Buddy Program | Menu → Programa Buddy | ✅ (UC08 é back-office) |
 | RF07 Comunidades | Should | UC09 | Community | Conversas → Grupos | ✅ |
-| RF08 Relatos | Must | UC10, UC03 | Exchange Reports | Explorar → Relatos | ⚠️ só consulta; o formulário de envio fica para a Sprint 3 |
+| RF08 Relatos | Must | UC10, UC03 | Exchange Reports | Explorar → Relatos, “+ Escrever relato” | ✅ consulta e envio (Sprint 3, I-08) |
 | RF09 Eventos | Should | UC11 | Institutional News | Menu → Agenda | ✅ |
 | RF10 Denúncia | Must | UC13 | Moderation & Audit | Ícone 🚩 em tópico, resposta, notícia, reel, perfil e conversa | ✅ |
 | RF11 Moderação | Must | UC14 | Moderation & Audit | Menu → Painel de moderação | ✅ |
@@ -52,10 +52,10 @@
 | I-05 | RF14 (notificações) não tem caso de uso próprio. | requisitos × casos-de-uso | Baixa | Tratado como requisito transversal, acionado por UC06, UC07, UC16 e UC23. As preferências estão em UC20. Se necessário, criar UC24 “Receber e gerenciar notificações” na Sprint 3. | 🟡 Aceito |
 | I-06 | Stakeholder STK07 (Comunicação Institucional) não aparecia como ator na UML. | stakeholders × casos-de-uso | Média | Criado o ator “Equipe de Comunicação (TV Unifor / NEI / Coord.)” e o UC23. | ✅ Resolvido |
 | I-07 | UC08, UC12 e UC23 são de back-office e não têm tela no protótipo. | casos-de-uso × protótipo | Baixa | Fora do escopo do protótipo do app do estudante. No protótipo, o conteúdo institucional vem pré-carregado. | 🟡 Aceito |
-| I-08 | RF08: o protótipo tem consulta de relatos, mas não o formulário de envio. | requisitos × protótipo | Média | Planejado para a Sprint 3. | 🟡 Pendente ([#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28)) |
+| I-08 | RF08: o protótipo tinha consulta de relatos, mas não o formulário de envio. | requisitos × protótipo | Média | Formulário estruturado em Explorar → Relatos (universidade, nota, custos por categoria, prós e contras obrigatórios, dicas) e selo de RN07 (“verificado” ou “depoimento colaborativo não verificado”). | ✅ Resolvido ([#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28)) |
 | I-09 | RNF02 (LGPD) era genérico e sem funções verificáveis. | requisitos | Média | Detalhado em RF20 (direitos do Art. 18) e RN13. | ✅ Resolvido |
 | I-10 | O RF04 diz que o feed é “de estudantes e gestores”, mas a aba central virou um jornal institucional. | requisitos × visão | Baixa | Posts de estudantes continuam possíveis (“+” na aba Unifor e tópicos em Explorar), mas passam por moderação (RN06). Conteúdo oficial vem do RF23. | ✅ Resolvido |
-| I-11 | RNF04 pede contraste de 4,5:1, mas a cor personalizada (RF19) pode quebrar isso. | RNF04 × RF19 | Baixa | O critério de aceitação do RF19 exige manter o contraste. Na implementação real, o seletor deve avisar quando a cor escolhida tiver contraste baixo. | 🟡 Pendente de implementação ([#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29)) |
+| I-11 | RNF04 pede contraste de 4,5:1, mas a cor personalizada (RF19) pode quebrar isso. Na Sprint 3 vimos que 7 das 8 cores prontas também ficavam abaixo de 4,5:1 com texto branco. | RNF04 × RF19 | Média | O texto sobre a cor de destaque passou a alternar entre branco e escuro (sempre ≥ 4,5:1). A tela Aparência mostra o contraste e avisa quando a cor fica abaixo de 3:1 sobre o fundo (abas, links e ícones). | ✅ Resolvido ([#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29)) |
 
 ## 4. Regras de Negócio × Fluxos do SRS
 
@@ -75,4 +75,4 @@
 ## 5. Conclusão
 Depois da revisão, **os 23 RFs** têm caso de uso (ou justificativa de transversalidade) e componente responsável, e **22 dos 23 RFs** têm tela navegável no protótipo. A exceção é o RF23, que é de back-office, e o RF08 está coberto só em parte.
 
-Na atualização de 24/11/2026, a I-04 foi resolvida com o diagrama [`implantacao-v2`](../uml/implantacao-v2.svg), e os três diagramas da Sprint 2 ganharam fonte editável ([`casos-de-uso-v2.drawio`](../uml/casos-de-uso-v2.drawio), [`componentes-v2.drawio`](../uml/componentes-v2.drawio), [`implantacao-v2.drawio`](../uml/implantacao-v2.drawio)). Seguem pendentes na milestone M3: I-08 ([#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28)) e I-11 ([#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29)).
+Na atualização de 24/11/2026, a I-04 foi resolvida com o diagrama [`implantacao-v2`](../uml/implantacao-v2.svg), e os três diagramas da Sprint 2 ganharam fonte editável ([`casos-de-uso-v2.drawio`](../uml/casos-de-uso-v2.drawio), [`componentes-v2.drawio`](../uml/componentes-v2.drawio), [`implantacao-v2.drawio`](../uml/implantacao-v2.drawio)). Na Sprint 3 (milestone M3), as inconsistências I-08 e I-11 também foram resolvidas no protótipo. Com isso, os 23 RFs têm tela navegável, exceto o RF23 (back-office). Segue pendente só a validação das regras RN11–RN14 com o NEI ([#27](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/27)).

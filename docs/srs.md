@@ -11,6 +11,7 @@
 | 0.1 | 02/11/2026 | Equipe | Base da P1: visão, requisitos RF01–RF16, RNF01–RNF10, RN01–RN10, UML inicial. |
 | 1.0 | 05/11/2026 | Equipe | Primeira versão do SRS: navegação em 5 abas, RF17–RF23, RNF11–RNF12, RN11–RN14, casos de uso UC01–UC23 detalhados e protótipo navegável. |
 | 1.1 | 24/11/2026 | Equipe | Versão de entrega da P2: diagramas da Sprint 2 com fonte editável (`*-v2.drawio`), implantação com canal WSS e Pub/Sub (I-04 resolvida), prints do protótipo e rastreio por issues/milestones (M1, M2). |
+| 1.2 | 24/11/2026 | Equipe | Sprint 3: formulário de envio de relato (UC10, RF08, RN07) e contraste automático da cor de destaque (RF19 × RNF04) no protótipo. |
 
 ---
 

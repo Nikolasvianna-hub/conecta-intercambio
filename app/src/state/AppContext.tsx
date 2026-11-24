@@ -1,4 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { onAccent } from '../utils/contrast'
+import type { ExchangeReport } from '../data/mock'
 import { dictionaries, type Lang, type StringKey } from '../i18n/strings'
 import { conversations as convSeed, notificationsSeed, reportsSeed, topics as topicSeed, type Conversation, type Level, type Status, type Topic } from '../data/mock'
 
@@ -47,6 +49,7 @@ interface State {
   notifications: typeof notificationsSeed
   reports: { id: string; target: string; reason: StringKey; by: string; time: string }[]
   auditLog: { at: string; action: string; target: string; justification: string }[]
+  myReports: ExchangeReport[]
 }
 
 export const UNIFOR_BLUE = '#2f8cff'
@@ -73,6 +76,7 @@ const initial: State = {
   notifications: notificationsSeed,
   reports: reportsSeed,
   auditLog: [],
+  myReports: [],
 }
 
 const KEY = 'conecta-intercambio:v1'
@@ -118,6 +122,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement
     root.dataset.theme = resolvedMode
     root.style.setProperty('--accent', state.accent)
+    root.style.setProperty('--on-accent', onAccent(state.accent))
     root.style.setProperty('--font-scale', String(state.fontScale))
     root.dataset.motion = state.reduceMotion ? 'reduce' : 'full'
     root.lang = state.lang === 'pt' ? 'pt-BR' : state.lang === 'en' ? 'en-US' : 'es'

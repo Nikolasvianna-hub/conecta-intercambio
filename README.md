@@ -9,6 +9,16 @@
 
 ---
 
+## Pitch final (P3, 01/12/2026)
+
+| Item | Link |
+| :--- | :--- |
+| **Slides em PDF** | [`pitch/pitch-conecta-intercambio.pdf`](pitch/pitch-conecta-intercambio.pdf) (fonte: [`pitch/pitch.html`](pitch/pitch.html), no modelo da disciplina) |
+| Roteiro de fala (8 a 10 min) | [`pitch/roteiro-pitch.md`](pitch/roteiro-pitch.md) |
+| Sprint 3 (milestone M3) | Formulário de relato ([#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28)), contraste automático ([#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29)), pitch ([#31](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/31)); validação com o NEI segue aberta ([#27](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/27)) |
+
+---
+
 ## Entrega P2 (links para o AVA)
 
 | Item | Link |
@@ -174,7 +184,8 @@ Modela a topologia física conceitual de hardware, nós de execução e protocol
 ![Componentes — Sprint 2](uml/componentes-v2.svg)
 ![Implantação — Sprint 2](uml/implantacao-v2.svg)
 
-### Pendências levadas para a Sprint 3 (milestone M3)
-- [#27](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/27) Validar RN11–RN14 com o NEI e contato com a TV Unifor (planejada para a Sprint 2 e não realizada).
-- [#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28) Formulário de envio de relato no protótipo (I-08).
-- [#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29) Aviso de contraste baixo na cor personalizada (I-11).
+### Sprint 3 (milestone M3, 24/11 a 30/11/2026)
+- ✅ [#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28) Formulário de envio de relato no protótipo (I-08).
+- ✅ [#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29) Contraste automático e aviso na cor de destaque (I-11).
+- ✅ [#31](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/31) Pitch final (slides em PDF e roteiro).
+- ⏳ [#27](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/27) Validar RN11–RN14 com o NEI e contato com a TV Unifor (ainda não realizada).

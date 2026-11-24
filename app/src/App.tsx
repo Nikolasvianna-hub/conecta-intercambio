@@ -2,7 +2,7 @@ import { HashRouter, Navigate, NavLink, Route, Routes, useLocation } from 'react
 import { Clapperboard, Menu as MenuIcon, MessageCircle, Search, User } from 'lucide-react'
 import { AppProvider, useApp } from './state/AppContext'
 import Login from './pages/Login'
-import Explore, { NewTopic, TopicDetail } from './pages/Explore'
+import Explore, { NewReport, NewTopic, TopicDetail } from './pages/Explore'
 import Chats, { ChatRoom, PersonProfile } from './pages/Chats'
 import Unifor, { NewsDetail } from './pages/Unifor'
 import Menu, { Appearance, Buddy, Events, Faq, Language, Moderation, NotificationSettings, Notifications, Privacy } from './pages/Menu'
@@ -37,6 +37,7 @@ function Shell() {
         <Route path="/" element={<Navigate to="/unifor" replace />} />
         <Route path="/explorar" element={<Explore />} />
         <Route path="/explorar/novo" element={<NewTopic />} />
+        <Route path="/explorar/relato/novo" element={<NewReport />} />
         <Route path="/explorar/topico/:id" element={<TopicDetail />} />
         <Route path="/conversas" element={<Chats />} />
         <Route path="/conversas/:id" element={<ChatRoom />} />
