@@ -387,19 +387,23 @@ Na Sprint 2 a equipe definiu a navegação do app em **cinco abas**, seguindo o 
 - *Como* membro da equipe de comunicação, *quero* publicar notícias e reels com o selo oficial e marcar os cursos-alvo, *para* manter a comunidade informada.
 - **Critérios de aceitação:** selo "Comunicado Institucional Unifor"; classificação por tipo e curso; publicação sem fila de moderação.
 
-### 6.3 Issues sugeridas para o GitHub (Milestone M2)
+### 6.3 Issues da Sprint 2 no GitHub (Milestone M2)
 
-| # | Issue | Labels | Entregável |
-| :---: | :--- | :--- | :--- |
-| 1 | Redigir SRS (IEEE 830) com casos de uso detalhados | `docs`, `sprint-2` | [`docs/srs.md`](srs.md) |
-| 2 | Revisão de consistência UML × requisitos | `docs`, `uml`, `sprint-2` | [`docs/revisao-de-consistencia.md`](revisao-de-consistencia.md) |
-| 3 | Atualizar diagrama de casos de uso (UC16–UC23) | `uml`, `sprint-2` | [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg) |
-| 4 | Atualizar diagrama de componentes (ChatService, ContentService, PrivacyService) | `uml`, `sprint-2` | `uml/componentes.drawio` |
-| 5 | Wireframes das 5 abas | `prototipo`, `sprint-2` | [`docs/prototipo.md`](prototipo.md) |
-| 6 | Protótipo navegável — aba Explorar | `prototipo`, `sprint-2` | `app/src/pages/Explore.tsx` |
-| 7 | Protótipo navegável — aba Conversas e perfis | `prototipo`, `sprint-2` | `app/src/pages/Chats.tsx` |
-| 8 | Protótipo navegável — aba Unifor (notícias + reels) | `prototipo`, `sprint-2` | `app/src/pages/Unifor.tsx` |
-| 9 | Protótipo navegável — Menu, aparência e LGPD | `prototipo`, `sprint-2` | `app/src/pages/Menu.tsx` |
-| 10 | Protótipo navegável — Perfil e notícias do curso | `prototipo`, `sprint-2` | `app/src/pages/Profile.tsx` |
-| 11 | Publicar protótipo no GitHub Pages | `devops`, `sprint-2` | `.github/workflows/deploy-pages.yml` |
-| 12 | Validar RN11–RN14 com NEI e contato com TV Unifor | `elicitação`, `sprint-2` | Ata / resultados de entrevista |
+As issues estão no GitHub, na [milestone M2](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues?q=milestone%3A%22M2+%E2%80%94+Sprint+2+%28P2%29%22). As da Sprint 1 estão na milestone M1, e o que ficou pendente foi para a M3.
+
+| Issue | Título | Labels | Entregável | Situação |
+| :---: | :--- | :--- | :--- | :---: |
+| [#21](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/21) | Redigir o SRS (IEEE 830) com casos de uso detalhados | `docs` | [`docs/srs.md`](srs.md) | ✅ |
+| [#22](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/22) | Revisão de consistência UML × requisitos | `docs`, `uml` | [`docs/revisao-de-consistencia.md`](revisao-de-consistencia.md) | ✅ |
+| [#23](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/23) | Atualizar o diagrama de casos de uso (UC16–UC23) | `uml` | [`uml/casos-de-uso-v2.drawio`](../uml/casos-de-uso-v2.drawio) | ✅ |
+| [#24](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/24) | Atualizar o diagrama de componentes | `uml` | [`uml/componentes-v2.drawio`](../uml/componentes-v2.drawio) | ✅ |
+| [#25](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/25) | Atualizar o diagrama de implantação com canal WSS e Pub/Sub (I-04) | `uml` | [`uml/implantacao-v2.drawio`](../uml/implantacao-v2.drawio) | ✅ |
+| [#14](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/14) | Wireframes das 5 abas | `prototipo` | [`docs/prototipo.md`](prototipo.md) §2 | ✅ |
+| [#15](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/15) | Protótipo navegável — aba Explorar | `prototipo` | `app/src/pages/Explore.tsx` | ✅ |
+| [#16](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/16) | Protótipo navegável — aba Conversas e perfis | `prototipo` | `app/src/pages/Chats.tsx` | ✅ |
+| [#17](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/17) | Protótipo navegável — aba Unifor (notícias e reels) | `prototipo` | `app/src/pages/Unifor.tsx` | ✅ |
+| [#18](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/18) | Protótipo navegável — Menu, aparência e LGPD | `prototipo` | `app/src/pages/Menu.tsx` | ✅ |
+| [#19](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/19) | Protótipo navegável — Perfil e notícias do curso | `prototipo` | `app/src/pages/Profile.tsx` | ✅ |
+| [#20](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/20) | Publicar o protótipo no GitHub Pages | `devops` | `.github/workflows/deploy-pages.yml` | ✅ |
+| [#26](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/26) | Registrar prints do protótipo navegável | `prototipo` | [`docs/prototipo.md`](prototipo.md) §6 | ✅ |
+| [#27](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/27) | Validar RN11–RN14 com o NEI e contato com a TV Unifor | `elicitacao` | Ata / resultados de entrevista | ➡️ M3 (não realizada na Sprint 2) |

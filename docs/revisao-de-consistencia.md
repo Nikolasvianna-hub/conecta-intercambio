@@ -1,7 +1,7 @@
 # Revisão de Consistência — UML × Requisitos × Protótipo (Sprint 2)
 
 > **Entregável P2:** “Revisão de consistência: alinhamento entre UML e requisitos”
-> **Data da revisão:** 05/11/2026 · **Artefatos revisados:** [`requisitos.md`](requisitos.md), [`regras-de-negocio.md`](regras-de-negocio.md), [`backlog.md`](backlog.md), [`srs.md`](srs.md), [`uml/casos-de-uso.svg`](../uml/casos-de-uso.svg), [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg), [`uml/componentes.svg`](../uml/componentes.svg), [`uml/componentes-v2.svg`](../uml/componentes-v2.svg), [`uml/implantacao.svg`](../uml/implantacao.svg) e o protótipo em [`app/`](../app).
+> **Data da revisão:** 05/11/2026 · **Atualizada em:** 24/11/2026 (I-04 resolvida, UML v2 com fontes `.drawio`) · **Artefatos revisados:** [`requisitos.md`](requisitos.md), [`regras-de-negocio.md`](regras-de-negocio.md), [`backlog.md`](backlog.md), [`srs.md`](srs.md), [`uml/casos-de-uso.svg`](../uml/casos-de-uso.svg), [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg), [`uml/componentes.svg`](../uml/componentes.svg), [`uml/componentes-v2.svg`](../uml/componentes-v2.svg), [`uml/implantacao.svg`](../uml/implantacao.svg) e o protótipo em [`app/`](../app).
 
 ## 1. Método
 1. **Cobertura direta:** todo RF deve ter pelo menos um caso de uso, ou ser declarado como requisito transversal ou de sistema.
@@ -48,14 +48,14 @@
 | I-01 | RF12 (reels) não tinha caso de uso nem componente. | requisitos × casos-de-uso × componentes | Alta | Criados UC22 e o componente *Media & Reels Module*. | ✅ Resolvido |
 | I-02 | RF13 (idiomas) não tinha caso de uso; o Motor de Localização só citava PT/EN. | requisitos × UML | Média | Criado UC19; o componente foi marcado como “PT/EN + ES” na v2. | ✅ Resolvido |
 | I-03 | O backlog marcava o chat (US16) como *Won't have*, mas a navegação nova coloca Conversas como aba principal. | backlog × visão do produto | Alta | Repriorizado para *Should* (RF17), com RN11 e RN12 para tratar os riscos citados na P1. | ✅ Resolvido |
-| I-04 | Diagrama de implantação sem canal WebSocket para mensagens em tempo real. | implantacao × RNF12 | Média | Canal WSS e Pub/Sub incluídos em `componentes-v2.svg`. O `implantacao.drawio` ainda precisa do nó/protocolo WSS. | 🟡 Parcial (issue #4) |
+| I-04 | Diagrama de implantação sem canal WebSocket para mensagens em tempo real. | implantacao × RNF12 | Média | Canal WSS e Pub/Sub incluídos em `componentes-v2` e no novo [`implantacao-v2`](../uml/implantacao-v2.svg) (nó “Servidor de Mensagens em Tempo Real”, protocolo WSS porta 443). | ✅ Resolvido ([#25](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/25)) |
 | I-05 | RF14 (notificações) não tem caso de uso próprio. | requisitos × casos-de-uso | Baixa | Tratado como requisito transversal, acionado por UC06, UC07, UC16 e UC23. As preferências estão em UC20. Se necessário, criar UC24 “Receber e gerenciar notificações” na Sprint 3. | 🟡 Aceito |
 | I-06 | Stakeholder STK07 (Comunicação Institucional) não aparecia como ator na UML. | stakeholders × casos-de-uso | Média | Criado o ator “Equipe de Comunicação (TV Unifor / NEI / Coord.)” e o UC23. | ✅ Resolvido |
 | I-07 | UC08, UC12 e UC23 são de back-office e não têm tela no protótipo. | casos-de-uso × protótipo | Baixa | Fora do escopo do protótipo do app do estudante. No protótipo, o conteúdo institucional vem pré-carregado. | 🟡 Aceito |
-| I-08 | RF08: o protótipo tem consulta de relatos, mas não o formulário de envio. | requisitos × protótipo | Média | Planejado para a Sprint 3. | 🟡 Pendente |
+| I-08 | RF08: o protótipo tem consulta de relatos, mas não o formulário de envio. | requisitos × protótipo | Média | Planejado para a Sprint 3. | 🟡 Pendente ([#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28)) |
 | I-09 | RNF02 (LGPD) era genérico e sem funções verificáveis. | requisitos | Média | Detalhado em RF20 (direitos do Art. 18) e RN13. | ✅ Resolvido |
 | I-10 | O RF04 diz que o feed é “de estudantes e gestores”, mas a aba central virou um jornal institucional. | requisitos × visão | Baixa | Posts de estudantes continuam possíveis (“+” na aba Unifor e tópicos em Explorar), mas passam por moderação (RN06). Conteúdo oficial vem do RF23. | ✅ Resolvido |
-| I-11 | RNF04 pede contraste de 4,5:1, mas a cor personalizada (RF19) pode quebrar isso. | RNF04 × RF19 | Baixa | O critério de aceitação do RF19 exige manter o contraste. Na implementação real, o seletor deve avisar quando a cor escolhida tiver contraste baixo. | 🟡 Pendente de implementação |
+| I-11 | RNF04 pede contraste de 4,5:1, mas a cor personalizada (RF19) pode quebrar isso. | RNF04 × RF19 | Baixa | O critério de aceitação do RF19 exige manter o contraste. Na implementação real, o seletor deve avisar quando a cor escolhida tiver contraste baixo. | 🟡 Pendente de implementação ([#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29)) |
 
 ## 4. Regras de Negócio × Fluxos do SRS
 
@@ -73,4 +73,6 @@
 | RN14 | UC18 (E2) | Motivo “Spam ou golpe” na denúncia |
 
 ## 5. Conclusão
-Depois da revisão, **os 23 RFs** têm caso de uso (ou justificativa de transversalidade) e componente responsável, e **22 dos 23 RFs** têm tela navegável no protótipo. A exceção é o RF23, que é de back-office, e o RF08 está coberto só em parte. Seguem pendentes: I-04 (atualizar `implantacao.drawio`), I-08 (formulário de relato) e I-11 (aviso de contraste), registrados como issues da Sprint 3.
+Depois da revisão, **os 23 RFs** têm caso de uso (ou justificativa de transversalidade) e componente responsável, e **22 dos 23 RFs** têm tela navegável no protótipo. A exceção é o RF23, que é de back-office, e o RF08 está coberto só em parte.
+
+Na atualização de 24/11/2026, a I-04 foi resolvida com o diagrama [`implantacao-v2`](../uml/implantacao-v2.svg), e os três diagramas da Sprint 2 ganharam fonte editável ([`casos-de-uso-v2.drawio`](../uml/casos-de-uso-v2.drawio), [`componentes-v2.drawio`](../uml/componentes-v2.drawio), [`implantacao-v2.drawio`](../uml/implantacao-v2.drawio)). Seguem pendentes na milestone M3: I-08 ([#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28)) e I-11 ([#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29)).

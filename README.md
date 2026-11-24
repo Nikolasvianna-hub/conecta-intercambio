@@ -3,9 +3,23 @@
 > **Repositório Oficial de Engenharia de Requisitos e Modelagem de Software**  
 > **Universidade de Fortaleza (Unifor)** | Centro de Ciências Tecnológicas (CCT)  
 > **Disciplina:** Requisitos e Modelagem de Sistemas  
-> **Avaliação:** Primeira Avaliação (P1) - Sprint 1 (Milestone M1) | Período: 20/10/2026 a 02/11/2026  
+> **Avaliação atual:** Trabalho P2 - Sprint 2 (Milestone M2) | Período: 03/11/2026 a 23/11/2026 (P1: Sprint 1, 20/10 a 02/11/2026)  
 > **Eixo Temático de Extensão:** Internacionalização Universitária  
 > **Docente Avaliador:** Prof. Marcelo Bezerra ([@marcelobezerra-dotcom](https://github.com/marcelobezerra-dotcom))  
+
+---
+
+## Entrega P2 (links para o AVA)
+
+| Item | Link |
+| :--- | :--- |
+| **Protótipo navegável** | https://nikolasvianna-hub.github.io/conecta-intercambio/ |
+| **Repositório GitHub** | https://github.com/Nikolasvianna-hub/conecta-intercambio |
+| SRS versionado (IEEE 830, v1.1) | [`docs/srs.md`](docs/srs.md) |
+| Revisão de consistência UML × requisitos | [`docs/revisao-de-consistencia.md`](docs/revisao-de-consistencia.md) |
+| Wireframes, roteiro de demonstração e prints | [`docs/prototipo.md`](docs/prototipo.md) · [`docs/evidencias/prototipo/`](docs/evidencias/prototipo/) |
+| Diagramas UML atualizados | [`uml/`](uml/) — `casos-de-uso-v2`, `componentes-v2`, `implantacao-v2` (`.drawio` + `.svg`) |
+| Issues fechadas por sprint | [M1 — Sprint 1](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues?q=milestone%3A%22M1+%E2%80%94+Sprint+1+%28P1%29%22) · [M2 — Sprint 2](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues?q=milestone%3A%22M2+%E2%80%94+Sprint+2+%28P2%29%22) · [M3 — Sprint 3](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues?q=milestone%3A%22M3+%E2%80%94+Sprint+3%22) |
 
 ---
 
@@ -50,18 +64,23 @@ conecta-intercambio/
 │   ├── fichas_de_registro_entrevista.pdf # Fichas preenchidas das entrevistas (Roteiros A, B e C)
 │   ├── requisitos.md              # Requisitos Funcionais (RF) e Não Funcionais (RNF)
 │   ├── regras-de-negocio.md       # Catálogo de Regras de Negócio e diretrizes éticas
-│   ├── backlog.md                 # Product Backlog em Épicos, User Stories e MoSCoW
+│   ├── backlog.md                 # Product Backlog em Épicos, User Stories e MoSCoW (+ issues da Sprint 2)
+│   ├── srs.md                     # SRS IEEE 830 com casos de uso detalhados (P2)
+│   ├── revisao-de-consistencia.md # Alinhamento UML × requisitos × protótipo (P2)
+│   ├── prototipo.md               # Wireframes, roteiro de demonstração e prints (P2)
 │   ├── rastreabilidade.md         # Matriz de Rastreabilidade Bidirecional (Forward/Backward)
 │   ├── glossario.md               # Vocabulário padrão de domínio e engenharia de software
 │   ├── pendencias-entrega.md      # Convite ao avaliador e checklist AVA
-│   └── evidencias/                # Print do convite a marcelobezerra-dotcom
+│   └── evidencias/                # Print do convite ao avaliador e prints do protótipo (prototipo/)
+├── app/                           # Protótipo navegável (React + TypeScript + Vite)
 └── uml/                           # Modelos visuais em notação UML 2.5 padronizada
     ├── casos-de-uso.drawio        # Arquivo-fonte editável do Diagrama de Casos de Uso
     ├── casos-de-uso.svg           # Exportação vetorial do Diagrama de Casos de Uso
     ├── componentes.drawio         # Arquivo-fonte editável do Diagrama de Componentes
     ├── componentes.svg            # Exportação vetorial do Diagrama de Componentes
     ├── implantacao.drawio         # Arquivo-fonte editável do Diagrama de Implantação
-    └── implantacao.svg            # Exportação vetorial do Diagrama de Implantação
+    ├── implantacao.svg            # Exportação vetorial do Diagrama de Implantação
+    └── *-v2.drawio / *-v2.svg     # Diagramas atualizados na Sprint 2 (casos de uso, componentes, implantação)
 ```
 
 ---
@@ -130,22 +149,32 @@ Modela a topologia física conceitual de hardware, nós de execução e protocol
 
 ---
 
-## 8. Sprint 2 (P2, Milestone M2: 03/11 a 23/11/2026) — em andamento
+## 8. Sprint 2 (P2, Milestone M2: 03/11 a 23/11/2026) — concluída
 
 | Entregável P2 | Arquivo |
 | :--- | :--- |
-| **SRS (IEEE 830) com casos de uso** | [`docs/srs.md`](docs/srs.md) |
+| **SRS (IEEE 830) com casos de uso** — introdução, descrição geral e requisitos detalhados | [`docs/srs.md`](docs/srs.md) (histórico de versões 0.1 → 1.1) |
 | **Revisão de consistência UML × requisitos** | [`docs/revisao-de-consistencia.md`](docs/revisao-de-consistencia.md) |
-| **Wireframes + protótipo navegável** | [`docs/prototipo.md`](docs/prototipo.md) · código em [`app/`](app) |
-| **UML atualizada** | [`uml/casos-de-uso-v2.svg`](uml/casos-de-uso-v2.svg) (UC16–UC23) · [`uml/componentes-v2.svg`](uml/componentes-v2.svg) |
+| **Wireframes + protótipo navegável** | [`docs/prototipo.md`](docs/prototipo.md) · código em [`app/`](app) · [protótipo online](https://nikolasvianna-hub.github.io/conecta-intercambio/) |
+| **UML atualizada** | [`casos-de-uso-v2`](uml/casos-de-uso-v2.drawio) (UC16–UC23) · [`componentes-v2`](uml/componentes-v2.drawio) · [`implantacao-v2`](uml/implantacao-v2.drawio) (canal WSS + Pub/Sub) |
 | Requisitos novos | RF17–RF23, RNF11–RNF12 em [`docs/requisitos.md`](docs/requisitos.md) · RN11–RN14 em [`docs/regras-de-negocio.md`](docs/regras-de-negocio.md) |
-| Backlog e issues da Sprint 2 | [`docs/backlog.md` §6](docs/backlog.md) |
+| Backlog e issues da Sprint 2 | [`docs/backlog.md` §6](docs/backlog.md) · [milestone M2](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues?q=milestone%3A%22M2+%E2%80%94+Sprint+2+%28P2%29%22) |
 
 **Protótipo online:** https://nikolasvianna-hub.github.io/conecta-intercambio/ (publicado pelo workflow `.github/workflows/deploy-pages.yml`).
 
 ### Navegação do app (5 abas, identidade Unifor Mobile)
 `🔍 Explorar` (fórum e guia da cidade) · `💬 Conversas` (estilo WhatsApp, com busca de perfis) · `🎬 Unifor` (jornal e reels da universidade) · `☰ Menu` (idioma, tema claro/noturno/personalizado, LGPD) · `👤 Perfil` (com notícias do meu curso)
 
+| Unifor | Explorar | Conversas | Privacidade e LGPD | Perfil |
+| :---: | :---: | :---: | :---: | :---: |
+| <img src="docs/evidencias/prototipo/02-unifor-noticias.png" width="150"> | <img src="docs/evidencias/prototipo/04-explorar.png" width="150"> | <img src="docs/evidencias/prototipo/07-conversas.png" width="150"> | <img src="docs/evidencias/prototipo/12-privacidade-lgpd.png" width="150"> | <img src="docs/evidencias/prototipo/15-perfil.png" width="150"> |
+
 ### Diagramas da Sprint 2
 ![Casos de uso — Sprint 2](uml/casos-de-uso-v2.svg)
 ![Componentes — Sprint 2](uml/componentes-v2.svg)
+![Implantação — Sprint 2](uml/implantacao-v2.svg)
+
+### Pendências levadas para a Sprint 3 (milestone M3)
+- [#27](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/27) Validar RN11–RN14 com o NEI e contato com a TV Unifor (planejada para a Sprint 2 e não realizada).
+- [#28](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/28) Formulário de envio de relato no protótipo (I-08).
+- [#29](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues/29) Aviso de contraste baixo na cor personalizada (I-11).

@@ -10,6 +10,7 @@
 | :---: | :---: | :--- | :--- |
 | 0.1 | 02/11/2026 | Equipe | Base da P1: visão, requisitos RF01–RF16, RNF01–RNF10, RN01–RN10, UML inicial. |
 | 1.0 | 05/11/2026 | Equipe | Primeira versão do SRS: navegação em 5 abas, RF17–RF23, RNF11–RNF12, RN11–RN14, casos de uso UC01–UC23 detalhados e protótipo navegável. |
+| 1.1 | 24/11/2026 | Equipe | Versão de entrega da P2: diagramas da Sprint 2 com fonte editável (`*-v2.drawio`), implantação com canal WSS e Pub/Sub (I-04 resolvida), prints do protótipo e rastreio por issues/milestones (M1, M2). |
 
 ---
 
@@ -62,7 +63,7 @@ A Seção 2 descreve o produto de forma geral: perspectiva, funções, usuários
 ## 2. Descrição Geral
 
 ### 2.1 Perspectiva do Produto
-O Conecta Intercâmbio é um produto **novo e independente**, que deve conviver com o ecossistema digital da Unifor (Unifor Mobile, AVA, Unifor Online). Ele não substitui esses sistemas. A arquitetura alvo está em [`uml/componentes.svg`](../uml/componentes.svg) e [`uml/implantacao.svg`](../uml/implantacao.svg): cliente SPA/PWA, API REST com HTTPS, serviços de domínio (Auth, Profile, Feed/Content, Chat, Moderation, Notification, Privacy), banco PostgreSQL, armazenamento de objetos para mídia e SMTP.
+O Conecta Intercâmbio é um produto **novo e independente**, que deve conviver com o ecossistema digital da Unifor (Unifor Mobile, AVA, Unifor Online). Ele não substitui esses sistemas. A arquitetura alvo está em [`uml/componentes.svg`](../uml/componentes.svg) + [`uml/componentes-v2.svg`](../uml/componentes-v2.svg) e em [`uml/implantacao-v2.svg`](../uml/implantacao-v2.svg): cliente SPA/PWA, API REST com HTTPS, serviços de domínio (Auth, Profile, Feed/Content, Chat, Moderation, Notification, Privacy), banco PostgreSQL, armazenamento de objetos para mídia e SMTP.
 
 ```
 ┌──────────────────────── App (SPA / PWA) ─────────────────────────┐
@@ -143,7 +144,7 @@ HTTPS/TLS 1.3 para a API REST (JSON) e WebSocket seguro (WSS) para conversas (RN
 
 ### 3.2 Requisitos Funcionais — Casos de Uso
 
-Diagramas: [`uml/casos-de-uso.svg`](../uml/casos-de-uso.svg) (UC01–UC15) e [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg) (UC16–UC23). O texto completo de cada RF está em [`requisitos.md`](requisitos.md).
+Diagramas: [`uml/casos-de-uso.svg`](../uml/casos-de-uso.svg) (UC01–UC15) e [`uml/casos-de-uso-v2.svg`](../uml/casos-de-uso-v2.svg) (UC16–UC23), com fontes editáveis em [`casos-de-uso.drawio`](../uml/casos-de-uso.drawio) e [`casos-de-uso-v2.drawio`](../uml/casos-de-uso-v2.drawio). O texto completo de cada RF está em [`requisitos.md`](requisitos.md).
 
 #### 3.2.1 Visão geral dos casos de uso
 
@@ -429,3 +430,5 @@ A matriz necessidade → requisito → regra → história → caso de uso está
 | US16 | Chat saiu de *Won't* e virou RF17 (*Should*), com RN11 e RN12. |
 | RF13 | Espanhol incluído como *Could*. |
 | Novos | RF17–RF23, RNF11–RNF12, RN11–RN14, UC16–UC23, NEC13–NEC16, US22–US27. |
+| UML | Casos de uso v2, componentes v2 e implantação v2 (canal WSS + Pub/Sub para RNF12), cada um com `.drawio` e `.svg`. |
+| Rastreio | Issues por sprint nas milestones M1 e M2 ([lista](https://github.com/Nikolasvianna-hub/conecta-intercambio/issues?q=is%3Aissue)). |
