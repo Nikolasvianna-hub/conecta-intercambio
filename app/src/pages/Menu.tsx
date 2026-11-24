@@ -5,6 +5,7 @@ import {
 } from 'lucide-react'
 import { UNIFOR_BLUE, useApp, type Audience, type Mode } from '../state/AppContext'
 import { BrandBar, Sheet, ToggleRow, TopBar } from '../components/ui'
+import { BG, MIN_TEXT_CONTRAST, MIN_UI_CONTRAST, contrastRatio, formatRatio, onAccent } from '../utils/contrast'
 import { events, people } from '../data/mock'
 import { languageNames, type Lang, type StringKey } from '../i18n/strings'
 
@@ -63,8 +64,11 @@ const swatches = [UNIFOR_BLUE, '#1428a0', '#13a8c2', '#2fbf71', '#8a5cf6', '#e05
 
 // RF19 — aparência: claro, noturno, automático e cor personalizada
 export function Appearance() {
-  const { t, mode, accent, fontScale, reduceMotion, set } = useApp()
+  const { t, lang, mode, accent, fontScale, reduceMotion, resolvedMode, set } = useApp()
   const custom = !swatches.includes(accent)
+  // RNF04 x RF19 (I-11): o texto dos botões alterna entre branco e escuro; abas e links usam a cor sobre o fundo
+  const textRatio = contrastRatio(accent, onAccent(accent))
+  const bgRatio = contrastRatio(accent, BG[resolvedMode])
   return (
     <>
       <TopBar title={t('menuAppearance')} />
@@ -88,6 +92,21 @@ export function Appearance() {
           </label>
         </div>
         {custom && <p className="small muted">{t('appearanceCustom')}: {accent}</p>}
+        <div className="card flat" style={{ margin: '12px 0' }} aria-live="polite">
+          <b className="small">{t('contrastTitle')}</b>
+          <div className="row small" style={{ justifyContent: 'space-between', marginTop: 6 }}>
+            <span>{t('contrastText')}</span>
+            <span><b>{formatRatio(textRatio, lang)}</b> {textRatio >= MIN_TEXT_CONTRAST ? '✅' : '⚠️'}</span>
+          </div>
+          <div className="row small" style={{ justifyContent: 'space-between', marginTop: 4 }}>
+            <span>{t('contrastBg')}</span>
+            <span><b>{formatRatio(bgRatio, lang)}</b> {bgRatio >= MIN_UI_CONTRAST ? '✅' : '⚠️'}</span>
+          </div>
+          <p className="small muted" style={{ margin: '8px 0 0' }}>{t('contrastAuto')}</p>
+        </div>
+        {bgRatio < MIN_UI_CONTRAST && (
+          <div className="disclaimer" role="alert"><span aria-hidden>⚠️</span> <span>{t('contrastWarn')}</span></div>
+        )}
 
         <h3>{t('appearanceFont')}</h3>
         <input type="range" min={0.9} max={1.3} step={0.05} value={fontScale} onChange={(e) => set('fontScale', Number(e.target.value))} style={{ width: '100%', accentColor: 'var(--accent)' }} aria-label={t('appearanceFont')} />

@@ -104,11 +104,27 @@ export const places: Place[] = [
   { id: 'p6', name: 'Parque do Cocó', category: 'leisure', area: 'Cocó', distanceKm: 4, rating: 4.8, price: 'Grátis', tip: 'Trilhas e corrida de manhã.', color: '#3aa35b', emoji: '🌳' },
 ]
 
-export const exchangeReports = [
-  { id: 'e1', university: 'Universidade do Porto', country: '🇵🇹 Portugal', rating: 4.6, cost: '€ 850/mês', authorId: 'lucas', pros: 'Transporte excelente, ensino prático', cons: 'Moradia cara no centro' },
-  { id: 'e2', university: 'Universidad de Salamanca', country: '🇪🇸 Espanha', rating: 4.8, cost: '€ 700/mês', authorId: 'sofia', pros: 'Cidade universitária, custo baixo', cons: 'Inverno muito frio' },
-  { id: 'e3', university: 'Université de Lyon', country: '🇫🇷 França', rating: 4.4, cost: '€ 950/mês', authorId: 'julien', pros: 'Bolsa CAF para moradia', cons: 'Burocracia inicial' },
+// RF08 — relato estruturado. RN07: sem comprovação do intercâmbio, o relato aparece como "não verificado".
+export interface ExchangeReport {
+  id: string
+  university: string
+  country: string
+  rating: number
+  cost: string
+  authorId: string
+  pros: string
+  cons: string
+  tips?: string
+  verified: boolean
+}
+
+export const exchangeReports: ExchangeReport[] = [
+  { id: 'e1', university: 'Universidade do Porto', country: '🇵🇹 Portugal', rating: 4.6, cost: '€ 850/mês', authorId: 'lucas', pros: 'Transporte excelente, ensino prático', cons: 'Moradia cara no centro', tips: 'Peça o passe Andante de estudante logo na 1ª semana.', verified: true },
+  { id: 'e2', university: 'Universidad de Salamanca', country: '🇪🇸 Espanha', rating: 4.8, cost: '€ 700/mês', authorId: 'sofia', pros: 'Cidade universitária, custo baixo', cons: 'Inverno muito frio', verified: true },
+  { id: 'e3', university: 'Université de Lyon', country: '🇫🇷 França', rating: 4.4, cost: '€ 950/mês', authorId: 'julien', pros: 'Bolsa CAF para moradia', cons: 'Burocracia inicial', verified: true },
 ]
+
+export const partnerUniversities = ['Universidade do Porto', 'Universidad de Salamanca', 'Université de Lyon', 'Universidad de Chile', 'Waseda University', 'Outra']
 
 export const equivalences = [
   { id: 'q1', course: 'Engenharia Civil', partner: 'Universidade do Porto', foreign: 'Estruturas de Betão I', unifor: 'Estruturas de Concreto I', semester: '2025.2' },

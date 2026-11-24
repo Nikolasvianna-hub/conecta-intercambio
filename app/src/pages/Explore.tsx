@@ -3,11 +3,11 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { AlertTriangle, BadgeCheck, Eye, MapPin, Plus, Search, Send, ThumbsUp } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { Avatar, BrandBar, PersonAvatar, ReportButton, Stars, TopBar } from '../components/ui'
-import { categories, equivalences, exchangeReports, findPerson, places, type Category } from '../data/mock'
+import { categories, equivalences, exchangeReports, findPerson, partnerUniversities, places, type Category } from '../data/mock'
 
 // RF18 — Explorar: fórum da cidade (tópicos em alta, moradia, restaurantes, guia para quem é de fora)
 export default function Explore() {
-  const { t, topics } = useApp()
+  const { t, topics, myReports } = useApp()
   const [q, setQ] = useState('')
   const [cat, setCat] = useState<Category | 'all'>('all')
   const nav = useNavigate()
@@ -87,15 +87,22 @@ export default function Explore() {
 
         {(cat === 'all' || cat === 'academic') && (
           <>
-            <h2 className="section-title">{t('exploreReports')}</h2>
+            <h2 className="section-title">
+              {t('exploreReports')}
+              <button onClick={() => nav('/explorar/relato/novo')}>+ {t('exploreWriteReport')}</button>
+            </h2>
             <div className="hscroll">
-              {exchangeReports.map((r) => (
+              {[...myReports, ...exchangeReports].map((r) => (
                 <article key={r.id} className="card flat" style={{ minWidth: 250 }}>
-                  <b>{r.university}</b>
+                  <span className="pill" style={r.verified ? undefined : { background: 'color-mix(in srgb, var(--brand-yellow) 22%, transparent)', color: 'var(--text)' }}>
+                    {r.verified ? `✓ ${t('reportVerified')}` : t('reportUnverified')}
+                  </span>
+                  <div style={{ marginTop: 6 }}><b>{r.university}</b></div>
                   <div className="small muted">{r.country}</div>
                   <div className="small" style={{ margin: '6px 0' }}><Stars value={r.rating} /> {r.rating} · {r.cost}</div>
                   <div className="small">👍 {r.pros}</div>
                   <div className="small">👎 {r.cons}</div>
+                  {r.tips && <div className="small">💡 {r.tips}</div>}
                   <div className="small muted" style={{ marginTop: 6 }}>{t('reportDisclaimer')}</div>
                 </article>
               ))}
@@ -239,6 +246,96 @@ export function NewTopic() {
           <span className="small muted" style={{ textAlign: 'right' }}>{body.length}/1000</span>
         </div>
         <button className="btn block" disabled={!title.trim() || !body.trim()} onClick={publish}>{t('publish')}</button>
+      </main>
+    </>
+  )
+}
+
+// RF08 / UC10 — formulário estruturado de relato (I-08). RN07: sem comprovação, o relato sai como "não verificado".
+const costKeys = ['reportCostHousing', 'reportCostFood', 'reportCostTransport', 'reportCostInsurance'] as const
+const currencies = ['€', 'US$', 'R$', '¥']
+
+export function NewReport() {
+  const { t, set, toast, me } = useApp()
+  const nav = useNavigate()
+  const [university, setUniversity] = useState(partnerUniversities[0])
+  const [other, setOther] = useState('')
+  const [country, setCountry] = useState('')
+  const [rating, setRating] = useState(0)
+  const [currency, setCurrency] = useState('€')
+  const [costs, setCosts] = useState<Record<(typeof costKeys)[number], string>>({ reportCostHousing: '', reportCostFood: '', reportCostTransport: '', reportCostInsurance: '' })
+  const [pros, setPros] = useState('')
+  const [cons, setCons] = useState('')
+  const [tips, setTips] = useState('')
+  const verified = me?.status === 'alumni'
+  const total = costKeys.reduce((s, k) => s + (Number(costs[k]) || 0), 0)
+  const uni = university === 'Outra' ? other.trim() : university
+  const ok = !!uni && !!country.trim() && rating > 0 && !!pros.trim() && !!cons.trim()
+
+  const publish = () => {
+    if (!ok) return
+    set('myReports', (all) => [{
+      id: crypto.randomUUID(), university: uni, country: country.trim(), rating,
+      cost: total > 0 ? `${currency} ${total}/mês` : '—', authorId: 'me',
+      pros: pros.trim(), cons: cons.trim(), tips: tips.trim() || undefined, verified,
+    }, ...all])
+    toast(t('saved'))
+    nav('/explorar', { replace: true })
+  }
+
+  return (
+    <>
+      <TopBar title={t('reportFormTitle')} />
+      <main className="screen pad">
+        {!verified && <div className="disclaimer"><BadgeCheck size={18} /> <span>{t('reportUnverifiedInfo')}</span></div>}
+        <div className="field">
+          <label htmlFor="uni">{t('reportUniversity')}</label>
+          <select id="uni" className="input" value={university} onChange={(e) => setUniversity(e.target.value)}>
+            {partnerUniversities.map((u) => <option key={u} value={u}>{u === 'Outra' ? t('reportOtherUniversity') : u}</option>)}
+          </select>
+          {university === 'Outra' && <input className="input" style={{ marginTop: 8 }} value={other} onChange={(e) => setOther(e.target.value)} placeholder={t('reportUniversity')} aria-label={t('reportUniversity')} maxLength={80} />}
+        </div>
+        <div className="field">
+          <label htmlFor="country">{t('reportCountry')}</label>
+          <input id="country" className="input" value={country} onChange={(e) => setCountry(e.target.value)} maxLength={40} />
+        </div>
+        <div className="field">
+          <span className="small" style={{ fontWeight: 600 }}>{t('reportRating')}</span>
+          <div className="row" style={{ gap: 4 }} role="radiogroup" aria-label={t('reportRating')}>
+            {[1, 2, 3, 4, 5].map((n) => (
+              <button key={n} type="button" role="radio" aria-checked={rating === n} aria-label={`${n} / 5`} className="icon-btn"
+                style={{ fontSize: '1.7rem', color: n <= rating ? 'var(--brand-yellow)' : 'var(--muted)', background: 'none', border: 0 }} onClick={() => setRating(n)}>
+                {n <= rating ? '★' : '☆'}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="field">
+          <span className="small" style={{ fontWeight: 600 }}>{t('reportCosts')}</span>
+          <div className="row" style={{ gap: 8, flexWrap: 'wrap' }}>
+            <select className="input" style={{ width: 90 }} value={currency} onChange={(e) => setCurrency(e.target.value)} aria-label={t('reportCurrency')}>
+              {currencies.map((c) => <option key={c}>{c}</option>)}
+            </select>
+            {costKeys.map((k) => (
+              <input key={k} className="input" style={{ flex: '1 1 40%' }} inputMode="numeric" placeholder={t(k)} aria-label={t(k)}
+                value={costs[k]} onChange={(e) => setCosts({ ...costs, [k]: e.target.value.replace(/\D/g, '').slice(0, 5) })} />
+            ))}
+          </div>
+          <span className="small muted">{t('reportTotal')}: {currency} {total}/mês · {t('reportDisclaimer')}</span>
+        </div>
+        <div className="field">
+          <label htmlFor="pros">{t('reportPros')}</label>
+          <textarea id="pros" className="input" value={pros} onChange={(e) => setPros(e.target.value)} maxLength={300} />
+        </div>
+        <div className="field">
+          <label htmlFor="cons">{t('reportCons')}</label>
+          <textarea id="cons" className="input" value={cons} onChange={(e) => setCons(e.target.value)} maxLength={300} />
+        </div>
+        <div className="field">
+          <label htmlFor="tips">{t('reportTips')}</label>
+          <textarea id="tips" className="input" value={tips} onChange={(e) => setTips(e.target.value)} maxLength={300} />
+        </div>
+        <button className="btn block" disabled={!ok} onClick={publish}>{t('publish')}</button>
       </main>
     </>
   )

@@ -166,3 +166,6 @@ Prints do protótipo publicado, tirados em 24/11/2026 em tela de celular (390 ×
 | Painel de moderação com denúncias pendentes | UC14 | <img src="evidencias/prototipo/13-moderacao.png" width="180" alt="Painel de moderação com denúncias pendentes"> |
 | Programa Buddy | UC07 | <img src="evidencias/prototipo/14-buddy.png" width="180" alt="Programa Buddy"> |
 | Meu perfil com dados de intercâmbio | UC02, UC21 | <img src="evidencias/prototipo/15-perfil.png" width="180" alt="Meu perfil com dados de intercâmbio"> |
+| Novo relato de intercâmbio (Sprint 3) | UC10 | <img src="evidencias/prototipo/17-novo-relato.png" width="180" alt="Novo relato"> |
+| Relato publicado como não verificado, RN07 (Sprint 3) | UC10 | <img src="evidencias/prototipo/18-relato-nao-verificado.png" width="180" alt="Relato não verificado"> |
+| Aparência com painel de contraste e aviso, RNF04 (Sprint 3) | UC19 | <img src="evidencias/prototipo/19-contraste-aviso.png" width="180" alt="Aviso de contraste"> |
