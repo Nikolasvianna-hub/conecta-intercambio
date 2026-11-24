@@ -1,6 +1,6 @@
 # Protótipo Navegável e Wireframes — Conecta Intercâmbio (Sprint 2)
 
-> **Link do protótipo:** https://nikolasvianna-hub.github.io/conecta-intercambio/ *(fica disponível depois que o GitHub Pages for ativado; ver §5)*
+> **Link do protótipo:** https://nikolasvianna-hub.github.io/conecta-intercambio/ (publicado no GitHub Pages; ver §5)
 > **Código-fonte:** [`app/`](../app) — React 19 + TypeScript + Vite · dados fictícios · sem backend
 
 ## 1. Conceito de navegação
@@ -146,4 +146,23 @@ npm run build    # gera app/dist
 O workflow [`.github/workflows/deploy-pages.yml`](../.github/workflows/deploy-pages.yml) compila o `app/` e publica a cada push na `main`. Para ativar, o dono do repositório precisa acessar **Settings → Pages → Build and deployment → Source: GitHub Actions**. O link do protótipo para entregar no AVA é o do topo deste documento.
 
 ## 6. Evidências (prints)
-Salvar os prints das telas em `docs/evidencias/prototipo/` (exigência do P2: “Protótipos (prints ou links)”).
+Prints do protótipo publicado, tirados em 24/11/2026 em tela de celular (390 × 844, tema noturno). Os arquivos em tamanho real estão em [`evidencias/prototipo/`](evidencias/prototipo/).
+
+| Tela | Caso de uso | Print |
+| :--- | :---: | :---: |
+| Login com validação de vínculo (RN02) e seletor de idioma | UC01 | <img src="evidencias/prototipo/01-login.png" width="180" alt="Login com validação de vínculo (RN02) e seletor de idioma"> |
+| Unifor → Notícias, TV Unifor e filtros | UC06, UC21 | <img src="evidencias/prototipo/02-unifor-noticias.png" width="180" alt="Unifor → Notícias, TV Unifor e filtros"> |
+| Edital com selo de comunicado institucional (RN01) | UC06 | <img src="evidencias/prototipo/03-noticia-edital.png" width="180" alt="Edital com selo de comunicado institucional (RN01)"> |
+| Unifor → Reels | UC22 | <img src="evidencias/prototipo/16-reels.png" width="180" alt="Unifor → Reels"> |
+| Explorar: categorias, guia da cidade e tópicos em alta | UC18 | <img src="evidencias/prototipo/04-explorar.png" width="180" alt="Explorar: categorias, guia da cidade e tópicos em alta"> |
+| Tópico de moradia com aviso de isenção (RN08) | UC15, UC18 | <img src="evidencias/prototipo/05-topico-moradia.png" width="180" alt="Tópico de moradia com aviso de isenção (RN08)"> |
+| Novo tópico (até 1.000 caracteres) | UC18 | <img src="evidencias/prototipo/06-novo-topico.png" width="180" alt="Novo tópico (até 1.000 caracteres)"> |
+| Conversas, grupos e pedidos | UC16 | <img src="evidencias/prototipo/07-conversas.png" width="180" alt="Conversas, grupos e pedidos"> |
+| Conversa aberta com aviso de confidencialidade (RN12) | UC16 | <img src="evidencias/prototipo/08-conversa-aberta.png" width="180" alt="Conversa aberta com aviso de confidencialidade (RN12)"> |
+| Perfil privado de outra pessoa (RN04) | UC17 | <img src="evidencias/prototipo/09-perfil-privado.png" width="180" alt="Perfil privado de outra pessoa (RN04)"> |
+| Menu: preferências, comunidade e ajuda | UC19, UC20 | <img src="evidencias/prototipo/10-menu.png" width="180" alt="Menu: preferências, comunidade e ajuda"> |
+| Aparência: modo, cor de destaque e texto | UC19 | <img src="evidencias/prototipo/11-aparencia.png" width="180" alt="Aparência: modo, cor de destaque e texto"> |
+| Privacidade e LGPD: visibilidade e consentimentos | UC20 | <img src="evidencias/prototipo/12-privacidade-lgpd.png" width="180" alt="Privacidade e LGPD: visibilidade e consentimentos"> |
+| Painel de moderação com denúncias pendentes | UC14 | <img src="evidencias/prototipo/13-moderacao.png" width="180" alt="Painel de moderação com denúncias pendentes"> |
+| Programa Buddy | UC07 | <img src="evidencias/prototipo/14-buddy.png" width="180" alt="Programa Buddy"> |
+| Meu perfil com dados de intercâmbio | UC02, UC21 | <img src="evidencias/prototipo/15-perfil.png" width="180" alt="Meu perfil com dados de intercâmbio"> |

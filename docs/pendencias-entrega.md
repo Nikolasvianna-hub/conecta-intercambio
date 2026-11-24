@@ -67,3 +67,21 @@ Antes do fechamento do prazo estipulado (Sprint 1: 20/10/2026 a 02/11/2026), cer
 - [x] Fichas da 1ª rodada de entrevistas anexadas (`docs/fichas_de_registro_entrevista.pdf`) e consolidadas em `docs/resultados-de-entrevistas.md`.
 
 ![Evidência do convite ao avaliador](evidencias/convite-marcelobezerra-dotcom.png)
+
+---
+
+## 4. Checklist de Entrega no AVA — P2 (Sprint 2 / Milestone M2)
+
+Prazo no AVA: 27/11/2026, 00:00. Enviar no AVA:
+
+- **Link do protótipo:** https://nikolasvianna-hub.github.io/conecta-intercambio/
+- **Link do repositório:** https://github.com/Nikolasvianna-hub/conecta-intercambio
+
+Obrigatórios no GitHub:
+
+- [x] SRS versionado (IEEE 830, histórico 0.1 → 1.1): [`srs.md`](srs.md)
+- [x] Revisão de consistência UML × requisitos: [`revisao-de-consistencia.md`](revisao-de-consistencia.md)
+- [x] Diagramas UML atualizados (`uml/*-v2.drawio` e `uml/*-v2.svg`)
+- [x] Wireframes e protótipo navegável: [`prototipo.md`](prototipo.md), [`../app`](../app)
+- [x] Prints do protótipo: [`evidencias/prototipo/`](evidencias/prototipo/)
+- [x] Issues fechadas por sprint: milestones M1 (Sprint 1) e M2 (Sprint 2); pendências na M3
